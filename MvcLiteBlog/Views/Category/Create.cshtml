@@ -1,0 +1,47 @@
+﻿@model MvcLiteBlog.Models.CatModel
+
+@{
+    this.ViewBag.Title = "Create";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div id="main">
+    <h1>Create category</h1>
+    @using (this.Html.BeginForm("Create", "Category"))
+    {
+        <div class="catForm">
+            <fieldset>
+                <legend>
+                    Create Category
+                </legend>
+                <div class="success">
+                    @this.ViewData["Message"]
+                </div>
+                <div class="error">
+                    @this.ViewData["ErrorMessage"]
+                </div>
+                <div>
+                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                </div>
+                <div>Category ID (Url Name)</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.CatID, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.CatID, "*")
+                </div>
+                <div>Display name</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.Name, "*")
+                </div>
+                <div class="button">
+                    <input type="submit" name="Submit" value="Create Category" />
+                </div>
+            </fieldset>
+        </div>
+    }
+    <div>
+        @this.Html.ActionLink("Back to list", "Manage")
+    </div>
+</div>
+

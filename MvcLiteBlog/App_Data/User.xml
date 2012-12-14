@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User PKey="cbc74b7f-92bd-4401-8121-5059362a3da2" Name="Admin" Email="Admin@LiteBlog.com">
+    <Password>admin</Password>
+    <Locked>False</Locked>
+    <CreatedTime>14/11/2010 01:01 AM</CreatedTime>
+    <LastLoginTime>14/11/2010 01:01 AM</LastLoginTime>
+    <LastActivityTime>14/12/2012 09:23 PM</LastActivityTime>
+    <LastPasswordTime>14/11/2010 01:01 AM</LastPasswordTime>
+    <LastLockedTime>14/11/2010 01:01 AM</LastLockedTime>
+  </User>
+</Users>

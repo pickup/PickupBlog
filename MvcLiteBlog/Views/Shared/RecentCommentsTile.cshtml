@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Comment>
+
+
+
+<div class="widget">
+    <div class="widgetTitle">
+        Comments
+    </div>
+    <ul id="recentComments" class="widgetList">
+        @foreach (Comment comment in this.Model)
+        {
+            <li style="display: none;"><a href="@this.Url.Action("Index", "Post", new { id = comment.FileID }, null)">@this.Html.Raw(comment.TileText)</a> <br/><br/>by @comment.Name</li>
+        }
+    </ul>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                var cur = 0;
+                var max = $('#recentComments li').length;
+                var prev = max - 1;
+
+                flipTile();
+                setInterval(flipTile, 7000);
+
+                function flipTile() {
+                    $('#recentComments li:eq(' + prev + ')').hide();
+                    $('#recentComments li:eq(' + cur + ')').show();
+                    cur++;
+                    if (cur > max - 1)
+                        cur = 0;
+                    prev++;
+                    if (prev > max - 1)
+                        prev = 0;
+                }
+            }
+        );
+
+    </script>
+    <div class="widgetBottom">
+        @this.Html.ActionLink("More Comments", "Recent", "Comment")
+    </div>
+</div>

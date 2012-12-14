@@ -1,0 +1,6 @@
+D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlProviders.XML
+D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlProviders.dll
+D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlProviders.pdb
+D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlProviders\obj\Debug\LiteBlog.XmlProviders.csprojResolveAssemblyReference.cache
+D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlProviders\obj\Debug\LiteBlog.XmlProviders.dll
+D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlProviders\obj\Debug\LiteBlog.XmlProviders.pdb

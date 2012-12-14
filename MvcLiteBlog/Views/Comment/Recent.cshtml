@@ -1,0 +1,63 @@
+﻿@model List<Comment>
+
+@{
+    this.ViewBag.Title = "Recent Comments";
+    this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
+
+}
+
+<div class="content">
+    <h1>Recent Comments</h1>
+    
+    @foreach (Comment comment in this.Model)
+    {
+        if (comment.IsAuthor)
+        {
+            <div class="authorBg">
+                <div class="commentHeader">
+                    Comment by 
+                    @if (string.IsNullOrEmpty(comment.Url))
+                    {
+                        @comment.Name
+                    }
+                    else
+                    {
+                        <a href='@comment.Url' target="_blank">@comment.Name</a>
+                    }
+                    at
+                    @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)
+                    @this.Html.ActionLink("View Post", "Index", "Post", new { id = comment.FileID }, null)
+                </div>
+                <div class="comment">
+                    @this.Html.Raw(comment.HighlightedCode)
+                </div>
+            </div>
+        }
+        else
+        {
+            <div>
+                <div class="commentHeader">
+                    Comment by 
+                    @if (string.IsNullOrEmpty(comment.Url))
+                    {
+                        @comment.Name
+                    }
+                    else
+                    {
+                        <a href='@comment.Url' target="_blank">@comment.Name</a>
+                    }
+                    at
+                    @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)
+                    @this.Html.ActionLink("View Post", "Index", "Post", new { id = comment.FileID }, null)
+                </div>
+                <div class="comment">
+                    @this.Html.Raw(comment.HighlightedCode)
+                </div>
+            </div>
+        }
+    }
+
+</div>
+
+
+

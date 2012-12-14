@@ -1,0 +1,20 @@
+﻿@model Post
+
+@{
+    this.ViewBag.Title = this.Model.Title;
+    this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
+
+}
+
+@section ScriptSection
+{
+    <script src='@this.Url.Content("~/Scripts/ckeditor.js")' type="text/javascript"></script>
+    <script src='@this.Url.Content("~/Scripts/jquery-ckeditor.js")'  type="text/javascript"></script>
+    <script src='@this.Url.Content("~/Scripts/comment.js")' type="text/javascript"></script>
+}
+
+@{ this.Html.RenderPartial("PostControl"); }
+<div id="commentForm">
+    @{ this.Html.RenderAction("CommentFormControl", "Comment"); }
+</div>
+

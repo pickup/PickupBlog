@@ -1,0 +1,50 @@
+﻿@model MvcLiteBlog.Models.AuthorModel
+
+@{
+    this.ViewBag.Title = "Manage Author";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div id="main">
+    <h1>Edit author</h1>
+    @using (this.Html.BeginForm("Edit", "Author"))
+    {
+        <div class="authorForm">
+            <fieldset>
+                <legend>
+                    Edit Author
+                </legend>
+                <div class="success">
+                    @this.ViewData["Message"]
+                </div>
+                <div>
+                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                </div>
+                <div>Author name</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.Name, "*")
+                </div>
+                <div>Display name</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.DisplayName, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.DisplayName, "*")
+                </div>        
+                <div>Email</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Email, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.Email, "*")
+                </div>       
+                <div class="button">
+                    <input type="submit" name="Submit" value="Submit" />
+                </div>
+            </fieldset>
+        </div>
+    }
+    <div>
+        @this.Html.ActionLink("Back to List", "Manage")
+    </div>
+</div>
+
+

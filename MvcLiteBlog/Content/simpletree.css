@@ -1,0 +1,39 @@
+﻿.tree
+{
+    padding: 10px;
+    margin: 0px 0px 0px 20px;
+    list-style: none;
+}
+
+    .tree ul
+    {
+        padding: 0px 10px;
+        margin: 0px;        
+    }
+
+    .tree li
+    {
+        padding: 2px 0px;
+        margin: 0;
+    }
+
+        .tree li.node
+        {
+        }
+
+        .tree li.expanded
+        {
+            list-style-image: url('simpletree/down.png');
+        }
+
+
+        .tree li.collapsed
+        {
+            list-style-image: url('simpletree/right.png');
+        }
+
+
+        .tree li.leaf
+        {
+            list-style: none;
+        }

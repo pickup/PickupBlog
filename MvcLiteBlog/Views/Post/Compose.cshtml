@@ -1,0 +1,84 @@
+﻿@model MvcLiteBlog.Models.ComposePostModel
+@{
+    this.ViewBag.Title = "Compose";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+@section ScriptSection
+{
+    <script type="text/javascript" src='@this.Url.Content("~/Scripts/ckeditor.js")'></script>
+    <script type="text/javascript" src='@this.Url.Content("~/Scripts/compose.js")'></script>
+    <script type="text/javascript" src='@this.Url.Content("~/Scripts/post-compose.js")'></script>
+}
+<div id="main">
+    <h1>Compose</h1>
+    @using (this.Html.BeginForm("Compose", "Post", FormMethod.Post, new { encType = "multipart/form-data" }))
+    {
+        <div class="leftCompose">
+            <div>
+                @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                @this.Html.Hidden("DraftID")
+            </div>
+            <div class="error">
+                @this.ViewData["Message"]
+            </div>
+            <div>
+                Title: @this.Html.TextBoxFor(m => m.Title, new { @class = "TextBox", @style = "width: 530px;" })
+                @this.Html.ValidationMessageFor(m => m.Title, "*")
+            </div>
+            <div>
+                Uploaded files:
+                @this.Html.Partial("AttachmentControl", this.Model.Post.Documents)
+            </div>
+            <div>
+                Post Contents: <span class="blue">Click Add Code button to add code</span>
+                <textarea id="PostEditor" name="Content" style="width: 530px;" cols="30" rows="10">@this.Model.Content</textarea>
+            </div>
+            <div>
+                <!-- Timer -->
+            </div>
+        </div>
+        <div class="rightCompose">
+            <div>
+                Publish date:</div>
+            <div>
+                @if (this.Model.Post.Type == PostType.New)
+                {
+                    <input type="text" name="PublishDate" class="TextBox" style="width: 80%;" value='@this.Model.PublishDate' />
+                }
+                else
+                {
+                    <span>@this.Model.PublishDate</span>
+                }
+            </div>
+            <div>
+                Category:</div>
+            <div>
+                @this.Html.ListBox("CatID", this.Model.CategoryList, new { @class = "CatList" })
+            </div>
+            <div>
+                Upload files:
+                <br />
+                @this.ViewData["Message2"]
+            </div>
+            <div>
+                <input type="file" name="Upload1" class="TextBox" style="width: 80%;" /></div>
+            <div>
+                <input type="file" name="Upload2" class="TextBox" style="width: 80%;" /></div>
+            <div>
+                <input type="file" name="Upload3" class="TextBox" style="width: 80%;" /></div>
+            <div class="button">
+                <input type="submit" name="Upload" value="Upload" /></div>
+        </div>
+        <div style="clear: both;">
+            <div class="button">   
+                <input type="submit" name="Preview" value="Preview" />
+                <input type="submit" name="Save" value="Save" />
+                <input type="submit" name="Publish" value="Publish" />
+                <input type="submit" name="Close" value="Close" />
+            </div>
+            <div id="saveMessage" style="text-align: center;">
+            </div>
+        </div>
+    }
+</div>

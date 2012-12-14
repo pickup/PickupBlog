@@ -1,0 +1,39 @@
+﻿<div id="menu">
+    <div class="menuContainer">
+        <div class="menuHeader">
+            Posts</div>
+        <ul class="menu">
+            <li>@this.Html.ActionLink("Compose", "Compose", "Post")</li>
+            <li>@this.Html.ActionLink("Manage Posts", "Manage", "Post")</li>
+            <li>@this.Html.ActionLink("Manage Drafts", "ManageDraft", "Post")</li>
+            <li>@this.Html.ActionLink("Manage Pages", "Manage", "Page")</li>
+        </ul>
+    </div>
+    <div class="menuContainer">
+        <div class="menuHeader">
+            Comments</div>
+        <ul class="menu">
+            <li>@this.Html.ActionLink("Manage Comments", "Manage", "Comment")</li>
+            <li>@this.Html.ActionLink("Moderate Comments", "Moderate", "Comment")</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="menuContainer">
+        <div class="menuHeader">
+            Categories</div>
+        <ul class="menu">
+            <li>@this.Html.ActionLink("Create Category", "Create", "Category")</li>
+            <li>@this.Html.ActionLink("Manage Categories", "Manage", "Category")</li>
+            <li>@this.Html.ActionLink("Reorder Categories", "Reorder", "Category")</li>
+        </ul>
+    </div>
+    <div class="menuContainer">
+        <div class="menuHeader">
+            Application</div>
+        <ul class="menu">
+            <li>@this.Html.ActionLink("Application Settings", "Application", "Admin")</li>
+            <li>@this.Html.ActionLink("User Management", "Manage", "Author")</li>
+            <li>@this.Html.ActionLink("View Blog", "Index", "Home")</li>
+        </ul>
+    </div>
+</div>

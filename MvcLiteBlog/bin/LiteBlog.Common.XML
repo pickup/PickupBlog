@@ -1,0 +1,1801 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LiteBlog.Common</name>
+    </assembly>
+    <members>
+        <member name="T:LiteBlog.Common.ArchiveMonth">
+            <summary>
+            The archive month.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth.ArchiveFormat">
+            <summary>
+            The _archive format.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth.StartYear">
+            <summary>
+            The _start year.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth._count">
+            <summary>
+            The _count.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth._id">
+            <summary>
+            The _id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth._month">
+            <summary>
+            The _month.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ArchiveMonth._year">
+            <summary>
+            The _year.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.ArchiveMonth.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.ArchiveMonth"/> class.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.ArchiveMonth.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.ArchiveMonth"/> class.
+            </summary>
+            <param name="month">
+            The month.
+            </param>
+            <param name="year">
+            The year.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.ArchiveMonth.GetArchiveID(System.Int32,System.Int32)">
+            <summary>
+            The get archive id.
+            </summary>
+            <param name="month">
+            The month.
+            </param>
+            <param name="year">
+            The year.
+            </param>
+            <returns>
+            The System.Int32.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.ID">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.Month">
+            <summary>
+            Gets or sets the month.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.Name">
+            <summary>
+            Gets the name.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.Url">
+            <summary>
+            Gets the url.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ArchiveMonth.Year">
+            <summary>
+            Gets or sets the year.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Author">
+            <summary>
+            The author.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Author._email">
+            <summary>
+            The _email.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Author._id">
+            <summary>
+            The _id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Author._locked">
+            <summary>
+            The _locked.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Author._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Author._url">
+            <summary>
+            The _url.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Author.Email">
+            <summary>
+            Gets or sets the email.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Author.ID">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Author.Locked">
+            <summary>
+            Gets or sets a value indicating whether locked.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Author.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Author.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Category">
+            <summary>
+            The category.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Category._catID">
+            <summary>
+            The _cat id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Category._count">
+            <summary>
+            The _count.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Category._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Category._order">
+            <summary>
+            The _order.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Category.CatID">
+            <summary>
+            Gets or sets the cat id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Category.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Category.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Category.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.CodeBlock">
+            <summary>
+            The code block.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeBlock.bEncode">
+            <summary>
+            The _b encode.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeBlock.hText">
+            <summary>
+            The _h text.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeBlock._rawText">
+            <summary>
+            The _raw text.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeBlock._snippets">
+            <summary>
+            The _snippets.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.CodeBlock.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.CodeBlock"/> class. 
+            Default constructor highlights the code, 
+            For doing other processing, 
+            use GetSnippets to get CodeSnippets
+            Replace CodeSnippets with somethng
+            use ReplaceSnippets to replace _hText
+            Use HighlightedText to get processed CodeBlock
+            </summary>
+            <param name="code">
+            raw text with code
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.CodeBlock.GetSnippets">
+            <summary>
+            Call this method to get snippets for processing
+            Call 
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.CodeBlock.ReplaceSnippets">
+            <summary>
+            The replace snippets.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeBlock.Encode">
+            <summary>
+            Gets a value indicating whether encode.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeBlock.HighlightedText">
+            <summary>
+            Gets the highlighted text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeBlock.RawText">
+            <summary>
+            Gets the raw text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeBlock.Snippets">
+            <summary>
+            Gets the snippets.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Comment">
+            <summary>
+            The comment.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._fileID">
+            <summary>
+            The _file id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._highlightedText">
+            <summary>
+            The _highlighted text.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._id">
+            <summary>
+            The _id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._ip">
+            <summary>
+            The _ip.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._text">
+            <summary>
+            The _text.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._time">
+            <summary>
+            The _time.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment._url">
+            <summary>
+            The _url.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment.isApproved">
+            <summary>
+            The is approved.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Comment.isAuthor">
+            <summary>
+            The is author.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.FileID">
+            <summary>
+            Gets or sets the file id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.HighlightedCode">
+            <summary>
+            Gets the highlighted code.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.ID">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.Ip">
+            <summary>
+            Gets or sets the ip.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.IsApproved">
+            <summary>
+            Gets or sets a value indicating whether is approved.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.IsAuthor">
+            <summary>
+            Gets or sets a value indicating whether is author.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.TileText">
+            <summary>
+            Gets the tile text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Comment.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.CodeSnippet">
+            <summary>
+            CodeSnippet stores the code as <pre>Encoded string</pre>
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeSnippet.code">
+            <summary>
+            The code.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeSnippet.codeID">
+            <summary>
+            The code id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeSnippet.cssClass">
+            <summary>
+            The css class.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CodeSnippet.language">
+            <summary>
+            The language.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.CodeID">
+            <summary>
+            Gets or sets the code id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.CssClass">
+            <summary>
+            Gets or sets the css class.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.InnerCode">
+            <summary>
+            Gets or sets the inner code.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.Language">
+            <summary>
+            Gets or sets the language.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.CodeSnippet.Placeholder">
+            <summary>
+            Gets the placeholder.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IDataContext">
+            <summary>
+            The DataContext interface.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.ArchiveData">
+            <summary>
+            Gets the archive data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.BlogData">
+            <summary>
+            Gets the blog data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.CategoryData">
+            <summary>
+            Gets the category data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.CommentData">
+            <summary>
+            Gets the comment data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.DraftData">
+            <summary>
+            Gets the draft data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.DraftPostData">
+            <summary>
+            Gets the draft post data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.PageData">
+            <summary>
+            Gets the page data
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.PostData">
+            <summary>
+            Gets the post data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.ServiceData">
+            <summary>
+            Gets the service data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.SettingsData">
+            <summary>
+            Gets the settings data.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Contracts.IDataContext.StatData">
+            <summary>
+            Gets the stat data.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.ISettingsData">
+            <summary>
+            The SettingsData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ISettingsData.Load">
+            <summary>
+            The load.
+            </summary>
+            <returns>
+            The LiteBlog.Common.Settings.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ISettingsData.Save(LiteBlog.Common.Settings)">
+            <summary>
+            The save.
+            </summary>
+            <param name="app">
+            The app.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IServiceData">
+            <summary>
+            The ServiceData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IServiceData.Load">
+            <summary>
+            The load.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.ServiceItem].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IServiceData.Save(System.Collections.Generic.List{LiteBlog.Common.ServiceItem})">
+            <summary>
+            The save.
+            </summary>
+            <param name="svcItems">
+            The svc items.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IStatData">
+            <summary>
+            The StatData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IStatData.Load">
+            <summary>
+            The load.
+            </summary>
+            <returns>
+            The LiteBlog.Common.Stat.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IStatData.Save(LiteBlog.Common.Stat)">
+            <summary>
+            The save.
+            </summary>
+            <param name="stat">
+            The stat.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.ICommentData">
+            <summary>
+            The CommentData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.Approve(System.String)">
+            <summary>
+            The approve.
+            </summary>
+            <param name="commentID">
+            The comment id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="commentID">
+            The comment id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.GetComments">
+            <summary>
+            The get comments.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.Comment].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.Insert(LiteBlog.Common.Comment)">
+            <summary>
+            The insert.
+            </summary>
+            <param name="comment">
+            The comment.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.Refresh">
+            <summary>
+            The refresh.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICommentData.Update(LiteBlog.Common.Comment)">
+            <summary>
+            The update.
+            </summary>
+            <param name="comment">
+            The comment.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IDraftPostData">
+            <summary>
+            The DraftPostData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Create(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            The create.
+            </summary>
+            <param name="title">
+            The title.
+            </param>
+            <param name="author">
+            The author.
+            </param>
+            <param name="time">
+            The time.
+            </param>
+            <param name="catID">
+            The cat id.
+            </param>
+            <returns>
+            The LiteBlog.Common.DraftPost.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Create(System.String)">
+            <summary>
+            The create.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <returns>
+            The LiteBlog.Common.DraftPost.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Load(System.String)">
+            <summary>
+            The load.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <returns>
+            The LiteBlog.Common.DraftPost.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Publish(LiteBlog.Common.DraftPost)">
+            <summary>
+            The publish.
+            </summary>
+            <param name="post">
+            The post.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftPostData.Save(LiteBlog.Common.DraftPost)">
+            <summary>
+            The save.
+            </summary>
+            <param name="post">
+            The post.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IPostData">
+            <summary>
+            The PostData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.DeleteComment(LiteBlog.Common.Comment)">
+            <summary>
+            The delete comment.
+            </summary>
+            <param name="comment">
+            The comment.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.InsertComment(LiteBlog.Common.Comment)">
+            <summary>
+            The insert comment.
+            </summary>
+            <param name="comment">
+            The comment.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.Load(System.String)">
+            <summary>
+            The load.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <returns>
+            The LiteBlog.Common.Post.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.Save(LiteBlog.Common.Post)">
+            <summary>
+            The save.
+            </summary>
+            <param name="post">
+            The post.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IPostData.UpdateComment(LiteBlog.Common.Comment)">
+            <summary>
+            The update comment.
+            </summary>
+            <param name="comment">
+            The comment.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IDraftData">
+            <summary>
+            The DraftData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftData.AddSchedule(System.String,System.DateTime)">
+            <summary>
+            The add schedule.
+            </summary>
+            <param name="draftID">
+            The draft id.
+            </param>
+            <param name="publishDate">
+            The publish date.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="draftID">
+            The draft id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftData.GetDraftItems">
+            <summary>
+            The get draft items.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.PostInfo].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftData.GetScheduledDraftItems">
+            <summary>
+            The get scheduled draft items.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.PostInfo].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IDraftData.Insert(System.String,System.String)">
+            <summary>
+            The insert.
+            </summary>
+            <param name="draftID">
+            The draft id.
+            </param>
+            <param name="title">
+            The title.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IArchiveData">
+            <summary>
+            The ArchiveData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IArchiveData.ChangeCount(System.String,System.Int32)">
+            <summary>
+            The change count.
+            </summary>
+            <param name="archiveID">
+            The archive id.
+            </param>
+            <param name="number">
+            The number.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IArchiveData.Create(LiteBlog.Common.ArchiveMonth)">
+            <summary>
+            The create.
+            </summary>
+            <param name="month">
+            The month.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IArchiveData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="archiveID">
+            The archive id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IArchiveData.GetArchiveMonths">
+            <summary>
+            The get archive months.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.ArchiveMonth].
+            </returns>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.ICategoryData">
+            <summary>
+            The CategoryData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICategoryData.ChangeCount(System.String,System.Int32)">
+            <summary>
+            The change count.
+            </summary>
+            <param name="catID">
+            The cat id.
+            </param>
+            <param name="number">
+            The number.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICategoryData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="catID">
+            The cat id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICategoryData.GetCategories">
+            <summary>
+            The get categories.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.Category].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICategoryData.Insert(LiteBlog.Common.Category)">
+            <summary>
+            The insert.
+            </summary>
+            <param name="category">
+            The category.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICategoryData.Update(System.String,LiteBlog.Common.Category)">
+            <summary>
+            The update.
+            </summary>
+            <param name="oldID">
+            The old id.
+            </param>
+            <param name="category">
+            The category.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.IBlogData">
+            <summary>
+            The BlogData interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.ChangeAuthor(System.String,System.String)">
+            <summary>
+            The change author.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <param name="author">
+            The author.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.ChangeCategory(System.String,System.String,System.String)">
+            <summary>
+            The change category.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <param name="oldCatID">
+            The old cat id.
+            </param>
+            <param name="newCatID">
+            The new cat id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.Create(LiteBlog.Common.PostInfo)">
+            <summary>
+            The create.
+            </summary>
+            <param name="postInfo">
+            The post info.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.Delete(System.String)">
+            <summary>
+            The delete.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.GetBlogItems">
+            <summary>
+            The get blog items.
+            </summary>
+            <returns>
+            The System.Collections.Generic.List`1[T -&gt; LiteBlog.Common.PostInfo].
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.IBlogData.Update(System.String,System.String,System.String)">
+            <summary>
+            The update.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <param name="title">
+            The title.
+            </param>
+            <param name="catID">
+            The cat id.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Contracts.ICacheContext">
+            <summary>
+            The CacheContext interface.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICacheContext.GetDependency(LiteBlog.Common.CacheType)">
+            <summary>
+            The get dependency.
+            </summary>
+            <param name="type">
+            The type.
+            </param>
+            <returns>
+            The System.Web.Caching.CacheDependency.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Contracts.ICacheContext.GetDependency(LiteBlog.Common.CacheType,System.String)">
+            <summary>
+            The get dependency.
+            </summary>
+            <param name="type">
+            The type.
+            </param>
+            <param name="id">
+            The id.
+            </param>
+            <returns>
+            The System.Web.Caching.CacheDependency.
+            </returns>
+        </member>
+        <member name="T:LiteBlog.Common.PostCollection">
+            <summary>
+            The post collection.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostCollection._catMap">
+            <summary>
+            The _cat map.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostCollection._list">
+            <summary>
+            The _list.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostCollection._monthMap">
+            <summary>
+            The _month map.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostCollection.CategoryMap">
+            <summary>
+            Gets the category map.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostCollection.MonthMap">
+            <summary>
+            Gets the month map.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostCollection.Posts">
+            <summary>
+            Gets or sets the posts.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Document">
+            <summary>
+            A special class with functions of how to store a file
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Document._path">
+            <summary>
+            The _path.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Document.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.PostType">
+            <summary>
+            The post type.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostType.New">
+            <summary>
+            The new.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostType.Draft">
+            <summary>
+            The draft.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.SyntaxHighlighter">
+            <summary>
+            The syntax highlighter.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.SyntaxHighlighter.Highlight(System.String)">
+            <summary>
+            The highlight.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.SyntaxHighlighter.SyntaxHighlight(System.String,System.String)">
+            <summary>
+            The syntax highlight.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <param name="language">
+            The language.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="T:LiteBlog.Common.CodeCleaner">
+            <summary>
+            The code cleaner.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.CodeCleaner.CleanCode(System.String)">
+            <summary>
+            The clean code.
+            </summary>
+            <param name="code">
+            The code.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="T:LiteBlog.Common.CacheType">
+            <summary>
+            The cache type.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.DataContext">
+            <summary>
+            The data context.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.CacheContext">
+            <summary>
+            The cache context.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Blog">
+            <summary>
+            The blog.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Categories">
+            <summary>
+            The categories.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Archive">
+            <summary>
+            The archive.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Post">
+            <summary>
+            The post.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Pages">
+            <summary>
+            The page
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Comments">
+            <summary>
+            The comments.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Rss">
+            <summary>
+            The rss.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Atom">
+            <summary>
+            The atom
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.CacheType.Settings">
+            <summary>
+            The settings.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.DraftPost">
+            <summary>
+            The draft post.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Post">
+            <summary>
+            The post.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._author">
+            <summary>
+            The _author.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._catID">
+            <summary>
+            The _cat id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._comments">
+            <summary>
+            The _comments.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._contents">
+            <summary>
+            The _contents.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._docs">
+            <summary>
+            The _docs.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._fileID">
+            <summary>
+            The _file id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._time">
+            <summary>
+            The _time.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._title">
+            <summary>
+            The _title.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Post._highlightedContents">
+            <summary>
+            The _highlighted contents.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Post.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.Post"/> class.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Post.GetCommentCount">
+            <summary>
+            The get comment count.
+            </summary>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Author">
+            <summary>
+            Gets or sets the author.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.CatID">
+            <summary>
+            Gets or sets the cat id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.CategoriesText">
+            <summary>
+            Gets or sets the categories text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Comments">
+            <summary>
+            Gets or sets the comments.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Contents">
+            <summary>
+            Gets or sets the contents.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Documents">
+            <summary>
+            Gets or sets the documents.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.FileID">
+            <summary>
+            Gets or sets the file id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.HighlightedContents">
+            <summary>
+            Gets the highlighted contents.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.TimeText">
+            <summary>
+            Gets or sets the time text.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Post.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.DraftPost._draftID">
+            <summary>
+            This is used if editing an existing post
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.DraftPost._oldCatID">
+            <summary>
+            The _old cat id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.DraftPost._type">
+            <summary>
+            The _type.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.DraftPost.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.DraftPost"/> class.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.DraftPost.#ctor(LiteBlog.Common.Post)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.DraftPost"/> class.
+            </summary>
+            <param name="post">
+            The post.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.DraftPost.GetNewDraftID(System.String,System.DateTime)">
+            <summary>
+            The get new draft id.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <param name="now">
+            The now.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.DraftPost.IsDraft(System.String)">
+            <summary>
+            The is draft.
+            </summary>
+            <param name="fileID">
+            The file id.
+            </param>
+            <returns>
+            The System.Boolean.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.DraftPost.DraftID">
+            <summary>
+            Gets or sets the draft id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.DraftPost.OldCatID">
+            <summary>
+            Gets or sets the old cat id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.DraftPost.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.LocalTime">
+            <summary>
+            The local time.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.LocalTime.Convert(System.DateTime,System.TimeZoneInfo)">
+            <summary>
+            The convert.
+            </summary>
+            <param name="time">
+            The time.
+            </param>
+            <param name="tzi">
+            The tzi.
+            </param>
+            <returns>
+            The System.DateTime.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.LocalTime.GetCurrentTime(System.TimeZoneInfo)">
+            <summary>
+            The get current time.
+            </summary>
+            <param name="tzi">
+            The tzi.
+            </param>
+            <returns>
+            The System.DateTime.
+            </returns>
+        </member>
+        <member name="T:LiteBlog.Common.Logger">
+            <summary>
+            The logger.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Logger.lockObj">
+            <summary>
+            The lock obj.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Logger.Log(System.String)">
+            <summary>
+            The log.
+            </summary>
+            <param name="message">
+            The message.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Logger.Log(System.String,System.Exception)">
+            <summary>
+            The log.
+            </summary>
+            <param name="message">
+            The message.
+            </param>
+            <param name="ex">
+            The ex.
+            </param>
+        </member>
+        <member name="T:LiteBlog.Common.Month">
+            <summary>
+            The month.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Month._count">
+            <summary>
+            The _count.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Month._monthID">
+            <summary>
+            The _month id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Month._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Month.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.Month"/> class.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Month.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:LiteBlog.Common.Month"/> class.
+            </summary>
+            <param name="dt">
+            The dt.
+            </param>
+        </member>
+        <member name="M:LiteBlog.Common.Month.GetMonthID(System.DateTime)">
+            <summary>
+            The get month id.
+            </summary>
+            <param name="date">
+            The date.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Month.GetMonthName(System.DateTime)">
+            <summary>
+            The get month name.
+            </summary>
+            <param name="date">
+            The date.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Month.GetDate">
+            <summary>
+            The get date.
+            </summary>
+            <returns>
+            The System.DateTime.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.Month.Count">
+            <summary>
+            Gets or sets the count.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Month.MonthID">
+            <summary>
+            Gets or sets the month id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Month.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.PostInfo">
+            <summary>
+            The post info.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._author">
+            <summary>
+            The _author.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._catID">
+            <summary>
+            The _cat id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._fileID">
+            <summary>
+            The _file id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._monthID">
+            <summary>
+            The _month id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._time">
+            <summary>
+            The _time.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.PostInfo._title">
+            <summary>
+            The _title.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.PostInfo.GetMonthID(System.DateTime)">
+            <summary>
+            The get month id.
+            </summary>
+            <param name="date">
+            The date.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Author">
+            <summary>
+            Gets or sets the author.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.CatID">
+            <summary>
+            Gets or sets the cat id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Categories">
+            <summary>
+            Gets the categories.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.FileID">
+            <summary>
+            Gets or sets the file id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Month">
+            <summary>
+            Gets the Month
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.MonthID">
+            <summary>
+            Gets or sets the month id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Time">
+            <summary>
+            Gets or sets the time.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Views">
+            <summary>
+            Gets or sets the views.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.PostInfo.Year">
+            <summary>
+            Gets the Year
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.ServiceItem">
+            <summary>
+            The service item.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._freq">
+            <summary>
+            The _freq.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._id">
+            <summary>
+            The _id.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._lastUpdated">
+            <summary>
+            The _last updated.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._method">
+            <summary>
+            The _method.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._path">
+            <summary>
+            The _path.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.ServiceItem._type">
+            <summary>
+            The _type.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.Frequency">
+            <summary>
+            Gets or sets the frequency.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.ID">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.LastUpdated">
+            <summary>
+            Gets or sets the last updated.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.Method">
+            <summary>
+            Gets or sets the method.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.NextUpdate">
+            <summary>
+            Gets the next update.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.ServiceItem.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Settings">
+            <summary>
+            The settings.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Settings._moderate">
+            <summary>
+            The _moderate.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Settings._name">
+            <summary>
+            The _name.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Settings._postCount">
+            <summary>
+            The _post count.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Settings._timezone">
+            <summary>
+            The _timezone.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Settings._url">
+            <summary>
+            The _url.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Settings.CommentModeration">
+            <summary>
+            Gets or sets a value indicating whether comment moderation.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Settings.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Settings.PostCount">
+            <summary>
+            Gets or sets the post count.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Settings.Timezone">
+            <summary>
+            Gets or sets the timezone.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Settings.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="T:LiteBlog.Common.Stat">
+            <summary>
+            The stat.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._feeds">
+            <summary>
+            The _feeds.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._hits">
+            <summary>
+            The _hits.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._mostPopular">
+            <summary>
+            The _most popular.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._path">
+            <summary>
+            The _path.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._visitors">
+            <summary>
+            The _visitors.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat._visits">
+            <summary>
+            The _visits.
+            </summary>
+        </member>
+        <member name="F:LiteBlog.Common.Stat.pageVisits">
+            <summary>
+            The _page visits.
+            </summary>
+        </member>
+        <member name="M:LiteBlog.Common.Stat.GetFeedKey(System.DateTime)">
+            <summary>
+            The get feed key.
+            </summary>
+            <param name="date">
+            The date.
+            </param>
+            <returns>
+            The System.String.
+            </returns>
+        </member>
+        <member name="M:LiteBlog.Common.Stat.IsFeedKey(System.String)">
+            <summary>
+            The is feed key.
+            </summary>
+            <param name="key">
+            The key.
+            </param>
+            <returns>
+            The System.Boolean.
+            </returns>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.FeedCount">
+            <summary>
+            Gets the feed count.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.Feeds">
+            <summary>
+            Gets or sets the feeds.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.Hits">
+            <summary>
+            Gets or sets the hits.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.PageVisits">
+            <summary>
+            Gets or sets the page visits.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.Visitors">
+            <summary>
+            Gets or sets the visitors.
+            </summary>
+        </member>
+        <member name="P:LiteBlog.Common.Stat.Visits">
+            <summary>
+            Gets or sets the visits.
+            </summary>
+        </member>
+    </members>
+</doc>

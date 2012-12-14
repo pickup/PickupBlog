@@ -1,0 +1,75 @@
+﻿@using MvcLiteBlog.Extensions
+@model List<Comment>
+@{
+    this.ViewBag.Title = "Manage Comments";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+@section ScriptSection
+{
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+
+
+                $('#SelectAll').click(
+                    function() {
+
+                        if ($('#SelectAll').attr('checked') == 'checked') {
+                            $('input:checkbox[name=Select]').each(
+                                function() {
+                                    $(this).attr('checked', 'checked');
+                                });
+                        } else {
+                            $('input:checkbox[name=Select]').each(
+                                function() {
+                                    $(this).removeAttr('checked');
+                                });
+                        }
+                    });
+
+
+                $('input:checkbox[name=Select]').click(
+                    function() {
+                        if ($(this).attr('checked') != 'checked') {
+                            $('#SelectAll').removeAttr('checked');
+                        } else {
+                            if ($('input:checkbox[name=Select]').length == $('input:checkbox[name=Select]:checked').length) {
+                                $('#SelectAll').attr('checked', 'checked');
+                            }
+                        }
+                    });
+            });
+
+    </script>
+}
+<div id="main">
+    <h1>Manage comments</h1>
+    @using (this.Html.BeginForm("Delete", "Comment", new { page = this.ViewBag.PageIndex }))
+    {
+        <div class="GridMargin leftButton">
+            <input type="checkbox" id="SelectAll" title="Select All" />
+            <label for="SelectAll">
+                Select All
+            </label>
+            <input type="submit" value="Delete Comments" />
+        </div>
+        <div class="success">
+            @this.TempData["Message"]
+        </div>
+
+        var grid = new WebGrid(this.Model, canSort: false, rowsPerPage: 10);
+
+        @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Select", (item) => this.Html.ValuedCheckBox("Select", (string)item.ID), "cmntIdStyle"), grid.Column(string.Empty, "Edit", (item) =>
+            {
+                if (item.IsApproved)
+                {
+                    return this.Html.ActionLink("Edit", "Edit", new { id = item.ID /*, page = ViewBag.PageIndex */ });
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }, "cmntIdStyle"), grid.Column("ID", "ID", null, "cmntIdStyle"), grid.Column("Name", "Comment By", null, "cmntNameStyle"), grid.Column(string.Empty, "Comment", (item) => this.Html.Raw(item.HighlightedCode), "cmntCommentStyle2"), grid.Column("Ip", "IP", null, "cmntIpStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+    }
+</div>

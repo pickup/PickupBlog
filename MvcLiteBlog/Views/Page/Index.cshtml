@@ -1,0 +1,14 @@
+﻿@model LiteBlog.Common.Page
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+<div class="post">
+    <div>
+        <h1>@this.Model.Title</h1>
+    </div>
+    <div class="postContent">
+        @this.Html.Raw(this.Model.Body)
+    </div>
+</div>

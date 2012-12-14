@@ -1,0 +1,47 @@
+﻿@model IEnumerable<IGrouping<int, ArchiveMonth>>
+<div class="widget">
+    <div class="widgetTitle">
+        Archive
+    </div>
+
+    <ul id="archiveTree">
+        @{
+            foreach (IGrouping<int, ArchiveMonth> group in Model)
+            {
+            <li>@group.Key
+                <ul>
+                    @foreach (ArchiveMonth month in group)
+                    {
+                        <li>@this.Html.ActionLink(string.Format("{0} ({1})", month.Name, month.Count), "Index", "Archive", new { year = month.Year, month = month.Month }, null)</li>
+                    }
+                </ul>
+            </li>        
+            }
+        }
+        </ul>
+        <div class="widgetBottom">
+            @this.Html.ActionLink("Archive", "Archive", "Archive")  | @this.Html.ActionLink("RSS", "Rss", "Home") | @this.Html.ActionLink("ATOM", "Atom", "Home")
+        </div>
+
+
+        <script type="text/javascript">
+            $(document).ready(
+                function () {
+                    if (window.year==undefined) {
+                        $('#archiveTree').simpletree({
+                            expandAll: false,
+                            expandFirstItem: true,
+                            expandItem: ''
+                        });
+                    }
+                    else {
+                        $('#archiveTree').simpletree({
+                            expandAll: false,
+                            expandFirstItem: false,
+                            expandItem: year
+                        });
+                    }
+                });
+        </script>
+   
+</div>

@@ -1,0 +1,54 @@
+﻿@model MvcLiteBlog.Models.ChgPwdModel
+
+@{
+    this.ViewBag.Title = "Change Password";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+@using (this.Html.BeginForm("ChgPwd", "Admin"))
+{
+    <div id="main">
+        <div class="loginForm">
+            <fieldset>
+                <legend>Change Password</legend>
+                <div>
+                    @this.Html.ValidationSummary("Changing password was unsuccessful. Please try again.")
+                </div>
+                <div>
+                    Login:
+                </div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.UserName, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.UserName, "*")
+                </div>
+                <div>
+                    Old Password: 
+                </div>
+                <div>
+                    @this.Html.PasswordFor(m => m.OldPassword, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.OldPassword, "*")
+                </div>
+                <div>
+                    New Password: 
+                </div>
+                <div>
+                    @this.Html.PasswordFor(m => m.NewPassword, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.NewPassword, "*")
+                </div>
+                <div>
+                    Repeat New Password: 
+                </div>
+                <div>
+                    @this.Html.PasswordFor(m => m.RepeatPassword, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.RepeatPassword, "*")
+                </div>
+                <div class="button">
+                    <input type="submit" name="Submit" value="Login" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+}
+
+

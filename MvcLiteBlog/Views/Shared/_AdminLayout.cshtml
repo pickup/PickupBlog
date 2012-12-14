@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@this.ViewBag.Title</title>
+        <link href="@this.Url.Content("~/Content/le-frog/jquery-ui-1.8.16.custom.css")" rel="stylesheet" type="text/css" />
+        <link href="@this.Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
+        <script src='@this.Url.Content("~/Scripts/MicrosoftAjax.debug.js")' type="text/javascript"></script>
+        <script src='@this.Url.Content("~/Scripts/MicrosoftMvcAjax.debug.js")' type="text/javascript"></script>
+        <script src='@this.Url.Content("~/Scripts/MicrosoftMvcValidation.debug.js")' type="text/javascript"></script>
+        <script src='@this.Url.Content("~/Scripts/jquery-1.6.2.min.js")' type="text/javascript"></script>
+        <script src='@this.Url.Content("~/Scripts/jquery-ui-1.8.16.custom.min.js")' type="text/javascript"></script>
+        <script type="text/javascript">
+            var appPath = '@this.Url.Content("~/")';
+
+            $(document).ready(
+                function() {
+                    $('input[type=submit], input[type=button], a', '.button, .leftButton').button();
+                });
+
+        </script>
+        @this.RenderSection("ScriptSection", false)
+    </head>
+    <body>
+        <div class="page">
+            <div id="header">
+                @this.Html.Action("AdminTitle", "Home")
+            </div>
+            <div id="middle">
+                <div id="left">
+                    @{ this.Html.RenderAction("AdminMenu", "Home"); }
+                </div>
+                <div id="center">
+                    @{ this.Html.EnableClientValidation(); }
+
+                    @this.RenderBody()
+                </div>
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+       
+            <div id="footer">
+                &copy; 2012 LiteBlog
+            </div>
+        </div>
+    </body>
+</html>

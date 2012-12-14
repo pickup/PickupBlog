@@ -1,0 +1,476 @@
+﻿/* Generic page styles */
+body
+{
+    background-color: #000;
+    margin: 0;
+}
+
+table
+{
+    padding: 0px;
+    margin: 0px;
+    font-size: 1em;
+}
+
+tr
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+td
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+a:link, a:visited, a:hover
+{
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+div
+{
+    font-size: 1em;
+}
+
+
+fieldset
+{
+    border: 2px solid #009E49;
+    margin: 5px;
+}
+
+legend
+{
+    font-family: 'Segoe UI', Segoe, Futura, Helvetica;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #2778ec;
+}
+
+/* End Generic page styles */
+
+/* Master page styles */
+
+div.page
+{
+    width: 100%;
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    text-align: left;
+}
+
+#header
+{
+    background-color: #009E49;
+    color: #fff;
+    font-family: 'Segoe UI', Segoe, Futura, Helvetica;
+}
+
+#headerTitle
+{
+    float: left;
+    margin: 0 0 0 50px;
+    font-size: 2.5em;
+    padding-top: 8px;
+    padding-bottom: 12px;
+}
+
+#headerMenu
+{
+    float: right;
+    margin: 0 20px 0 0;
+    font-size: 1.5em;
+    padding-top: 18px;
+    padding-bottom: 20px;
+}
+
+    #headerMenu ul
+    {
+        margin: 0px;
+    }
+
+        #headerMenu ul li
+        {
+            list-style: none;
+            display: inline;
+            padding: 0 10px 0 10px;
+        }
+
+    #headerMenu a:link, #headerMenu a:visited
+    {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #headerMenu a:hover
+    {
+        color: dodgerblue;
+    }
+
+#headerStrip
+{
+    background-color: darkgray;
+    clear: both;
+}
+
+#middle
+{
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+
+
+#left
+{
+    width: 17%;
+    vertical-align: top;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#main
+{
+    vertical-align: top;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#center
+{
+    vertical-align: top;
+    width: 66%;
+    float: left;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#right
+{
+   /* width: 220px; */
+    width: 17%;
+    vertical-align: top;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+
+#footer
+{
+    display: block;
+    color: #fff;
+    padding: 6px;
+    text-align: right;
+    font-family: Segoe UI, Verdana;
+    font-size: 1em;
+    background-color: #009E49;
+}
+
+/* End Master page styles*/
+
+/* Widget styles */
+
+div.widget
+{
+    font-family: Segoe UI, Segoe, Arial;
+    font-size: .9em;
+    line-height: 110%;
+    background-color: #009E49;
+    color: White;
+    margin: 8px;
+}
+
+    div.widget a:link, div.widget a:visited
+    {
+        color: White;
+        text-decoration: none;
+    }
+
+    div.widget a:Hover
+    {
+        color: lawngreen;
+        text-decoration: underline;
+    }
+
+div.widgetTitle
+{
+    font-size: 1.4em;
+    color: White;
+    text-align: right;
+    padding: 8px;
+}
+
+
+ul.widgetList
+{
+    padding: 8px 0 14px 10px;
+    margin: 0px;
+}
+
+    ul.widgetList li
+    {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        line-height: 130%;
+    }
+
+
+
+#popular
+{
+    height: 120px;
+}
+
+#recentComments
+{
+    height: 120px;
+}
+
+.widgetBottom
+{
+    text-align: right;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+
+
+/* End Widget styles */
+
+
+/* Post Control Styles */
+
+div.post
+{
+    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-size: 1em;
+    padding: 5px 0;
+    margin: 0;
+    width: 90%;
+    margin: auto;
+}
+
+    div.post a, div.post a:visited
+    {
+        text-decoration: underline;
+        color: #00f;
+    }
+
+        div.post a:hover
+        {
+            color: #f00;
+        }
+
+div.postContent
+{
+    font-size: 1em;
+    word-spacing: 2px;
+    line-height: 130%;
+}
+
+h1, .title
+{
+    font-family: 'Segoe UI', Segoe, Helvetica;
+    word-wrap: normal;
+    font-size: 3em;
+    line-height: 110%;
+    font-weight: normal;
+    word-spacing: 2px;
+    color: #2778ec;
+    border-bottom: 2px solid #009E49;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
+
+pre.code
+{
+    font-family: Consolas, Courier New;
+    font-size: .8em;
+    min-width: 700px;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+
+pre.commentCode
+{
+    font-family: Consolas, Courier New;
+    font-size: .8em;
+    margin: 0;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+
+.postMeta
+{
+    color: #f00;
+    padding-bottom: 5px;
+}
+
+/* Post - comment related styles */
+
+.commentHeader
+{
+    padding: 5px 10px;
+}
+
+
+.comment
+{
+    border-bottom: solid 2px #009E49;
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+
+.authorBg
+{
+    background-color: #aaffaa;
+}
+
+
+.textBox, input[type=text]
+{
+    font-family: Verdana;
+    font-size: 1.1em;
+    border: 2px solid #999;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+    input[type=text]:focus
+    {
+        border: 2px solid #99f;
+    }
+
+
+.ModalWindow
+{
+    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-size: 1em;
+    border: 2px solid #ccc;
+    background: #fff;
+    color: black;
+}
+
+    .ModalWindow fieldset > div
+    {
+        padding: 3px 6px;
+    }
+
+    .ModalWindow div.ModalTitle
+    {
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+        background: #99ff99;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+div.button
+{
+    text-align: center;
+}
+
+.successMessage
+{
+    color: Navy;
+    font-weight: bold;
+}
+
+#commentResult
+{
+    color: Red;
+}
+
+/* End Post Control Styles */
+
+/* Other pages */
+
+div.content
+{
+    width: 90%;
+    margin: auto;
+    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-size: 1em;
+    word-spacing: 2px;
+    line-height: 130%;
+    padding: 10px 10px;
+}
+
+    div.content a, div.content a:visited
+    {
+        text-decoration: underline;
+        color: #00f;
+    }
+
+        div.content a:hover
+        {
+            color: #f00;
+        }
+
+
+
+.caption
+{
+    font-family: 'Segoe UI', Segoe;
+    font-size: 1.5em;
+    color: black;
+    background-color: lightgray;
+    padding: 0 5px;
+}
+
+
+div.success
+{
+    color: Navy;
+    text-align: center;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* End Style for validation helpers */
+
+
+

@@ -1,0 +1,33 @@
+﻿@model DraftPost
+@{
+    this.ViewBag.Title = this.Model.Title;
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+@section ScriptSection
+{
+
+}
+
+<div id="main">
+    <div class="post">
+        <div>
+            <h1>@this.Model.Title</h1>
+        </div>
+        <div id="PostContent" class="postContent">
+            @this.Html.Raw(this.Model.HighlightedContents)
+        </div>
+        <div class="postMeta">
+            <span>@this.Model.TimeText</span><br />
+            <span>@this.Model.CategoriesText</span>
+        </div>
+    </div>
+
+    @using (this.Html.BeginForm("BackToCompose", "Post"))
+    {
+        <div class="button">
+            @*<input type="submit" name="Back" value="Back" />   *@
+            @this.Html.ActionLink("Back", "Compose")
+        </div>
+    }
+</div>

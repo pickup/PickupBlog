@@ -1,0 +1,61 @@
+﻿@model List<Category>
+
+@{
+    this.ViewBag.Title = "Reorder Categories";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                $('ul#ReorderList').sortable();
+
+                $('input#ReorderBtn').click(
+                    function() {
+                        var order = '';
+                        $('ul#ReorderList li').each(
+                            function() {
+                                order = order + $(this).attr('id') + ',';
+                            });
+
+                        $('#Order').val(order);
+                    });
+            });
+    </script>
+
+}
+
+
+<div id="main">
+    <h1>Reorder categories</h1>
+    <div class="catForm">
+        <fieldset>
+            <legend>
+                Reorder Categories
+            </legend>
+    
+            <div>Drag and Drop list items to reorder</div>
+
+            <ul id="ReorderList">
+                @foreach (Category cat in this.Model)
+                {
+                    <li id="@cat.CatID">@cat.Name</li>
+                }
+            </ul>
+            @using (this.Html.BeginForm("Reorder"))
+            {
+                <span>@this.Html.Hidden("Order")</span>
+                <div class="GridMargin leftButton">
+                    <input id="ReorderBtn" type="submit" value="Submit Order" />
+                </div>
+            }
+
+        </fieldset>
+    </div>
+    <div>
+        @this.Html.ActionLink("Back to list", "Manage")
+    </div>
+</div>

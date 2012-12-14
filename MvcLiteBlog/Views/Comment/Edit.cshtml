@@ -1,0 +1,128 @@
+﻿@model Comment
+
+@{
+    this.ViewBag.Title = "Edit Comment";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+@section ScriptSection
+{
+    <script src='@this.Url.Content("~/Scripts/ckeditor.js")' type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(
+            function() {
+                var css = appPath + 'Content/Admin.css';
+
+                var config = {
+                    toolbar:
+                        [
+                            ['Bold', 'Italic', 'Underline', '-', 'NumberedList', 'BulletedList', 'TextColor', 'BGColor', 'Indent', 'Outdent', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'AddCode', 'Source']
+                        ],
+                    height: '200px',
+                    entities: 'false',
+                    contentsCss: css
+                };
+
+                var editor = CKEDITOR.replace('commentEditor', config);
+
+                editor.on('pluginsLoaded', function(ev) {
+                    // If our custom dialog has not been registered, do that now.
+                    if (!CKEDITOR.dialog.exists('addCodeDialog')) {
+                        // We need to do the following trick to find out the dialog
+                        // definition file URL path. In the real world, you would simply
+                        // point to an absolute path directly, like "/mydir/mydialog.js".
+                        var href = appPath + 'Scripts/addCommentCodeDialog.js';
+
+                        // Finally, register the dialog.
+                        CKEDITOR.dialog.add('addCodeDialog', href);
+                    }
+
+                    // Register the command used to open the dialog.
+                    editor.addCommand('addCodeDialogCmd', new CKEDITOR.dialogCommand('addCodeDialog'));
+
+                    // Add the a custom toolbar buttons, which fires the above
+                    // command..
+                    editor.ui.addButton('AddCode',
+                        {
+                            label: 'Add Code',
+                            command: 'addCodeDialogCmd'
+                        });
+                });
+
+            });
+
+    </script>
+}
+
+<div id="main">
+    <h1>Edit comment</h1>
+    @using (this.Html.BeginForm("Edit", "Comment"))
+    {
+        <div class="commentForm">
+            <fieldset>
+                <legend>
+                    Edit Comment
+                </legend>
+                <div class="success">
+                    @this.ViewData["Message"]
+                </div>
+                <div class="error">
+                    @this.ViewData["ErrorMessage"]
+                </div>
+                <div>
+                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                </div>
+                <div>Comment ID: @this.Model.ID</div>
+            
+                <div>File ID</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.FileID, new { @class = "ReadOnlyTextBox", @ReadOnly = "true", @style = "width: 400px;" })
+                </div>
+
+                <div>Time</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Time, new { @class = "ReadOnlyTextBox", @ReadOnly = "true", @style = "width: 400px;" })
+                </div>
+
+                <div>Commenter name</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox", @style = "width: 400px;" })
+                    @this.Html.ValidationMessageFor(m => m.Name, "*")
+                </div>
+                <div>Url</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Url, new { @class = "TextBox", @style = "width: 400px;" })
+                </div>
+                <div>IP Address</div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.Ip, new { @class = "ReadOnlyTextBox", @ReadOnly = "True" })
+                </div>
+                <div>Comment</div>
+                <div>
+                    @this.Html.TextAreaFor(m => m.Text, new { @class = "TextBox", @id = "commentEditor" })
+                    @this.Html.ValidationMessageFor(m => m.Text, "*")
+                </div>
+                <div>
+                    Commented by Author: @this.Html.CheckBoxFor(m => m.IsAuthor)
+                </div>
+                <div class="button">
+                    <input type="submit" name="Submit" value="Update Comment" />
+                </div>
+                <div>
+                    @if (this.ViewBag.PageIndex == 1)
+                    {
+                        <span>@this.Html.ActionLink("Back to list", "Manage")</span>
+                    }
+                    else
+                    {
+                        <span>@this.Html.ActionLink("Back to list", "Manage", new { page = this.ViewBag.PageIndex })</span>
+                    }
+                </div>
+            </fieldset>
+        </div>
+    }
+
+</div>
+

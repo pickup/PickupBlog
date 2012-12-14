@@ -1,0 +1,38 @@
+﻿@using MvcLiteBlog.Models
+@model IEnumerable<IGrouping<int, IGrouping<MonthYear, PostInfo>>>
+@{
+    this.ViewBag.Title = "Archive";
+    this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Custom/archive.archive.js")"></script>
+}
+
+<div class="content">
+    <h1>Archive</h1>
+    <ul id="archive">
+        @foreach (IGrouping<int, IGrouping<MonthYear, PostInfo>> group1 in this.Model)
+        {
+            <li>
+                @group1.Key
+                <ul>
+                    @foreach (IGrouping<MonthYear, PostInfo> group2 in group1)
+                    {
+                        <li>
+                            @group2.Key.Month
+                            <ul>
+                                @foreach (PostInfo postInfo in group2)
+                                {
+                                    <li>@this.Html.ActionLink(postInfo.Title, "Index", "Post", new { id = postInfo.FileID }, null)</li>
+                                }
+                            </ul>
+                        </li>
+                    }
+                </ul>
+            </li>
+        }
+    </ul>
+</div>
+

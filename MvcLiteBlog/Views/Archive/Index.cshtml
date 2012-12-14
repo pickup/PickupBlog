@@ -1,0 +1,29 @@
+﻿@model List<PostInfo>
+
+@{
+    this.ViewBag.Title = "Posts By Month";
+    this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+@section ScriptSection
+{
+    <script src='@this.Url.Content("~/Scripts/ckeditor.js")' type="text/javascript"></script>
+    <script src='@this.Url.Content("~/Scripts/jquery-ckeditor.js")'  type="text/javascript"></script>
+    <script src='@this.Url.Content("~/Scripts/comment.js")' type="text/javascript"></script>
+    <script type="text/javascript">
+        var year = '@ViewBag.Year';
+    </script>
+}
+
+
+<div class="content">
+    <span class="caption">Archive : @this.ViewData["ArchiveName"] </span>
+</div>
+@foreach (PostInfo postInfo in this.Model)
+{
+    this.Html.RenderAction("PostControl", "Post", new { id = postInfo.FileID });
+} 
+<div id="commentForm">
+    @{ this.Html.RenderAction("CommentFormControl", "Comment"); }
+</div>
+

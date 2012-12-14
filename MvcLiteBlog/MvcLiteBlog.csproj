@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F28298D-BDC2-4F54-A362-BD5069EF441A}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcLiteBlog</RootNamespace>
+    <AssemblyName>MvcLiteBlog</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\MvcLiteBlog.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorCode, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\ColorCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\References\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\References\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlogEngine\ArchiveComp.cs" />
+    <Compile Include="BlogEngine\BlogComp.cs" />
+    <Compile Include="BlogEngine\PageComp.cs" />
+    <Compile Include="Controllers\PageController.cs" />
+    <Compile Include="Helpers\CacheHelper.cs" />
+    <Compile Include="BlogEngine\CategoryComp.cs" />
+    <Compile Include="BlogEngine\CommentComp.cs" />
+    <Compile Include="Helpers\ConfigHelper.cs" />
+    <Compile Include="BlogEngine\AuthorComp.cs" />
+    <Compile Include="Helpers\CommenterProfile.cs" />
+    <Compile Include="Helpers\AtomBool.cs" />
+    <Compile Include="Helpers\VisitorProfile.cs" />
+    <Compile Include="Helpers\CustomProfile.cs" />
+    <Compile Include="Helpers\EngineException.cs" />
+    <Compile Include="BlogEngine\SettingsComp.cs" />
+    <Compile Include="BlogEngine\DraftComp.cs" />
+    <Compile Include="BlogEngine\PostComp.cs" />
+    <Compile Include="BlogEngine\ProfileComp.cs" />
+    <Compile Include="BlogEngine\PublisherComp.cs" />
+    <Compile Include="BlogEngine\ServiceComp.cs" />
+    <Compile Include="BlogEngine\StatComp.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ArchiveController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
+    <Compile Include="Helpers\RssActionResult.cs" />
+    <Compile Include="Helpers\RssBool.cs" />
+    <Compile Include="Controllers\LiteBlogController.cs" />
+    <Compile Include="Extensions\InputHelper.cs" />
+    <Compile Include="Extensions\PagerExtension.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\KeywordConstraint.cs" />
+    <Compile Include="Helpers\KeywordConstraint2.cs" />
+    <Compile Include="Helpers\NumberConstraint.cs" />
+    <Compile Include="Helpers\FeedType.cs" />
+    <Compile Include="Models\ComposePageModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\ManageAppModel.cs" />
+    <Compile Include="Models\AuthorModel.cs" />
+    <Compile Include="Models\CatModel.cs" />
+    <Compile Include="Models\ChgPwdModel.cs" />
+    <Compile Include="Models\InsertCommentModel.cs" />
+    <Compile Include="Models\ComposePostModel.cs" />
+    <Compile Include="Helpers\MonthYear.cs" />
+    <Compile Include="Helpers\MonthYearComparer.cs" />
+    <Compile Include="Models\SavePageResultModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Attributes\MultiButtonAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Archive.xml" />
+    <Content Include="App_Data\Blog.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Category.xml" />
+    <Content Include="App_Data\Comment.xml" />
+    <Content Include="App_Data\Draft.xml" />
+    <Content Include="App_Data\Log.txt" />
+    <Content Include="App_Data\Profile.xml" />
+    <Content Include="App_Data\Rss.xml" />
+    <Content Include="App_Data\Service.xml" />
+    <Content Include="App_Data\Settings.xml" />
+    <Content Include="App_Data\Stat.xml" />
+    <Content Include="App_Data\User.xml" />
+    <Content Include="Content\Admin.css" />
+    <Content Include="Content\Blog.css" />
+    <Content Include="Content\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Content\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Content\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Content\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Content\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Content\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Content\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Content\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Content\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Content\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="Content\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Content\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\le-frog\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Content\simpletree\down.png" />
+    <Content Include="Content\simpletree\right.png" />
+    <Content Include="Content\simpletree.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\addCodeDialog.js" />
+    <Content Include="Scripts\ckeditor.js" />
+    <Content Include="Scripts\comment.js" />
+    <Content Include="Scripts\compose.js" />
+    <Content Include="Scripts\addCommentCodeDialog.js" />
+    <Content Include="Scripts\Custom\plugins\simpletree.js" />
+    <Content Include="Scripts\post-compose.js" />
+    <Content Include="Scripts\images\spacer.gif" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-1.6.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="Scripts\lang\af.js" />
+    <Content Include="Scripts\lang\ar.js" />
+    <Content Include="Scripts\lang\bg.js" />
+    <Content Include="Scripts\lang\bn.js" />
+    <Content Include="Scripts\lang\bs.js" />
+    <Content Include="Scripts\lang\ca.js" />
+    <Content Include="Scripts\lang\cs.js" />
+    <Content Include="Scripts\lang\cy.js" />
+    <Content Include="Scripts\lang\da.js" />
+    <Content Include="Scripts\lang\de.js" />
+    <Content Include="Scripts\lang\el.js" />
+    <Content Include="Scripts\lang\en-au.js" />
+    <Content Include="Scripts\lang\en-ca.js" />
+    <Content Include="Scripts\lang\en-gb.js" />
+    <Content Include="Scripts\lang\en.js" />
+    <Content Include="Scripts\lang\eo.js" />
+    <Content Include="Scripts\lang\es.js" />
+    <Content Include="Scripts\lang\et.js" />
+    <Content Include="Scripts\lang\eu.js" />
+    <Content Include="Scripts\lang\fa.js" />
+    <Content Include="Scripts\lang\fi.js" />
+    <Content Include="Scripts\lang\fo.js" />
+    <Content Include="Scripts\lang\fr-ca.js" />
+    <Content Include="Scripts\lang\fr.js" />
+    <Content Include="Scripts\lang\gl.js" />
+    <Content Include="Scripts\lang\gu.js" />
+    <Content Include="Scripts\lang\he.js" />
+    <Content Include="Scripts\lang\hi.js" />
+    <Content Include="Scripts\lang\hr.js" />
+    <Content Include="Scripts\lang\hu.js" />
+    <Content Include="Scripts\lang\is.js" />
+    <Content Include="Scripts\lang\it.js" />
+    <Content Include="Scripts\lang\ja.js" />
+    <Content Include="Scripts\lang\km.js" />
+    <Content Include="Scripts\lang\ko.js" />
+    <Content Include="Scripts\lang\lt.js" />
+    <Content Include="Scripts\lang\lv.js" />
+    <Content Include="Scripts\lang\mn.js" />
+    <Content Include="Scripts\lang\ms.js" />
+    <Content Include="Scripts\lang\nb.js" />
+    <Content Include="Scripts\lang\nl.js" />
+    <Content Include="Scripts\lang\no.js" />
+    <Content Include="Scripts\lang\pl.js" />
+    <Content Include="Scripts\lang\pt-br.js" />
+    <Content Include="Scripts\lang\pt.js" />
+    <Content Include="Scripts\lang\ro.js" />
+    <Content Include="Scripts\lang\ru.js" />
+    <Content Include="Scripts\lang\sk.js" />
+    <Content Include="Scripts\lang\sl.js" />
+    <Content Include="Scripts\lang\sr-latn.js" />
+    <Content Include="Scripts\lang\sr.js" />
+    <Content Include="Scripts\lang\sv.js" />
+    <Content Include="Scripts\lang\th.js" />
+    <Content Include="Scripts\lang\tr.js" />
+    <Content Include="Scripts\lang\uk.js" />
+    <Content Include="Scripts\lang\vi.js" />
+    <Content Include="Scripts\lang\zh-cn.js" />
+    <Content Include="Scripts\lang\zh.js" />
+    <Content Include="Scripts\lang\_languages.js" />
+    <Content Include="Scripts\lang\_translationstatus.txt" />
+    <Content Include="Scripts\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\plugins\a11yhelp\lang\en.js" />
+    <Content Include="Scripts\plugins\a11yhelp\lang\he.js" />
+    <Content Include="Scripts\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\plugins\autogrow\plugin.js" />
+    <Content Include="Scripts\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\plugins\iframedialog\plugin.js" />
+    <Content Include="Scripts\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\plugins\link\images\anchor.gif" />
+    <Content Include="Scripts\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="Scripts\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\plugins\styles\styles\default.js" />
+    <Content Include="Scripts\plugins\tableresize\plugin.js" />
+    <Content Include="Scripts\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="Scripts\plugins\uicolor\lang\en.js" />
+    <Content Include="Scripts\plugins\uicolor\lang\he.js" />
+    <Content Include="Scripts\plugins\uicolor\plugin.js" />
+    <Content Include="Scripts\plugins\uicolor\uicolor.gif" />
+    <Content Include="Scripts\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="Scripts\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="Scripts\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="Scripts\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="Scripts\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="Scripts\plugins\uicolor\yui\yui.js" />
+    <Content Include="Scripts\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\skins\kama\dialog.css" />
+    <Content Include="Scripts\skins\kama\editor.css" />
+    <Content Include="Scripts\skins\kama\icons.png" />
+    <Content Include="Scripts\skins\kama\icons_rtl.png" />
+    <Content Include="Scripts\skins\kama\images\dialog_sides.gif" />
+    <Content Include="Scripts\skins\kama\images\dialog_sides.png" />
+    <Content Include="Scripts\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\skins\kama\images\mini.gif" />
+    <Content Include="Scripts\skins\kama\images\noimage.png" />
+    <Content Include="Scripts\skins\kama\images\sprites.png" />
+    <Content Include="Scripts\skins\kama\images\sprites_ie6.png" />
+    <Content Include="Scripts\skins\kama\images\toolbar_start.gif" />
+    <Content Include="Scripts\skins\kama\skin.js" />
+    <Content Include="Scripts\skins\kama\templates.css" />
+    <Content Include="Scripts\skins\office2003\dialog.css" />
+    <Content Include="Scripts\skins\office2003\editor.css" />
+    <Content Include="Scripts\skins\office2003\icons.png" />
+    <Content Include="Scripts\skins\office2003\icons_rtl.png" />
+    <Content Include="Scripts\skins\office2003\images\dialog_sides.gif" />
+    <Content Include="Scripts\skins\office2003\images\dialog_sides.png" />
+    <Content Include="Scripts\skins\office2003\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\skins\office2003\images\mini.gif" />
+    <Content Include="Scripts\skins\office2003\images\noimage.png" />
+    <Content Include="Scripts\skins\office2003\images\sprites.png" />
+    <Content Include="Scripts\skins\office2003\images\sprites_ie6.png" />
+    <Content Include="Scripts\skins\office2003\skin.js" />
+    <Content Include="Scripts\skins\office2003\templates.css" />
+    <Content Include="Scripts\skins\v2\dialog.css" />
+    <Content Include="Scripts\skins\v2\editor.css" />
+    <Content Include="Scripts\skins\v2\icons.png" />
+    <Content Include="Scripts\skins\v2\icons_rtl.png" />
+    <Content Include="Scripts\skins\v2\images\dialog_sides.gif" />
+    <Content Include="Scripts\skins\v2\images\dialog_sides.png" />
+    <Content Include="Scripts\skins\v2\images\dialog_sides_rtl.png" />
+    <Content Include="Scripts\skins\v2\images\mini.gif" />
+    <Content Include="Scripts\skins\v2\images\noimage.png" />
+    <Content Include="Scripts\skins\v2\images\sprites.png" />
+    <Content Include="Scripts\skins\v2\images\sprites_ie6.png" />
+    <Content Include="Scripts\skins\v2\images\toolbar_start.gif" />
+    <Content Include="Scripts\skins\v2\skin.js" />
+    <Content Include="Scripts\skins\v2\templates.css" />
+    <Content Include="Scripts\themes\default\theme.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Page\Index.cshtml" />
+    <Content Include="Views\Page\Manage.cshtml" />
+    <Content Include="Views\Page\Compose.cshtml" />
+    <Content Include="Scripts\Custom\page.compose.js" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Http.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.WebRequest.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.Formatting.dll" />
+    <None Include="_bin_deployableAssemblies\System.Net.Http.dll" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.WebData.xml" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.WebData.dll" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.Data.xml" />
+    <None Include="_bin_deployableAssemblies\WebMatrix.Data.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Administration.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Administration.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.xml" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.dll" />
+    <None Include="_bin_deployableAssemblies\NuGet.Core.dll" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.xml" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_SiteLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\TitleControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MenuControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\AdControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\CategoryControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\ArchiveControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\StatControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PostControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\CommentFormControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\CommentControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Archive\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Archive\Archive.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comment\Recent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\LiteBlog\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\AdminMenuControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\AdminTitleControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\LogOnUserControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\ChgPwd.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Author.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Application.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\Manage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\Compose.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comment\Manage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Author\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Author\Manage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\Manage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\Reorder.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comment\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Pages\" />
+    <Folder Include="App_Data\Posts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Author\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Category\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\RecentCommentsTile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\MostPopularTile.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiteBlog.Common\LiteBlog.Common.csproj">
+      <Project>{0E962CAD-F632-4C7E-A57F-9A98D69FC874}</Project>
+      <Name>LiteBlog.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\AttachmentControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\AutoSaveControl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comment\Moderate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\ManageDraft.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Post\Preview.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\Custom\archive.archive.js" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49370</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/MvcLiteBlog</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

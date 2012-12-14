@@ -1,0 +1,62 @@
+﻿@model MvcLiteBlog.Models.ManageAppModel
+
+@{
+    this.ViewBag.Title = "Manage Application";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+
+@using (this.Html.BeginForm("Application", "Admin"))
+{
+    <div id="main">
+        <h1>Application settings</h1>
+        <div class="appForm">
+            <fieldset>
+                <legend>Application Settings</legend>
+                <div class="success">
+                    @this.ViewData["SuccessMessage"]
+                </div>
+                <div>
+                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                </div>
+                <div>
+                    Blog Name
+                </div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.BlogName, new { @class = "TextBox", @style = "width: 500px;" })
+                    @this.Html.ValidationMessageFor(m => m.BlogName, "*")
+                </div>
+                @*<div>
+                    Blog Description
+                </div>
+                <div>
+                    <textarea id="PostEditor" name="BlogDesc" class="TextBox" rows="10" cols="60">@this.Model.BlogDesc</textarea>
+                </div>*@
+                <div>
+                    Number of Posts in Home page
+                </div>
+                <div>
+                    @this.Html.DropDownList("PostCount", this.Model.PostCountList, new { @class = "TextBox" })
+                </div>
+                <div>
+                    Comment moderation
+                </div>
+                <div>
+                    @this.Html.DropDownList("CommentModeration", this.Model.ModerationList, new { @class = "TextBox" }) 
+                </div>
+                <div>
+                    Timezone
+                </div>
+                <div>
+                    @this.Html.DropDownList("Timezone", this.ViewData.Model.TimeZoneList, new { @class = "TextBox" })
+                </div>
+                <div class="button">
+                    <input type="submit" name="Submit" value="Update" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+}
+
+

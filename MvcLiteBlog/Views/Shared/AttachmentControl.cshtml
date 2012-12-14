@@ -1,0 +1,12 @@
+﻿@model List<Document>
+
+<table id="attachments">
+    @foreach (Document doc in this.Model)
+    {
+        <tr>
+            <td>@doc.Path</td>
+            <td style="width: 80px; text-align: center;"><a class="deleteAttachment" href="">Delete</a></td>
+        </tr>
+    }
+</table>
+

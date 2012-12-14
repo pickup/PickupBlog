@@ -1,0 +1,41 @@
+﻿@model MvcLiteBlog.Models.InsertCommentModel
+           
+@using (this.Html.BeginForm("Create", "Comment"))
+{
+    <div class="ModalWindow">
+        <fieldset>
+            <legend>Your comment</legend>
+            <div class="">
+                <span id="commentResult"></span>
+                <input type="hidden" name="FileID" id="_hdnFileID" />
+                @this.Html.HiddenFor(m => m.IsAuthor)
+            </div>
+            <div class="editor_label">
+                <label for="Name">Name:</label>
+            </div>
+            <div class="editor_field">
+                @this.Html.TextBoxFor(m => m.Name, new { placeholder = "Your name" })
+            </div>
+            <div class="editor_label">
+                <label for="Url">Url:</label>
+            </div>
+            <div class="editor_field">
+                @this.Html.TextBoxFor(m => m.Url, new { placeholder = "Your blog URL" })
+           
+            </div>
+            <div class="editor_label">
+                <label for="CommentText">Comment:</label>
+            </div>
+            <div class="editor_field">
+                <textarea id="commentEditor" name="CommentText" rows="10" cols="30" placeholder="Please leave your comment"></textarea>
+            </div>
+            <div class="button">
+                <a href="#" id="addCommentLink">Submit</a>
+                <a href="#" id="closeCommentLink">Close</a>
+            </div>
+        </fieldset>
+    </div>
+}
+
+
+ 

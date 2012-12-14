@@ -1,0 +1,28 @@
+﻿@model List<Category>
+@{
+    this.ViewBag.Title = "Manage Categories";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<div id="main">
+    <h1>Manage categories</h1>
+    <div>
+        <div class="GridMargin leftButton">
+            @this.Html.ActionLink("Create Category", "Create") &nbsp;&nbsp;&nbsp;&nbsp;
+            @this.Html.ActionLink("Reorder categories", "Reorder")
+        </div>
+        <div class="success">
+            @(this.TempData["Message"] == null ? string.Empty : this.TempData["Message"].ToString())
+        </div>
+        @{
+            var grid = new WebGrid(this.Model, canSort: false);
+
+        }
+
+
+        @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => this.Html.ActionLink("Edit", "Edit", new { id = item.CatID }), "catLinkStyle"), grid.Column(string.Empty, "Delete", (item) => this.Html.ActionLink("Delete", "Delete", new { id = item.CatID }), "catLinkStyle"), grid.Column("CatID", "Category ID", null, "catIdStyle"), grid.Column("Name", "Category Name", null, "catNameStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+        
+    </div>
+    <div style="clear: both;">
+        &nbsp;</div>
+</div>

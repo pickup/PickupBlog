@@ -1,0 +1,38 @@
+﻿@model List<Author>
+
+@{
+    ViewBag.Title = "Manage Authors";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div id="main">
+    <h1>Manage authors</h1>
+    <div class="GridMargin leftButton">
+        @Html.ActionLink("Create Author", "Create")
+    </div>
+    <div class="success">
+        @(TempData["Message"] == null ? string.Empty : TempData["Message"].ToString())
+    </div>
+
+    @{
+        var grid = new WebGrid(Model, canSort: false);
+
+    }
+
+    @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => Html.ActionLink("Edit", "Edit", new { id = item.ID }), "authLinkStyle"), grid.Column(string.Empty, "Delete", (item) => Html.ActionLink("Delete", "Delete", new { id = item.ID }), "authLinkStyle"), grid.Column(string.Empty, "Unlock", (item) =>
+        {
+            if (item.Locked)
+            {
+                return Html.ActionLink("Unlock", "Unlock", new { id = item.ID });
+            }
+            else
+            {
+                return "Unlocked";
+            }
+        }, "authLinkStyle"), grid.Column("ID", "Name", null, "authIdStyle"), grid.Column("Name", "Display Name", null, "authNameStyle"), grid.Column("Email", "Email", null, "authEmailStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+
+  
+</div>
+
+

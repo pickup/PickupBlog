@@ -1,0 +1,85 @@
+﻿@model ManageAuthorModel
+
+@{
+    this.ViewBag.Title = "Manage Author";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<div id="main">
+    @using (this.Html.BeginForm("Author", "Admin"))
+    {
+        <div class="authorForm">
+            <fieldset>
+                <legend>
+                    @this.Model.CommandName
+                </legend>
+                <div class="success">
+                    @this.ViewData["Message"]
+                </div>
+                <div>
+                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                </div>
+                <div>Author name</div>
+                <div>
+                    <input type="text" name="Name" class="TextBox"  value="@this.Model.Name"/>
+                    @this.Html.ValidationMessage("Name", "*")
+                </div>
+                <div>Display name</div>
+                <div>
+                    <input type="text" name="DisplayName" class="TextBox"  value="@this.Model.DisplayName"/>
+                </div>        
+                <div>Email</div>
+                <div>
+                    <input type="text" name="Email" class="TextBox"  value="@this.Model.Email"/>
+                    @this.Html.ValidationMessage("Email", "*")
+                </div>       
+                <div class="button">
+                    <input type="submit" name="Submit" value="Submit" />
+                    @if (this.Model.CommandName == "Edit Author")
+                    {
+                        @this.Html.ActionLink("Cancel", "Author", "Admin", new { id = string.Empty }, null)
+                    }
+                </div>
+            </fieldset>
+        </div>
+    }
+    <div class="success">
+        @this.TempData["Message"] == null ? "" : TempData["Message"].ToString()
+    </div>
+    <table class="GridContent">
+        <thead class="GridHeader">
+            <tr>
+                <td width="65">Edit</td>
+                <td width="65">Delete</td>
+                <td width="65">Unlock</td>
+                <td width="150">Name</td>
+                <td width="150">Display Name</td>
+                <td width="150">Email</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Author author in this.Model.Authors)
+            {
+                <tr>
+                
+                    <td>@this.Html.ActionLink("Edit", "Author", new { id = author.ID })</td>
+                    <td><@this.Html.ActionLink("Delete", "DeleteAuthor", new { id = author.ID })</td>
+                    @if (author.Locked)
+                    {
+                        <td>@this.Html.ActionLink("Unlock", "UnlockAuthor", new { id = author.ID })</td>
+                    }
+                    else
+                    {
+                        <td>Unlocked</td>
+                    }
+                    <td>@author.ID</td>
+                    <td>@author.Name</td>
+                    <td>@author.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

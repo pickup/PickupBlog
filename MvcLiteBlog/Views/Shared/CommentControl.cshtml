@@ -1,0 +1,53 @@
+﻿@model List<Comment>
+         
+<div class="comment">
+    &nbsp;
+</div>          
+@foreach (Comment comment in this.Model)
+{
+    if (comment.IsAuthor)
+    {
+        <div class="authorBg">
+            <div class="commentHeader">
+                <a name="@comment.ID"></a>
+                Commented by 
+                @if (comment.Url == string.Empty)
+                {
+                    @comment.Name
+                }
+                else
+                {
+                    <a href="@comment.Url" target="_blank">@comment.Name</a>
+                }
+                <span> at @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)</span>
+            </div>
+            <div class="comment">
+                @this.Html.Raw(comment.HighlightedCode)
+            </div>
+        </div>
+    }
+    else
+    {
+        <div>
+            <div class="commentHeader">
+                <a name="@comment.ID"></a>
+                Commented by 
+                @if (comment.Url == string.Empty)
+                {
+                    @comment.Name
+                }
+                else
+                {
+                    <a href="@comment.Url" target="_blank">@comment.Name</a>
+                }
+                <span> at @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)</span>
+            </div>
+            <div class="comment">
+                @this.Html.Raw(comment.HighlightedCode)
+            </div>
+        </div>
+    }
+}
+ 
+
+

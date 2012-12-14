@@ -1,0 +1,18 @@
+﻿@model Stat
+<div class="widget">
+    <div class="widgetTitle">Statistics</div>
+    <ul class="widgetList">
+        <li>Visits: <span style="color: Navy;">@this.Model.Visits</span></li>
+        <li>Page Views: <span style="color: Navy;">@this.Model.Hits</span></li>
+        <li>Monthly visitors: <span style="color: Navy;">@this.Model.Visitors</span></li>
+        <li>Feed Count: <span style="color: Navy;">@this.Model.FeedCount</span></li>
+        @if (this.Model.PageVisits.Count > 0)
+        {
+            foreach(KeyValuePair<string, PostInfo>kvp in this.Model.PageVisits.Take(1))
+            {
+                <li>Most visited page: @this.Html.ActionLink(kvp.Value.Title, "Index", "Post", new { id = kvp.Key }, null) (@kvp.Value.Views.ToString())</li>
+            }
+        }
+    </ul>
+    
+</div>

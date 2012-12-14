@@ -1,0 +1,15 @@
+﻿@model List<Category>
+
+<div class="widget">
+    <div class="widgetTitle">
+        Categories
+    </div>
+    <ul class="widgetList">
+        @foreach (Category cat in this.Model)
+        {
+            <li>
+                @this.Html.ActionLink(string.Format("{0} ({1})", cat.Name, cat.Count), "Index", "Category", new { id = cat.CatID }, null)
+            </li>
+        }
+    </ul>
+</div>

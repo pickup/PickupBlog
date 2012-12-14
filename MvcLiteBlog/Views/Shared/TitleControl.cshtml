@@ -1,0 +1,16 @@
+﻿@model List<LiteBlog.Common.Page>
+<div id="headerTitle">
+    @this.Html.Raw((string)this.ViewData["Title"])
+</div>
+<div id="headerMenu">
+    <ul>
+        <li>@this.Html.ActionLink("Home", "Index", "Home") </li>
+        <li>@this.Html.ActionLink("Admin", "Index", "Admin") </li>
+        @*<li>@this.Html.ActionLink("LiteBlog", "Index", "LiteBlog") </li>*@
+        @foreach (var page in Model)
+        {
+            <li>@this.Html.ActionLink(page.Title, "Index", "Page", new { id = page.FileId }, null)</li>
+        }
+    </ul>
+</div>
+<div id="headerStrip">&nbsp;</div>

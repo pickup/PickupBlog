@@ -1,0 +1,46 @@
+﻿@model MvcLiteBlog.Models.LoginModel
+
+@{
+    this.ViewBag.Title = "Login Page";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+@using (this.Html.BeginForm("Index", "Admin"))
+{
+    <div id="main">
+        <div class="loginForm">
+            <fieldset>
+                <legend>Login</legend>
+                <div>
+                    @if (this.ViewData["ReturnUrl"] != null)
+                    {
+                        <span>@this.Html.Hidden("ReturnUrl", this.ViewData["ReturnUrl"].ToString())</span>
+                    }
+
+                    @this.Html.ValidationSummary("Login was unsuccessful. Please try again.")
+                </div>
+                <div>
+                    Login:
+                </div>
+                <div>
+                    @this.Html.TextBoxFor(m => m.UserName, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.UserName, "*")
+                </div>
+                <div>
+                    Password: 
+                </div>
+                <div>
+                    @this.Html.PasswordFor(m => m.Password, new { @class = "TextBox" })
+                    @this.Html.ValidationMessageFor(m => m.Password, "*")
+                    @this.Html.ActionLink("Change Password", "ChgPwd", "Admin")
+                </div>
+                <div class="button">
+                    <input type="submit" name="Submit" value="Login" />
+                </div>
+            </fieldset>
+        </div>
+    </div>
+}
+
+

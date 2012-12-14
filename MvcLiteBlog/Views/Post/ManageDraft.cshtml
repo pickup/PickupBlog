@@ -1,0 +1,37 @@
+﻿@model List<PostInfo>
+
+@{
+    this.ViewBag.Title = "View all posts";
+    this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+@section ScriptSection
+{
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+
+            });
+
+    </script>
+}
+
+<div id="main">
+    <h1>Manage drafts</h1>  
+    <div class="success">
+        @this.TempData["Message2"]
+    </div>
+
+    @{
+        var grid = new WebGrid(this.Model, canSort: false);
+
+    }
+
+
+    @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => this.Html.ActionLink("Edit", "Compose", "Post", new { id = item.FileID }, null), "draftLinkStyle"), grid.Column(string.Empty, "Delete", (item) => this.Html.ActionLink("Delete", "DeleteDraft", "Post", new { id = item.FileID }, null), "draftLinkStyle"), grid.Column(string.Empty, "Created Date", (item) => item.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture), "draftDateStyle"), grid.Column("Title", "Title", null, "draftTitleStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+
+  
+</div>
+
+

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<KeyValuePair<string, PostInfo>>
+<div class="widget">
+    <div class="widgetTitle">
+        Popular
+    </div>
+    <ul id="popular" class="widgetList">
+        @foreach (KeyValuePair<string, PostInfo> kvp in this.Model)
+        {
+            <li style="display: none;"><a href="@this.Url.Action("Index", "Post", new { id = kvp.Key }, null)">@kvp.Value.Title</a> (@kvp.Value.Views.ToString())</li>
+        }
+    </ul>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                var cur = 0;
+                var max = $('#popular li').length;
+                var prev = max - 1;
+
+                flipTile();
+                setInterval(flipTile, 5000);
+
+                function flipTile() {
+                    $('#popular li:eq(' + prev + ')').hide();
+                    $('#popular li:eq(' + cur + ')').show();
+                    cur++;
+                    if (cur > max - 1)
+                        cur = 0;
+                    prev++;
+                    if (prev > max - 1)
+                        prev = 0;
+                }
+            }
+        );
+
+    </script>
+</div>
