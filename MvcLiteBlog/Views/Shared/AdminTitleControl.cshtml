@@ -15,7 +15,7 @@
 </div>
 <div id="headerStrip">
     @{
-        var loginString = (bool)this.ViewData["IsAuthenticated"] ? "Logout" : "Login";
+        var loginString = (bool)this.ViewData["IsAuthenticated"] ? "退出" : "登录";
         var loginAction = (bool)this.ViewData["IsAuthenticated"] ? "Logout" : "Index";
 
     }
