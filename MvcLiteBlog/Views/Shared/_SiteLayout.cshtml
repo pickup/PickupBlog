@@ -23,20 +23,17 @@
         </div>
         <div id="middle">
             <div id="left">
-                @*@{Html.RenderPartial("AdControl");}*@
+                @this.Html.Action("MostPopularTile", "Home")
+                @this.Html.Action("RecentCommentsTile", "Comment")
                 @this.Html.Action("Widget", "Category")
                 @this.Html.Action("Widget", "Archive")
                 @this.Html.Action("Stat", "Home")
+                @this.Html.Partial("AdControl")
             </div>
 
 
             <div id="center">
                 @this.RenderBody()
-            </div>
-            <div id="right">
-                @this.Html.Action("MostPopularTile", "Home")
-                @this.Html.Action("RecentCommentsTile", "Comment")
-                @this.Html.Partial("AdControl")
             </div>
 
             <div style="clear: both;">&nbsp;</div>

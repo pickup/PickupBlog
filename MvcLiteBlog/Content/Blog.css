@@ -57,7 +57,7 @@ legend
 div.page
 {
     width: 100%;
-    min-width: 1200px;
+    min-width: 960px;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -66,15 +66,15 @@ div.page
 
 #header
 {
-    background-color: #009E49;
-    color: #fff;
+    background-color: #fff;
+    color: #666;
     font-family: 'Segoe UI', Segoe, Futura, Helvetica;
 }
 
 #headerTitle
 {
     float: left;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 20px;
     font-size: 2.5em;
     padding-top: 8px;
     padding-bottom: 12px;
@@ -103,37 +103,41 @@ div.page
 
     #headerMenu a:link, #headerMenu a:visited
     {
-        color: #fff;
+        color: #004a82;
         text-decoration: none;
     }
 
     #headerMenu a:hover
     {
-        color: dodgerblue;
+        color: #fff;
+        background-color: #004a82;
     }
 
 #headerStrip
 {
-    background-color: darkgray;
+    background-color: #fff;
+    border-bottom:1px dashed #666;
     clear: both;
+    height:1px;
 }
 
 #middle
 {
     margin: 0;
     padding: 0;
-    background-color: lightgray;
+    background-color: white;
 }
 
 
 
 #left
 {
-    width: 17%;
+    width: 25%;
     vertical-align: top;
     float: left;
     margin: 0;
-    padding: 0;
+    padding-top: 30px;
+    
 }
 
 #main
@@ -147,33 +151,22 @@ div.page
 #center
 {
     vertical-align: top;
-    width: 66%;
+    width: 75%;
     float: left;
     background-color: #fff;
     margin: 0;
     padding: 0;
 }
 
-#right
-{
-   /* width: 220px; */
-    width: 17%;
-    vertical-align: top;
-    float: right;
-    margin: 0;
-    padding: 0;
-}
-
-
 #footer
 {
     display: block;
-    color: #fff;
+    color: #333;
     padding: 6px;
     text-align: right;
     font-family: Segoe UI, Verdana;
     font-size: 1em;
-    background-color: #009E49;
+    background-color: #fff;
 }
 
 /* End Master page styles*/
@@ -185,28 +178,30 @@ div.widget
     font-family: Segoe UI, Segoe, Arial;
     font-size: .9em;
     line-height: 110%;
-    background-color: #009E49;
-    color: White;
+    background-color: #fff;
+    color: #333;
     margin: 8px;
+    border-bottom:1px dashed #bbb;
 }
 
     div.widget a:link, div.widget a:visited
     {
-        color: White;
+        color: #004a82;
         text-decoration: none;
     }
 
     div.widget a:Hover
     {
-        color: lawngreen;
-        text-decoration: underline;
+        color: #fff;
+        background-color: #004a82;
+        text-decoration: none;
     }
 
 div.widgetTitle
 {
     font-size: 1.4em;
-    color: White;
-    text-align: right;
+    color: #333;
+    text-align: left;
     padding: 8px;
 }
 
@@ -229,12 +224,12 @@ ul.widgetList
 
 #popular
 {
-    height: 120px;
+    /*height: 120px;*/
 }
 
 #recentComments
 {
-    height: 120px;
+    /*height: 120px;*/
 }
 
 .widgetBottom
@@ -255,21 +250,23 @@ div.post
 {
     font-family: 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
-    padding: 5px 0;
+    padding: 10px 0 20px 0;
     margin: 0;
     width: 90%;
     margin: auto;
+    border-bottom: 1px dashed #bbb;
 }
 
     div.post a, div.post a:visited
     {
-        text-decoration: underline;
-        color: #00f;
+        text-decoration: none;
+        color: #004a82;
     }
 
         div.post a:hover
         {
-            color: #f00;
+            color: #fff;
+            background-color: #004a82;
         }
 
 div.postContent
@@ -283,12 +280,11 @@ h1, .title
 {
     font-family: 'Segoe UI', Segoe, Helvetica;
     word-wrap: normal;
-    font-size: 3em;
+    font-size: 2em;
     line-height: 110%;
     font-weight: normal;
     word-spacing: 2px;
     color: #2778ec;
-    border-bottom: 2px solid #009E49;
     padding-bottom: 4px;
     margin-bottom: 12px;
 }
@@ -316,7 +312,7 @@ pre.commentCode
 
 .postMeta
 {
-    color: #f00;
+    color: #999;
     padding-bottom: 5px;
 }
 
@@ -330,7 +326,7 @@ pre.commentCode
 
 .comment
 {
-    border-bottom: solid 2px #009E49;
+    border-bottom: dashed 1px #bbb;
     padding: 5px 10px;
     font-size: 1em;
 }
