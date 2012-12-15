@@ -1,8 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Profiles>
-  <Profile UserName="Admin" LastActivity="12/14/2012 09:27 PM" LastUpdated="12/14/2012 09:27 PM">
+  <Profile UserName="Admin" LastActivity="12/15/2012 12:44 PM" LastUpdated="12/14/2012 09:27 PM">
     <Url></Url>
     <Name></Name>
+    <IPAddress>::1</IPAddress>
+  </Profile>
+  <Profile UserName="f8e0a441-61f8-4653-b6c1-8b614ad40e9c" LastActivity="12/15/2012 12:42 PM" LastUpdated="12/15/2012 12:42 PM">
+    <Url></Url>
+    <Name></Name>
+    <IPAddress>::1</IPAddress>
+  </Profile>
+  <Profile UserName="0aecb305-69ac-4ad7-a9c1-42c75f725251" LastActivity="12/15/2012 12:44 PM" LastUpdated="12/15/2012 12:44 PM">
+    <Url></Url>
+    <Name>zdy</Name>
     <IPAddress>::1</IPAddress>
   </Profile>
 </Profiles>

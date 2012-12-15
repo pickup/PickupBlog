@@ -1,6 +1,0 @@
-D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlLayer.xml
-D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlLayer.dll
-D:\work\Pickup\LiteBlog\liteblog-97885\MvcLiteBlog\bin\LiteBlog.XmlLayer.pdb
-D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlLayer\obj\Debug\LiteBlog.XmlLayer.csprojResolveAssemblyReference.cache
-D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlLayer\obj\Debug\LiteBlog.XmlLayer.dll
-D:\work\Pickup\LiteBlog\liteblog-97885\LiteBlog.XmlLayer\obj\Debug\LiteBlog.XmlLayer.pdb
