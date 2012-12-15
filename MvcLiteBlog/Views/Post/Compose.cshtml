@@ -1,6 +1,6 @@
 ﻿@model MvcLiteBlog.Models.ComposePostModel
 @{
-    this.ViewBag.Title = "Compose";
+    this.ViewBag.Title = "创建文章_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -11,27 +11,29 @@
     <script type="text/javascript" src='@this.Url.Content("~/Scripts/post-compose.js")'></script>
 }
 <div id="main">
-    <h1>Compose</h1>
+    <h1>创建文章</h1>
     @using (this.Html.BeginForm("Compose", "Post", FormMethod.Post, new { encType = "multipart/form-data" }))
     {
         <div class="leftCompose">
             <div>
-                @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                @this.Html.ValidationSummary("更新数据出错，请重试。")
                 @this.Html.Hidden("DraftID")
             </div>
             <div class="error">
                 @this.ViewData["Message"]
             </div>
             <div>
-                Title: @this.Html.TextBoxFor(m => m.Title, new { @class = "TextBox", @style = "width: 530px;" })
+                标题：
+                @this.Html.TextBoxFor(m => m.Title, new { @class = "TextBox", @style = "width: 530px;" })
                 @this.Html.ValidationMessageFor(m => m.Title, "*")
             </div>
             <div>
-                Uploaded files:
+                已上传文件：
                 @this.Html.Partial("AttachmentControl", this.Model.Post.Documents)
             </div>
             <div>
-                Post Contents: <span class="blue">Click Add Code button to add code</span>
+                文章内容：
+                <span class="blue">点击“Add Code”按钮以添加代码</span>
                 <textarea id="PostEditor" name="Content" style="width: 530px;" cols="30" rows="10">@this.Model.Content</textarea>
             </div>
             <div>
@@ -40,7 +42,7 @@
         </div>
         <div class="rightCompose">
             <div>
-                Publish date:</div>
+                发布日期：</div>
             <div>
                 @if (this.Model.Post.Type == PostType.New)
                 {
@@ -52,12 +54,12 @@
                 }
             </div>
             <div>
-                Category:</div>
+                所属分类：</div>
             <div>
                 @this.Html.ListBox("CatID", this.Model.CategoryList, new { @class = "CatList" })
             </div>
             <div>
-                Upload files:
+                上传文件：
                 <br />
                 @this.ViewData["Message2"]
             </div>
@@ -68,14 +70,14 @@
             <div>
                 <input type="file" name="Upload3" class="TextBox" style="width: 80%;" /></div>
             <div class="button">
-                <input type="submit" name="Upload" value="Upload" /></div>
+                <input type="submit" name="Upload" value="上传" /></div>
         </div>
         <div style="clear: both;">
             <div class="button">   
-                <input type="submit" name="Preview" value="Preview" />
-                <input type="submit" name="Save" value="Save" />
-                <input type="submit" name="Publish" value="Publish" />
-                <input type="submit" name="Close" value="Close" />
+                <input type="submit" name="Preview" value="预览" />
+                <input type="submit" name="Save" value="保存" />
+                <input type="submit" name="Publish" value="发布" />
+                <input type="submit" name="Close" value="关闭" />
             </div>
             <div id="saveMessage" style="text-align: center;">
             </div>

@@ -1,14 +1,14 @@
 ﻿@model List<LiteBlog.Common.Page>
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "管理页面";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <div id="main">
-    <h1>Manage pages</h1>
+    <h1>管理页面</h1>
     <div>
         <div class="GridMargin leftButton">
-            @this.Html.ActionLink("Compose Page", "Compose")
+            @this.Html.ActionLink("创建页面", "Compose")
         </div>
         <div class="success">
             @(this.TempData["Message"] == null ? string.Empty : this.TempData["Message"].ToString())
@@ -18,15 +18,15 @@
             
             var grid = new WebGrid(this.Model, canSort: false);
 
-            @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => this.Html.ActionLink("Edit", "Compose", new { id = item.FileId }), "pageLinkStyle"),
-                                            grid.Column(string.Empty, "Delete", (item) => this.Html.ActionLink("Delete", "Delete", new { id = item.FileId }), "pageLinkStyle"),
-                                            grid.Column("FileId", "Url", null, "pageUrlStyle"),
-                                            grid.Column("Title", "Title", null, "pageTitleStyle")),
+            @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "编辑", (item) => this.Html.ActionLink("编辑", "Compose", new { id = item.FileId }), "pageLinkStyle"),
+                                            grid.Column(string.Empty, "删除", (item) => this.Html.ActionLink("删除", "Delete", new { id = item.FileId }), "pageLinkStyle"),
+                                            grid.Column("FileId", "页面Url", null, "pageUrlStyle"),
+                                            grid.Column("Title", "标题", null, "pageTitleStyle")),
                                             tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
         }
         else
         {
-            <div>There are no pages to manage.</div>   
+            <div>没有页面</div>   
         }
     </div>
     <div style="clear: both;">

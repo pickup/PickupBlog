@@ -243,20 +243,15 @@ namespace LiteBlog.Common
         {
             if (this._comments.Count == 0)
             {
-                return "No Comments";
+                return "没有评论";
             }
 
-            if (this._comments.Count == 1)
+            if (this._comments.Count > 0)
             {
-                return " 1 Comment";
+                return string.Format("{0}条评论", this._comments.Count);
             }
 
-            if (this._comments.Count > 1)
-            {
-                return string.Format("{0} Comments", this._comments.Count);
-            }
-
-            return "No comments";
+            return "没有评论";
         }
 
         #endregion

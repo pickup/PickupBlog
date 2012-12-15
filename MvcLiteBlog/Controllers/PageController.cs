@@ -56,7 +56,7 @@ namespace MvcLiteBlog.Controllers
         public ActionResult Delete(string id)
         {
             PageComp.Delete(id);
-            TempData["Message"] = "The page is deleted";
+            TempData["Message"] = "页面已删除";
             return RedirectToAction("Manage");
         }
 
@@ -101,7 +101,7 @@ namespace MvcLiteBlog.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Publish", FormValue = "Publish")]
+        [MultiButton(FormName = "Publish", FormValue = "发布")]
         public ActionResult Publish(ComposePageModel pageModel)
         {
             // return if invalid model
@@ -118,14 +118,14 @@ namespace MvcLiteBlog.Controllers
             // Save the new page
             PageComp.Publish(page);
 
-            TempData["Message"] = "The page is published";
+            TempData["Message"] = "页面已发布";
             return this.RedirectToAction("Manage");
         }
 
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Close", FormValue = "Close")]
+        [MultiButton(FormName = "Close", FormValue = "关闭")]
         public ActionResult Close(Page page)
         {
             return this.RedirectToAction("Manage");

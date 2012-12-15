@@ -1,39 +1,39 @@
 ﻿<div id="menu">
     <div class="menuContainer">
         <div class="menuHeader">
-            Posts</div>
+            文章和页面</div>
         <ul class="menu">
-            <li>@this.Html.ActionLink("Compose", "Compose", "Post")</li>
-            <li>@this.Html.ActionLink("Manage Posts", "Manage", "Post")</li>
-            <li>@this.Html.ActionLink("Manage Drafts", "ManageDraft", "Post")</li>
-            <li>@this.Html.ActionLink("Manage Pages", "Manage", "Page")</li>
+            <li>@this.Html.ActionLink("创建", "Compose", "Post")</li>
+            <li>@this.Html.ActionLink("管理文章", "Manage", "Post")</li>
+            <li>@this.Html.ActionLink("管理草稿", "ManageDraft", "Post")</li>
+            <li>@this.Html.ActionLink("管理页面", "Manage", "Page")</li>
         </ul>
     </div>
     <div class="menuContainer">
         <div class="menuHeader">
-            Comments</div>
+            评论</div>
         <ul class="menu">
-            <li>@this.Html.ActionLink("Manage Comments", "Manage", "Comment")</li>
-            <li>@this.Html.ActionLink("Moderate Comments", "Moderate", "Comment")</li>
+            <li>@this.Html.ActionLink("管理评论", "Manage", "Comment")</li>
+            <li>@this.Html.ActionLink("审核评论", "Moderate", "Comment")</li>
             <li>&nbsp;</li>
         </ul>
     </div>
     <div class="menuContainer">
         <div class="menuHeader">
-            Categories</div>
+            分类</div>
         <ul class="menu">
-            <li>@this.Html.ActionLink("Create Category", "Create", "Category")</li>
-            <li>@this.Html.ActionLink("Manage Categories", "Manage", "Category")</li>
-            <li>@this.Html.ActionLink("Reorder Categories", "Reorder", "Category")</li>
+            <li>@this.Html.ActionLink("创建分类", "Create", "Category")</li>
+            <li>@this.Html.ActionLink("管理分类", "Manage", "Category")</li>
+            <li>@this.Html.ActionLink("重新排序", "Reorder", "Category")</li>
         </ul>
     </div>
     <div class="menuContainer">
         <div class="menuHeader">
-            Application</div>
+            系统</div>
         <ul class="menu">
-            <li>@this.Html.ActionLink("Application Settings", "Application", "Admin")</li>
-            <li>@this.Html.ActionLink("User Management", "Manage", "Author")</li>
-            <li>@this.Html.ActionLink("View Blog", "Index", "Home")</li>
+            <li>@this.Html.ActionLink("系统设置", "Application", "Admin")</li>
+            <li>@this.Html.ActionLink("用户管理", "Manage", "Author")</li>
+            <li>@this.Html.ActionLink("查看博客", "Index", "Home")</li>
         </ul>
     </div>
 </div>

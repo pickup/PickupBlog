@@ -137,18 +137,18 @@ namespace MvcLiteBlog.BlogEngine
         {
             if (catID.Length == 0)
             {
-                return "Uncategorized";
+                return "未分类";
             }
 
             if (catID.IndexOf(",") < 0)
             {
                 string cat = CategoryComp.GetCategoryName(catID);
-                return string.Format("Category : {0}", cat);
+                return string.Format("所属分类 : {0}", cat);
             }
             else
             {
                 string[] catIDs = catID.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                string cats = "Categories : ";
+                string cats = "所属分类 : ";
                 foreach (string id in catIDs)
                 {
                     cats += CategoryComp.GetCategoryName(id) + ", ";
@@ -246,7 +246,7 @@ namespace MvcLiteBlog.BlogEngine
         public static string GetTime(DateTime time, string author)
         {
             string postTime = time.ToString(ConfigHelper.DateFormat, CultureInfo.InvariantCulture);
-            return string.Format("Posted by {0} on {1}", author, postTime);
+            return string.Format("{0}发表于{1}", author, postTime);
         }
 
         /// <summary>

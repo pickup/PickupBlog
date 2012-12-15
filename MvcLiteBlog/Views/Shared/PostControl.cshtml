@@ -2,7 +2,7 @@
            
 <div class="post" id="@this.Model.FileID">
     <div>
-        <h1>@this.Model.Title</h1>
+        <h1>@this.Html.ActionLink(this.Model.Title, "Index", "Post", new { id = this.Model.FileID }, null)</h1>
     </div>
     <div id="PostContent" class="postContent">
         @this.Html.Raw(this.Model.HighlightedContents)
@@ -13,9 +13,9 @@
     </div>
     <div>
         
-        @this.Html.ActionLink("Permalink", "Index", "Post", new { id = this.Model.FileID }, null)  | 
+        @this.Html.ActionLink("永久链接", "Index", "Post", new { id = this.Model.FileID }, null)  | 
         <a href="#" class="showCommentLink">@this.Model.GetCommentCount()</a> | 
-        <a href="#" class="viewCommentLink">Leave your comment</a> 
+        <a href="#" class="viewCommentLink">添加评论</a> 
 
     </div>
     <div class="successMessage">

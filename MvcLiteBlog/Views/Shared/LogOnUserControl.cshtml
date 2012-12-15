@@ -1,6 +1,6 @@
 ﻿@if (this.Request.IsAuthenticated)
 {
-    <span>Welcome <b>@this.Page.User.Identity.Name</b>!
+    <span>欢迎 <b>@this.Page.User.Identity.Name</b>!
         [ @this.Html.ActionLink("Log Off", "LogOff", "Account") ]</span>
 }
 else

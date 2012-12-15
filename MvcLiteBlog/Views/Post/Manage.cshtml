@@ -1,7 +1,7 @@
 ﻿@model List<PostInfo>
 
 @{
-    this.ViewBag.Title = "View all posts";
+    this.ViewBag.Title = "管理文章_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -18,7 +18,7 @@
 }
 
 <div id="main">
-    <h1>Manage posts</h1>
+    <h1>管理文章</h1>
     <div class="success">
         @this.TempData["Message"]
     </div>
@@ -29,17 +29,17 @@
     }
 
 
-    @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => this.Html.ActionLink("Edit", "Compose", "Post", new { id = item.FileID }, null), "postLinkStyle"), grid.Column(string.Empty, "Delete", (item) => this.Html.ActionLink("Delete", "Delete", "Post", new { id = item.FileID }, null), "postLinkStyle"), grid.Column(string.Empty, "Published Date", (item) => item.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture), "postDateStyle"), grid.Column(string.Empty, "Title", (item) =>
+    @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "编辑", (item) => this.Html.ActionLink("编辑", "Compose", "Post", new { id = item.FileID }, null), "postLinkStyle"), grid.Column(string.Empty, "删除", (item) => this.Html.ActionLink("删除", "Delete", "Post", new { id = item.FileID }, null), "postLinkStyle"), grid.Column(string.Empty, "发布日期", (item) => item.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture), "postDateStyle"), grid.Column(string.Empty, "标题", (item) =>
         {
             if (string.IsNullOrEmpty(item.Title))
             {
-                return this.Html.ActionLink("No title", "Index", new { id = item.FileID });
+                return this.Html.ActionLink("没有标题", "Index", new { id = item.FileID });
             }
             else
             {
                 return this.Html.ActionLink((string)item.Title, "Index", new { id = item.FileID });
             }
-        }, "postTitleStyle"), grid.Column(string.Empty, "Category", (item) =>
+        }, "postTitleStyle"), grid.Column(string.Empty, "所属分类", (item) =>
             {
                 string cat = string.Empty;
                 foreach (string category in item.Categories)

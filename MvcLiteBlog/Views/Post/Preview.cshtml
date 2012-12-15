@@ -1,6 +1,6 @@
 ﻿@model DraftPost
 @{
-    this.ViewBag.Title = this.Model.Title;
+    this.ViewBag.Title = this.Model.Title + "_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -27,7 +27,7 @@
     {
         <div class="button">
             @*<input type="submit" name="Back" value="Back" />   *@
-            @this.Html.ActionLink("Back", "Compose")
+            @this.Html.ActionLink("返回", "Compose")
         </div>
     }
 </div>

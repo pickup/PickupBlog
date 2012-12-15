@@ -1,6 +1,6 @@
 ﻿@model MvcLiteBlog.Models.ComposePageModel
 @{
-    ViewBag.Title = "Compose";
+    ViewBag.Title = "创建页面_[皮卡博客]";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -10,24 +10,25 @@
     <script type="text/javascript" src='@this.Url.Content("~/Scripts/Custom/page.compose.js")'></script>
 }
 <div id="main">
-    <h1>Compose Page</h1>
-    @using (this.Html.BeginForm("Compose", "Page", FormMethod.Post))
+    <h1>创建页面</h1>
+    @using (this.Html.BeginForm("创建页面", "Page", FormMethod.Post))
     {
             
         <div class="page-compose">
             <div>
-                @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                @this.Html.ValidationSummary("更新数据出错，请重试。")
                 @this.Html.HiddenFor(m => m.FileId)
             </div>
             <div class="error">
                 @this.ViewData["Message"]
             </div>
             <div>
-                Title: @this.Html.TextBoxFor(m => m.Title, new { @class = "TextBox", @style = "width: 530px;" })
+                标题：
+                @this.Html.TextBoxFor(m => m.Title, new { @class = "TextBox", @style = "width: 530px;" })
                 @this.Html.ValidationMessageFor(m => m.Title, "*")
             </div>
             <div>
-                Page Contents: 
+                页面内容：
                 <textarea id="PageEditor" name="Contents" style="width: 530px;" cols="30" rows="10">@(this.Model.Contents ?? string.Empty)</textarea>
                 @this.Html.ValidationMessageFor(m => m.Contents, "*")
             </div>
@@ -36,10 +37,10 @@
             </div>
         </div>
         <div class="button">
-            <input type="submit" name="Save" value="Save" />
-            <input type="submit" name="Publish" value="Publish" />
+            <input type="submit" name="Save" value="保存" />
+            <input type="submit" name="Publish" value="发布" />
             <!-- Publish will add to menu -->
-            <input type="submit" name="Close" value="Close" />
+            <input type="submit" name="Close" value="关闭" />
         </div>
         <div id="saveMessage" style="text-align: center;">
         </div>

@@ -76,7 +76,7 @@ div
 div.page
 {
     width: 100%;
-    min-width: 1580px;
+    min-width: 960px;
     margin: 0;
     padding: 0;
     background-color: #fff;
@@ -168,13 +168,13 @@ div.page
 {
     padding: 0 8px;
     float: left;
-    width: 284px;
+    width: 20%;
 }
 
 #center
 {
     background-color: #fff;
-    width: 1280px;
+    width: 78%;
     float: left;
     min-height: 609px;
     margin: 0;

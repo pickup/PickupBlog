@@ -9,7 +9,7 @@
     <ul id="recentComments" class="widgetList">
         @foreach (Comment comment in this.Model)
         {
-            <li style="display: none;"><a href="@this.Url.Action("Index", "Post", new { id = comment.FileID }, null)">@this.Html.Raw(comment.TileText)</a> <br/><br/>by @comment.Name</li>
+            <li style="display: none;"><a href="@this.Url.Action("Index", "Post", new { id = comment.FileID }, null)">@this.Html.Raw(comment.TileText)</a> <br/><br/>——@comment.Name</li>
         }
     </ul>
     <script type="text/javascript">
@@ -37,6 +37,6 @@
 
     </script>
     <div class="widgetBottom">
-        @this.Html.ActionLink("More Comments", "Recent", "Comment")
+        @this.Html.ActionLink("更多评论", "Recent", "Comment")
     </div>
 </div>

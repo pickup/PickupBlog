@@ -10,7 +10,7 @@
         <div class="authorBg">
             <div class="commentHeader">
                 <a name="@comment.ID"></a>
-                Commented by 
+                
                 @if (comment.Url == string.Empty)
                 {
                     @comment.Name
@@ -19,7 +19,7 @@
                 {
                     <a href="@comment.Url" target="_blank">@comment.Name</a>
                 }
-                <span> at @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)</span>
+                <span> 于 @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture) 评论</span>
             </div>
             <div class="comment">
                 @this.Html.Raw(comment.HighlightedCode)

@@ -1,6 +1,6 @@
 ﻿@model HandleErrorInfo
 @{
-    this.ViewBag.Title = "Error page";
+    this.ViewBag.Title = "错误_[皮卡博客]";
     this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
 
 }
@@ -8,10 +8,10 @@
 
 
 <div class="content">
-    <h1>Error
+    <h1>错误
     </h1>
     <div>
-        An error occurred while processing your request.
+        很抱歉，在处理您的请求时发生了如下错误。
     </div>
     <div>
         @this.Model.Exception.Message

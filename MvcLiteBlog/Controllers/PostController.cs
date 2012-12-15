@@ -40,7 +40,7 @@ namespace MvcLiteBlog.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Close", FormValue = "Close")]
+        [MultiButton(FormName = "Close", FormValue = "关闭")]
         public ActionResult Close(ComposePostModel model)
         {
             this.Session.Remove("Post");
@@ -378,7 +378,7 @@ namespace MvcLiteBlog.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Preview", FormValue = "Preview")]
+        [MultiButton(FormName = "Preview", FormValue = "预览")]
         public ActionResult Preview(ComposePostModel model)
         {
             this.UpdatePost(model);
@@ -404,7 +404,7 @@ namespace MvcLiteBlog.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Publish", FormValue = "Publish")]
+        [MultiButton(FormName = "Publish", FormValue = "发布")]
         public ActionResult Publish(ComposePostModel model)
         {
             this.UpdatePost(model);
@@ -414,7 +414,7 @@ namespace MvcLiteBlog.Controllers
                 model.Post = this.SavePost(model.Post);
                 PublisherComp.Publish(model.Post);
                 this.Session.Remove("Post");
-                this.TempData["Message"] = "Post is successfully posted";
+                this.TempData["Message"] = "发布成功";
                 return this.RedirectToAction("Manage");
             }
 
@@ -464,7 +464,7 @@ namespace MvcLiteBlog.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [Authorize]
-        [MultiButton(FormName = "Upload", FormValue = "Upload")]
+        [MultiButton(FormName = "Upload", FormValue = "上传")]
         public ActionResult Upload(ComposePostModel model)
         {
             this.UpdatePost(model);

@@ -4,34 +4,34 @@
 {
     <div class="ModalWindow">
         <fieldset>
-            <legend>Your comment</legend>
+            <legend>添加评论</legend>
             <div class="">
                 <span id="commentResult"></span>
                 <input type="hidden" name="FileID" id="_hdnFileID" />
                 @this.Html.HiddenFor(m => m.IsAuthor)
             </div>
             <div class="editor_label">
-                <label for="Name">Name:</label>
+                <label for="Name">称呼：</label>
             </div>
             <div class="editor_field">
-                @this.Html.TextBoxFor(m => m.Name, new { placeholder = "Your name" })
+                @this.Html.TextBoxFor(m => m.Name, new { placeholder = "您的称呼" })
             </div>
             <div class="editor_label">
-                <label for="Url">Url:</label>
+                <label for="Url">博客地址：</label>
             </div>
             <div class="editor_field">
-                @this.Html.TextBoxFor(m => m.Url, new { placeholder = "Your blog URL" })
+                @this.Html.TextBoxFor(m => m.Url, new { placeholder = "您博客的地址" })
            
             </div>
             <div class="editor_label">
-                <label for="CommentText">Comment:</label>
+                <label for="CommentText">评论内容：</label>
             </div>
             <div class="editor_field">
-                <textarea id="commentEditor" name="CommentText" rows="10" cols="30" placeholder="Please leave your comment"></textarea>
+                <textarea id="commentEditor" name="CommentText" rows="10" cols="30" placeholder="请填写您的评论"></textarea>
             </div>
             <div class="button">
-                <a href="#" id="addCommentLink">Submit</a>
-                <a href="#" id="closeCommentLink">Close</a>
+                <a href="#" id="addCommentLink">完成</a>
+                <a href="#" id="closeCommentLink">取消</a>
             </div>
         </fieldset>
     </div>
