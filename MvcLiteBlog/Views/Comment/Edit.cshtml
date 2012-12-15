@@ -1,7 +1,7 @@
 ﻿@model Comment
 
 @{
-    this.ViewBag.Title = "Edit Comment";
+    this.ViewBag.Title = "编辑评论_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -57,13 +57,13 @@
 }
 
 <div id="main">
-    <h1>Edit comment</h1>
+    <h1>编辑评论</h1>
     @using (this.Html.BeginForm("Edit", "Comment"))
     {
         <div class="commentForm">
             <fieldset>
                 <legend>
-                    Edit Comment
+                    编辑评论
                 </legend>
                 <div class="success">
                     @this.ViewData["Message"]
@@ -72,21 +72,21 @@
                     @this.ViewData["ErrorMessage"]
                 </div>
                 <div>
-                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                    @this.Html.ValidationSummary("输入信息存在错误，请重试。")
                 </div>
-                <div>Comment ID: @this.Model.ID</div>
+                <div>评论ID: @this.Model.ID</div>
             
-                <div>File ID</div>
+                <div>博文ID</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.FileID, new { @class = "ReadOnlyTextBox", @ReadOnly = "true", @style = "width: 400px;" })
                 </div>
 
-                <div>Time</div>
+                <div>时间</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Time, new { @class = "ReadOnlyTextBox", @ReadOnly = "true", @style = "width: 400px;" })
                 </div>
 
-                <div>Commenter name</div>
+                <div>评论人</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox", @style = "width: 400px;" })
                     @this.Html.ValidationMessageFor(m => m.Name, "*")
@@ -95,29 +95,29 @@
                 <div>
                     @this.Html.TextBoxFor(m => m.Url, new { @class = "TextBox", @style = "width: 400px;" })
                 </div>
-                <div>IP Address</div>
+                <div>来源IP</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Ip, new { @class = "ReadOnlyTextBox", @ReadOnly = "True" })
                 </div>
-                <div>Comment</div>
+                <div>评论</div>
                 <div>
                     @this.Html.TextAreaFor(m => m.Text, new { @class = "TextBox", @id = "commentEditor" })
                     @this.Html.ValidationMessageFor(m => m.Text, "*")
                 </div>
                 <div>
-                    Commented by Author: @this.Html.CheckBoxFor(m => m.IsAuthor)
+                    作者评论：@this.Html.CheckBoxFor(m => m.IsAuthor)
                 </div>
                 <div class="button">
-                    <input type="submit" name="Submit" value="Update Comment" />
+                    <input type="submit" name="Submit" value="保存" />
                 </div>
                 <div>
                     @if (this.ViewBag.PageIndex == 1)
                     {
-                        <span>@this.Html.ActionLink("Back to list", "Manage")</span>
+                        <span>@this.Html.ActionLink("返回“评论管理”", "Manage")</span>
                     }
                     else
                     {
-                        <span>@this.Html.ActionLink("Back to list", "Manage", new { page = this.ViewBag.PageIndex })</span>
+                        <span>@this.Html.ActionLink("返回“评论管理”", "Manage", new { page = this.ViewBag.PageIndex })</span>
                     }
                 </div>
             </fieldset>

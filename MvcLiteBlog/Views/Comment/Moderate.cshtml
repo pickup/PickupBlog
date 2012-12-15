@@ -1,7 +1,7 @@
 ﻿@using MvcLiteBlog.Extensions
 @model List<Comment>
 @{
-    this.ViewBag.Title = "Moderate Comments";
+    this.ViewBag.Title = "评论审核_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -44,15 +44,15 @@
     </script>
 }
 <div id="main">
-    <h1>Moderate comments</h1>
+    <h1>评论审核</h1>
     @using (this.Html.BeginForm("Approve", "Comment"))
     {
         <div class="GridMargin leftButton">
-            <input type="checkbox" id="SelectAll" title="Select All" />
+            <input type="checkbox" id="SelectAll" title="全选" />
             <label for="SelectAll">
-                Select All</label>
-            <input type="submit" name="Approve" value="Approve Comments" />
-            <input type="submit" name="Reject" value="Reject Comments" />
+                全选</label>
+            <input type="submit" name="Approve" value="通过" />
+            <input type="submit" name="Reject" value="否决" />
         </div>
         <div class="success">
             @this.TempData["Message"]
@@ -62,11 +62,21 @@
 
         if (this.Model.Count == 0)
         {
-            <div class="info">There are no comments to moderate.</div>
+            <div class="info">没有评论需要审核。</div>
         }
         else
         {
-            @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Select", (item) => this.Html.ValuedCheckBox("Select", (string)item.ID), "cmntIdStyle"), grid.Column("ID", "ID", null, "cmntIdStyle"), grid.Column("Name", "Comment By", null, "cmntNameStyle"), grid.Column(string.Empty, "Comment", (item) => this.Html.Raw(item.HighlightedCode), "cmntCommentStyle"), grid.Column("Ip", "IP", null, "cmntIpStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+            @grid.GetHtml(
+                columns: grid.Columns(
+                    grid.Column(string.Empty, "选择", (item) => this.Html.ValuedCheckBox("Select", (string)item.ID), "cmntIdStyle"), 
+                    grid.Column("ID", "ID", null, "cmntIdStyle"), 
+                    grid.Column("Name", "评论人", null, "cmntNameStyle"), 
+                    grid.Column(string.Empty, "评论", (item) => this.Html.Raw(item.HighlightedCode), "cmntCommentStyle"), 
+                    grid.Column("Ip", "来源IP", null, "cmntIpStyle")), 
+                tableStyle: "GridContent", 
+                headerStyle: "GridHeader", 
+                rowStyle: "gridRowStyle", 
+                alternatingRowStyle: "gridAltRowStyle")
         }
     }
 </div>

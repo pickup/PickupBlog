@@ -1,7 +1,7 @@
 ﻿@model List<Category>
 
 @{
-    this.ViewBag.Title = "Reorder Categories";
+    this.ViewBag.Title = "分类排序_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -30,14 +30,14 @@
 
 
 <div id="main">
-    <h1>Reorder categories</h1>
+    <h1>分类排序</h1>
     <div class="catForm">
         <fieldset>
             <legend>
-                Reorder Categories
+                分类排序
             </legend>
     
-            <div>Drag and Drop list items to reorder</div>
+            <div>拖拽列表中的项目进行排序。</div>
 
             <ul id="ReorderList">
                 @foreach (Category cat in this.Model)
@@ -56,6 +56,6 @@
         </fieldset>
     </div>
     <div>
-        @this.Html.ActionLink("Back to list", "Manage")
+        @this.Html.ActionLink("返回“分类管理”", "Manage")
     </div>
 </div>

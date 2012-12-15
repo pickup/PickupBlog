@@ -1,7 +1,7 @@
 ﻿@model MvcLiteBlog.Models.ChgPwdModel
 
 @{
-    this.ViewBag.Title = "Change Password";
+    this.ViewBag.Title = "修改密码_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -11,40 +11,40 @@
     <div id="main">
         <div class="loginForm">
             <fieldset>
-                <legend>Change Password</legend>
+                <legend>更改密码</legend>
                 <div>
-                    @this.Html.ValidationSummary("Changing password was unsuccessful. Please try again.")
+                    @this.Html.ValidationSummary("更改密码失败，请重试。")
                 </div>
                 <div>
-                    Login:
+                    用户名:
                 </div>
                 <div>
                     @this.Html.TextBoxFor(m => m.UserName, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.UserName, "*")
                 </div>
                 <div>
-                    Old Password: 
+                    原密码: 
                 </div>
                 <div>
                     @this.Html.PasswordFor(m => m.OldPassword, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.OldPassword, "*")
                 </div>
                 <div>
-                    New Password: 
+                    新密码: 
                 </div>
                 <div>
                     @this.Html.PasswordFor(m => m.NewPassword, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.NewPassword, "*")
                 </div>
                 <div>
-                    Repeat New Password: 
+                    确认新密码: 
                 </div>
                 <div>
                     @this.Html.PasswordFor(m => m.RepeatPassword, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.RepeatPassword, "*")
                 </div>
                 <div class="button">
-                    <input type="submit" name="Submit" value="Login" />
+                    <input type="submit" name="Submit" value="确认修改" />
                 </div>
             </fieldset>
         </div>

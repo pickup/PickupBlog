@@ -21,26 +21,26 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the new password.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid new password")]
-        [RegularExpression("^[a-zA-z0-9_.]{3,15}$", ErrorMessage = "Please enter a valid password")]
+        [Required(ErrorMessage = "请输入正确的新密码")]
+        [RegularExpression("^[a-zA-z0-9_.]{3,15}$", ErrorMessage = "请输入正确的新密码（3至15位字母或数字）")]
         public string NewPassword { get; set; }
 
         /// <summary>
         /// Gets or sets the old password.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid password")]
+        [Required(ErrorMessage = "请输入正确的原密码")]
         public string OldPassword { get; set; }
 
         /// <summary>
         /// Gets or sets the repeat password.
         /// </summary>
-        [Required(ErrorMessage = "Please type the new password again in repeat password")]
+        [Required(ErrorMessage = "请重复输入新密码")]
         public string RepeatPassword { get; set; }
 
         /// <summary>
         /// Gets or sets the user name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid user name")]
+        [Required(ErrorMessage = "请输入正确的用户名")]
         public string UserName { get; set; }
 
         #endregion

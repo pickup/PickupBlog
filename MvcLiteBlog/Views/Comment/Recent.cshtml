@@ -1,13 +1,13 @@
 ﻿@model List<Comment>
 
 @{
-    this.ViewBag.Title = "Recent Comments";
+    this.ViewBag.Title = "最新评论_[皮卡博客]";
     this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
 
 }
 
 <div class="content">
-    <h1>Recent Comments</h1>
+    <h1>最新评论</h1>
     
     @foreach (Comment comment in this.Model)
     {
@@ -15,7 +15,7 @@
         {
             <div class="authorBg">
                 <div class="commentHeader">
-                    Comment by 
+                    评论人：
                     @if (string.IsNullOrEmpty(comment.Url))
                     {
                         @comment.Name
@@ -24,9 +24,9 @@
                     {
                         <a href='@comment.Url' target="_blank">@comment.Name</a>
                     }
-                    at
+                    &nbsp;&nbsp;&nbsp;&nbsp;评论时间：
                     @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)
-                    @this.Html.ActionLink("View Post", "Index", "Post", new { id = comment.FileID }, null)
+                    @this.Html.ActionLink("查看", "Index", "Post", new { id = comment.FileID }, null)
                 </div>
                 <div class="comment">
                     @this.Html.Raw(comment.HighlightedCode)
@@ -37,7 +37,7 @@
         {
             <div>
                 <div class="commentHeader">
-                    Comment by 
+                    评论人：
                     @if (string.IsNullOrEmpty(comment.Url))
                     {
                         @comment.Name
@@ -46,9 +46,9 @@
                     {
                         <a href='@comment.Url' target="_blank">@comment.Name</a>
                     }
-                    at
+                    &nbsp;&nbsp;&nbsp;&nbsp;评论时间：
                     @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)
-                    @this.Html.ActionLink("View Post", "Index", "Post", new { id = comment.FileID }, null)
+                    @this.Html.ActionLink("查看", "Index", "Post", new { id = comment.FileID }, null)
                 </div>
                 <div class="comment">
                     @this.Html.Raw(comment.HighlightedCode)

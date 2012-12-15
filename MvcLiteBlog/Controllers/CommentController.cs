@@ -64,11 +64,11 @@ namespace MvcLiteBlog.Controllers
 
                 if (approve)
                 {
-                    this.TempData["Message"] = "Comments are approved.";
+                    this.TempData["Message"] = "评论审核通过";
                 }
                 else
                 {
-                    this.TempData["Message"] = "Comments are rejected.";
+                    this.TempData["Message"] = "评论审核未通过";
                 }
             }
 
@@ -118,17 +118,17 @@ namespace MvcLiteBlog.Controllers
                     // Check if URL is valid
                     if (!MvcLiteBlog.Helpers.UrlHelper.IsValidUrl(model.Url))
                     {
-                        this.ModelState.AddModelError("Url", "Please enter a valid web URL");
+                        this.ModelState.AddModelError("Url", "请输入正确的Url地址");
                     }
                 }
 
                 if (this.ModelState.IsValid)
                 {
                     CommentComp.Insert(model.FileID, model.Name, model.Url ?? string.Empty, model.CommentText, model.IsAuthor);
-                    message = "Comment is successfully posted";
+                    message = "评论已提交";
                     if (SettingsComp.GetSettings().CommentModeration)
                     {
-                        message = "Comment will appear in the site after the blogger approves it";
+                        message = "评论已提交，并等待管理员审核";
                     }
 
                     ProfileComp.SetCommenterProfile(model.Name, model.Url ?? string.Empty);
@@ -153,7 +153,7 @@ namespace MvcLiteBlog.Controllers
             }
             catch
             {
-                message = "Comment could not be updated!";
+                message = "评论ID不能修改";
             }
 
             return this.Json(new { Message = message, Result = result });
@@ -185,7 +185,7 @@ namespace MvcLiteBlog.Controllers
                         CommentComp.Delete(id);
                     }
 
-                    this.TempData["Message"] = "Comments are deleted";
+                    this.TempData["Message"] = "评论已删除";
                 }
             }
 
@@ -258,12 +258,12 @@ namespace MvcLiteBlog.Controllers
         {
             if (string.IsNullOrEmpty(comment.Name))
             {
-                this.ModelState.AddModelError("Name", "Please fill commenter name");
+                this.ModelState.AddModelError("Name", "评论人不能为空");
             }
 
             if (string.IsNullOrEmpty(comment.Text))
             {
-                this.ModelState.AddModelError("Text", "Please fill comment text");
+                this.ModelState.AddModelError("Text", "评论内容不能为空");
             }
 
             comment.Url = comment.Url ?? string.Empty;
@@ -275,13 +275,13 @@ namespace MvcLiteBlog.Controllers
             }
             catch (Exception ex)
             {
-                this.ModelState.AddModelError("Update", "Update failed");
+                this.ModelState.AddModelError("Update", "更新错误");
                 Logger.Log("Update failed", ex);
             }
 
             if (this.ModelState.IsValid)
             {
-                this.TempData["Message"] = "Comment is successfully updated";
+                this.TempData["Message"] = "评论已更新";
 
                 // Find out the page index
                 int pageSize = 10;

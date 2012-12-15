@@ -1,7 +1,7 @@
 ﻿@using MvcLiteBlog.Extensions
 @model List<Comment>
 @{
-    this.ViewBag.Title = "Manage Comments";
+    this.ViewBag.Title = "评论管理_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -44,15 +44,15 @@
     </script>
 }
 <div id="main">
-    <h1>Manage comments</h1>
+    <h1>评论管理</h1>
     @using (this.Html.BeginForm("Delete", "Comment", new { page = this.ViewBag.PageIndex }))
     {
         <div class="GridMargin leftButton">
             <input type="checkbox" id="SelectAll" title="Select All" />
             <label for="SelectAll">
-                Select All
+                全选
             </label>
-            <input type="submit" value="Delete Comments" />
+            <input type="submit" value="删除" />
         </div>
         <div class="success">
             @this.TempData["Message"]
@@ -60,16 +60,27 @@
 
         var grid = new WebGrid(this.Model, canSort: false, rowsPerPage: 10);
 
-        @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Select", (item) => this.Html.ValuedCheckBox("Select", (string)item.ID), "cmntIdStyle"), grid.Column(string.Empty, "Edit", (item) =>
-            {
-                if (item.IsApproved)
+        @grid.GetHtml(
+            columns: grid.Columns(
+                grid.Column(string.Empty, "选择", (item) => this.Html.ValuedCheckBox("Select", (string)item.ID), "cmntIdStyle"), 
+                grid.Column(string.Empty, "编辑", (item) =>
                 {
-                    return this.Html.ActionLink("Edit", "Edit", new { id = item.ID /*, page = ViewBag.PageIndex */ });
-                }
-                else
-                {
-                    return string.Empty;
-                }
-            }, "cmntIdStyle"), grid.Column("ID", "ID", null, "cmntIdStyle"), grid.Column("Name", "Comment By", null, "cmntNameStyle"), grid.Column(string.Empty, "Comment", (item) => this.Html.Raw(item.HighlightedCode), "cmntCommentStyle2"), grid.Column("Ip", "IP", null, "cmntIpStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+                    if (item.IsApproved)
+                    {
+                        return this.Html.ActionLink("编辑", "Edit", new { id = item.ID /*, page = ViewBag.PageIndex */ });
+                    }
+                    else
+                    {
+                        return string.Empty;
+                    }
+                }, "cmntIdStyle"), 
+                grid.Column("ID", "ID", null, "cmntIdStyle"), 
+                grid.Column("Name", "评论人", null, "cmntNameStyle"), 
+                grid.Column(string.Empty, "评论", (item) => this.Html.Raw(item.HighlightedCode), "cmntCommentStyle2"), 
+                grid.Column("Ip", "来源IP", null, "cmntIpStyle")), 
+            tableStyle: "GridContent", 
+            headerStyle: "GridHeader", 
+            rowStyle: "gridRowStyle", 
+            alternatingRowStyle: "gridAltRowStyle")
     }
 </div>

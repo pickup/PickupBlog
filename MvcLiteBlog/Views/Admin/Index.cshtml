@@ -1,7 +1,7 @@
 ﻿@model MvcLiteBlog.Models.LoginModel
 
 @{
-    this.ViewBag.Title = "Login Page";
+    this.ViewBag.Title = "登录_皮卡博客";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -11,32 +11,32 @@
     <div id="main">
         <div class="loginForm">
             <fieldset>
-                <legend>Login</legend>
+                <legend>登录</legend>
                 <div>
                     @if (this.ViewData["ReturnUrl"] != null)
                     {
                         <span>@this.Html.Hidden("ReturnUrl", this.ViewData["ReturnUrl"].ToString())</span>
                     }
 
-                    @this.Html.ValidationSummary("Login was unsuccessful. Please try again.")
+                    @this.Html.ValidationSummary("登录失败，请重试。")
                 </div>
                 <div>
-                    Login:
+                    用户名:
                 </div>
                 <div>
                     @this.Html.TextBoxFor(m => m.UserName, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.UserName, "*")
                 </div>
                 <div>
-                    Password: 
+                    密码: 
                 </div>
                 <div>
                     @this.Html.PasswordFor(m => m.Password, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.Password, "*")
-                    @this.Html.ActionLink("Change Password", "ChgPwd", "Admin")
+                    @this.Html.ActionLink("更改密码", "ChgPwd", "Admin")
                 </div>
                 <div class="button">
-                    <input type="submit" name="Submit" value="Login" />
+                    <input type="submit" name="Submit" value="登录" />
                 </div>
             </fieldset>
         </div>

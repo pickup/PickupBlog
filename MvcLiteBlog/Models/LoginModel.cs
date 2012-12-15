@@ -34,13 +34,15 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the password.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid password")]
+        [Required(ErrorMessage = "其输入正确的密码")]
+        //[Display(Name="密码")]
         public string Password { get; set; }
 
         /// <summary>
         /// Gets or sets the user name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid user name")]
+        [Required(ErrorMessage = "请输入正确的用户名")]
+        //[Display(Name = "用户名")]
         public string UserName { get; set; }
 
         #endregion

@@ -21,7 +21,8 @@ namespace LiteBlog.Common
         /// <summary>
         /// The _archive format.
         /// </summary>
-        private const string ArchiveFormat = "MMM yyyy";
+        private const string ArchiveFormat = "yyyy年MM月";
+        //private const string ArchiveFormat = "MMM yyyy";
 
         /// <summary>
         /// The _start year.

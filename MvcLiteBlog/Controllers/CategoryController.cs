@@ -55,19 +55,19 @@ namespace MvcLiteBlog.Controllers
                 string uniqueCheck = CategoryComp.GetCategoryID(model.Name);
                 if (uniqueCheck != string.Empty)
                 {
-                    this.ModelState.AddModelError("Name", "Category name should be unique");
+                    this.ModelState.AddModelError("Name", "分类名称不能为空");
                 }
 
                 uniqueCheck = CategoryComp.GetCategoryName(model.CatID);
                 if (uniqueCheck != string.Empty)
                 {
-                    this.ModelState.AddModelError("CatID", "Category ID should be unique");
+                    this.ModelState.AddModelError("CatID", "分类ID不能为空");
                 }
 
                 if (this.ModelState.IsValid)
                 {
                     CategoryComp.Insert(model.CatID, model.Name);
-                    this.TempData["Message"] = "Category is successfully added";
+                    this.TempData["Message"] = "新建分类成功";
                     return this.RedirectToAction("Manage");
                 }
             }
@@ -89,7 +89,7 @@ namespace MvcLiteBlog.Controllers
         public ActionResult Delete(string id)
         {
             CategoryComp.Delete(id);
-            this.TempData["Message"] = "Category is successfully deleted";
+            this.TempData["Message"] = "分类已成功删除";
             return this.RedirectToAction("Manage");
         }
 
@@ -145,7 +145,7 @@ namespace MvcLiteBlog.Controllers
                     {
                         if (!CategoryComp.IsUniqueName(model.Name))
                         {
-                            this.ModelState.AddModelError("Name", "Category name should be unique");
+                            this.ModelState.AddModelError("Name", "分类名称不能为空");
                         }
                     }
 
@@ -153,7 +153,7 @@ namespace MvcLiteBlog.Controllers
                     {
                         if (!CategoryComp.IsUniqueId(model.CatID))
                         {
-                            this.ModelState.AddModelError("CatID", "Category ID should be unique");
+                            this.ModelState.AddModelError("CatID", "分类ID不能为空");
                         }
                     }
 
@@ -171,7 +171,7 @@ namespace MvcLiteBlog.Controllers
 
             if (this.ModelState.IsValid)
             {
-                this.TempData["Message"] = "Category is successfully updated";
+                this.TempData["Message"] = "分类信息已更新";
                 return this.RedirectToAction("Manage");
             }
             else

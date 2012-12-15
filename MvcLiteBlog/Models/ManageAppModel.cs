@@ -24,7 +24,7 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the blog name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid blog name")]
+        [Required(ErrorMessage = "请输入正确的博客名称")]
         public string BlogName { get; set; }
 
         /// <summary>

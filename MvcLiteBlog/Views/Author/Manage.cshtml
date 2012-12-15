@@ -1,15 +1,15 @@
 ﻿@model List<Author>
 
 @{
-    ViewBag.Title = "Manage Authors";
+    ViewBag.Title = "用户管理_[皮卡博客]";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
 
 <div id="main">
-    <h1>Manage authors</h1>
+    <h1>用户管理</h1>
     <div class="GridMargin leftButton">
-        @Html.ActionLink("Create Author", "Create")
+        @Html.ActionLink("新建用户", "Create")
     </div>
     <div class="success">
         @(TempData["Message"] == null ? string.Empty : TempData["Message"].ToString())
@@ -20,19 +20,28 @@
 
     }
 
-    @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => Html.ActionLink("Edit", "Edit", new { id = item.ID }), "authLinkStyle"), grid.Column(string.Empty, "Delete", (item) => Html.ActionLink("Delete", "Delete", new { id = item.ID }), "authLinkStyle"), grid.Column(string.Empty, "Unlock", (item) =>
-        {
-            if (item.Locked)
+    @grid.GetHtml(
+        columns: grid.Columns(
+            grid.Column(string.Empty, "编辑", (item) => Html.ActionLink("编辑", "Edit", new { id = item.ID }), "authLinkStyle"), 
+            grid.Column(string.Empty, "删除", (item) => Html.ActionLink("删除", "Delete", new { id = item.ID }), "authLinkStyle"), 
+            grid.Column(string.Empty, "锁定", (item) =>
             {
-                return Html.ActionLink("Unlock", "Unlock", new { id = item.ID });
-            }
-            else
-            {
-                return "Unlocked";
-            }
-        }, "authLinkStyle"), grid.Column("ID", "Name", null, "authIdStyle"), grid.Column("Name", "Display Name", null, "authNameStyle"), grid.Column("Email", "Email", null, "authEmailStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
-
-  
+                if (item.Locked)
+                {
+                    return Html.ActionLink("解锁", "Unlock", new { id = item.ID });
+                }
+                else
+                {
+                    return "正常";
+                }
+            }, "authLinkStyle"), 
+            grid.Column("ID", "用户名", null, "authIdStyle"), 
+            grid.Column("Name", "昵称", null, "authNameStyle"), 
+            grid.Column("Email", "电子邮箱", null, "authEmailStyle")), 
+        tableStyle: "GridContent", 
+        headerStyle: "GridHeader", 
+        rowStyle: "gridRowStyle", 
+        alternatingRowStyle: "gridAltRowStyle")
 </div>
 
 

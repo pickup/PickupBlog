@@ -1,15 +1,15 @@
 ﻿@model List<Category>
 @{
-    this.ViewBag.Title = "Manage Categories";
+    this.ViewBag.Title = "分类管理_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
 <div id="main">
-    <h1>Manage categories</h1>
+    <h1>分类管理</h1>
     <div>
         <div class="GridMargin leftButton">
-            @this.Html.ActionLink("Create Category", "Create") &nbsp;&nbsp;&nbsp;&nbsp;
-            @this.Html.ActionLink("Reorder categories", "Reorder")
+            @this.Html.ActionLink("新建分类", "Create") &nbsp;&nbsp;&nbsp;&nbsp;
+            @this.Html.ActionLink("分类排序", "Reorder")
         </div>
         <div class="success">
             @(this.TempData["Message"] == null ? string.Empty : this.TempData["Message"].ToString())
@@ -20,7 +20,16 @@
         }
 
 
-        @grid.GetHtml(columns: grid.Columns(grid.Column(string.Empty, "Edit", (item) => this.Html.ActionLink("Edit", "Edit", new { id = item.CatID }), "catLinkStyle"), grid.Column(string.Empty, "Delete", (item) => this.Html.ActionLink("Delete", "Delete", new { id = item.CatID }), "catLinkStyle"), grid.Column("CatID", "Category ID", null, "catIdStyle"), grid.Column("Name", "Category Name", null, "catNameStyle")), tableStyle: "GridContent", headerStyle: "GridHeader", rowStyle: "gridRowStyle", alternatingRowStyle: "gridAltRowStyle")
+        @grid.GetHtml(
+            columns: grid.Columns(
+                grid.Column(string.Empty, "编辑", (item) => this.Html.ActionLink("编辑", "Edit", new { id = item.CatID }), "catLinkStyle"), 
+                grid.Column(string.Empty, "删除", (item) => this.Html.ActionLink("删除", "Delete", new { id = item.CatID }), "catLinkStyle"), 
+                grid.Column("CatID", "分类ID", null, "catIdStyle"), 
+                grid.Column("Name", "分类名称", null, "catNameStyle")), 
+            tableStyle: "GridContent", 
+            headerStyle: "GridHeader", 
+            rowStyle: "gridRowStyle", 
+            alternatingRowStyle: "gridAltRowStyle")
         
     </div>
     <div style="clear: both;">

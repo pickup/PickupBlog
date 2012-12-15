@@ -1,19 +1,19 @@
 ﻿@model MvcLiteBlog.Models.CatModel
 
 @{
-    this.ViewBag.Title = "Create";
+    this.ViewBag.Title = "新建分类_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
 
 <div id="main">
-    <h1>Create category</h1>
+    <h1>新建分类</h1>
     @using (this.Html.BeginForm("Create", "Category"))
     {
         <div class="catForm">
             <fieldset>
                 <legend>
-                    Create Category
+                    新建分类
                 </legend>
                 <div class="success">
                     @this.ViewData["Message"]
@@ -22,26 +22,26 @@
                     @this.ViewData["ErrorMessage"]
                 </div>
                 <div>
-                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                    @this.Html.ValidationSummary("输入信息存在错误，请重试。")
                 </div>
-                <div>Category ID (Url Name)</div>
+                <div>分类ID(Url名称)</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.CatID, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.CatID, "*")
                 </div>
-                <div>Display name</div>
+                <div>分类名称</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.Name, "*")
                 </div>
                 <div class="button">
-                    <input type="submit" name="Submit" value="Create Category" />
+                    <input type="submit" name="Submit" value="保存" />
                 </div>
             </fieldset>
         </div>
     }
     <div>
-        @this.Html.ActionLink("Back to list", "Manage")
+        @this.Html.ActionLink("返回“分类管理”", "Manage")
     </div>
 </div>
 

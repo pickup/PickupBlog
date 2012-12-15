@@ -706,7 +706,7 @@ namespace LiteBlog.XmlProviders
 
             this._name = name;
 
-            // this._path = HttpContext.Current.Server.MapPath("~/App_data/User.xml");
+            //this._path = @"C:\Users\zdy\Documents\GitHub\PickupBlog\MvcLiteBlog\App_Data\User.xml"; //HttpContext.Current.Server.MapPath("~/App_data/User.xml");
             this._path = string.Format("{0}User.xml", config["DataPath"]);
 
             try

@@ -1,7 +1,7 @@
 ﻿@model List<PostInfo>
 
 @{
-    this.ViewBag.Title = "Posts By Month";
+    this.ViewBag.Title = "按月查看_[皮卡博客]";
     this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
@@ -17,7 +17,7 @@
 
 
 <div class="content">
-    <span class="caption">Archive : @this.ViewData["ArchiveName"] </span>
+    <span class="caption">@this.ViewData["ArchiveName"] </span>
 </div>
 @foreach (PostInfo postInfo in this.Model)
 {

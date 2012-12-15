@@ -21,13 +21,13 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the display name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid display name")]
+        [Required(ErrorMessage = "请输入正确的昵称")]
         public string DisplayName { get; set; }
 
         /// <summary>
         /// Gets or sets the email.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid email")]
+        [Required(ErrorMessage = "请输人正确的电子油箱地址")]
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", 
             ErrorMessage = "Please enter the email in the right format")]
         public string Email { get; set; }
@@ -35,7 +35,7 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter a valid user name")]
+        [Required(ErrorMessage = "请输人正确的用户名")]
         public string Name { get; set; }
 
         #endregion

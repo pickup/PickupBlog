@@ -1,7 +1,7 @@
 ﻿@model MvcLiteBlog.Models.ManageAppModel
 
 @{
-    this.ViewBag.Title = "Manage Application";
+    this.ViewBag.Title = "站点设置_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -13,15 +13,15 @@
         <h1>Application settings</h1>
         <div class="appForm">
             <fieldset>
-                <legend>Application Settings</legend>
+                <legend>站点设置</legend>
                 <div class="success">
                     @this.ViewData["SuccessMessage"]
                 </div>
                 <div>
-                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                    @this.Html.ValidationSummary("更新站点设置信息时发生错误，请重试。")
                 </div>
                 <div>
-                    Blog Name
+                    博客名称
                 </div>
                 <div>
                     @this.Html.TextBoxFor(m => m.BlogName, new { @class = "TextBox", @style = "width: 500px;" })
@@ -34,25 +34,25 @@
                     <textarea id="PostEditor" name="BlogDesc" class="TextBox" rows="10" cols="60">@this.Model.BlogDesc</textarea>
                 </div>*@
                 <div>
-                    Number of Posts in Home page
+                    首页显示篇数
                 </div>
                 <div>
                     @this.Html.DropDownList("PostCount", this.Model.PostCountList, new { @class = "TextBox" })
                 </div>
                 <div>
-                    Comment moderation
+                    是否开启评论审核
                 </div>
                 <div>
                     @this.Html.DropDownList("CommentModeration", this.Model.ModerationList, new { @class = "TextBox" }) 
                 </div>
                 <div>
-                    Timezone
+                    时区设置
                 </div>
                 <div>
                     @this.Html.DropDownList("Timezone", this.ViewData.Model.TimeZoneList, new { @class = "TextBox" })
                 </div>
                 <div class="button">
-                    <input type="submit" name="Submit" value="Update" />
+                    <input type="submit" name="Submit" value="保存设置" />
                 </div>
             </fieldset>
         </div>

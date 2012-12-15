@@ -67,7 +67,7 @@ namespace MvcLiteBlog.Controllers
 
             if (this.ModelState.IsValid)
             {
-                this.TempData["Message"] = "Author is successfully created!";
+                this.TempData["Message"] = "用户添加成功";
                 return this.RedirectToAction("Manage");
             }
 
@@ -94,7 +94,7 @@ namespace MvcLiteBlog.Controllers
             }
             else
             {
-                this.TempData["Message"] = "Author is successfully deleted";
+                this.TempData["Message"] = "用户已被删除";
             }
 
             return this.RedirectToAction("Manage");
@@ -162,7 +162,7 @@ namespace MvcLiteBlog.Controllers
 
             if (this.ModelState.IsValid)
             {
-                this.TempData["Message"] = "Author is successfully updated!";
+                this.TempData["Message"] = "用户信息已更新";
                 return this.RedirectToAction("Manage");
             }
 
@@ -199,7 +199,7 @@ namespace MvcLiteBlog.Controllers
         public ActionResult Unlock(string id)
         {
             AuthorComp.Unlock(id);
-            this.TempData["Message"] = "Author is unlocked";
+            this.TempData["Message"] = "用户已解除锁定";
             return this.RedirectToAction("Manage");
         }
 

@@ -1,49 +1,49 @@
 ﻿@model MvcLiteBlog.Models.AuthorModel
 
 @{
-    this.ViewBag.Title = "Manage Author";
+    this.ViewBag.Title = "编辑用户_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
 
 <div id="main">
-    <h1>Edit author</h1>
+    <h1>编辑用户</h1>
     @using (this.Html.BeginForm("Edit", "Author"))
     {
         <div class="authorForm">
             <fieldset>
                 <legend>
-                    Edit Author
+                    编辑用户
                 </legend>
                 <div class="success">
                     @this.ViewData["Message"]
                 </div>
                 <div>
-                    @this.Html.ValidationSummary("Error in updating values. Please try again.")
+                    @this.Html.ValidationSummary("输入信息存在错误，请重试。")
                 </div>
-                <div>Author name</div>
+                <div>用户名</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Name, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.Name, "*")
                 </div>
-                <div>Display name</div>
+                <div>昵称</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.DisplayName, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.DisplayName, "*")
                 </div>        
-                <div>Email</div>
+                <div>电子邮箱</div>
                 <div>
                     @this.Html.TextBoxFor(m => m.Email, new { @class = "TextBox" })
                     @this.Html.ValidationMessageFor(m => m.Email, "*")
                 </div>       
                 <div class="button">
-                    <input type="submit" name="Submit" value="Submit" />
+                    <input type="submit" name="Submit" value="保存" />
                 </div>
             </fieldset>
         </div>
     }
     <div>
-        @this.Html.ActionLink("Back to List", "Manage")
+        @this.Html.ActionLink("返回“用户管理”", "Manage")
     </div>
 </div>
 
