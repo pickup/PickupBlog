@@ -45,10 +45,10 @@ namespace MvcLiteBlog.Models
                 SelectListItem no = new SelectListItem();
 
                 yes.Value = "True";
-                yes.Text = "Yes";
+                yes.Text = "是";
 
                 no.Value = "False";
-                no.Text = "No";
+                no.Text = "否";
 
                 if (this.CommentModeration)
                 {
@@ -109,7 +109,7 @@ namespace MvcLiteBlog.Models
                     SelectListItem item = new SelectListItem();
                     item.Selected = false;
                     item.Text = tzInfo.DisplayName;
-                    item.Value = tzInfo.StandardName;
+                    item.Value = tzInfo.Id;
                     if (item.Value.ToLower() == this.Timezone.ToLower())
                     {
                         item.Selected = true;

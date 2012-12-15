@@ -1,7 +1,7 @@
 ﻿@model MvcLiteBlog.Models.ManageAppModel
 
 @{
-    this.ViewBag.Title = "站点设置_[皮卡博客]";
+    this.ViewBag.Title = "系统设置_[皮卡博客]";
     this.Layout = "~/Views/Shared/_AdminLayout.cshtml";
 
 }
@@ -10,10 +10,10 @@
 @using (this.Html.BeginForm("Application", "Admin"))
 {
     <div id="main">
-        <h1>Application settings</h1>
+        <h1>系统设置</h1>
         <div class="appForm">
             <fieldset>
-                <legend>站点设置</legend>
+                <legend>系统设置</legend>
                 <div class="success">
                     @this.ViewData["SuccessMessage"]
                 </div>

@@ -1,7 +1,7 @@
 ﻿@using MvcLiteBlog.Models
 @model IEnumerable<IGrouping<int, IGrouping<MonthYear, PostInfo>>>
 @{
-    this.ViewBag.Title = "博文列表_[皮卡博客]";
+    this.ViewBag.Title = "存档_[皮卡博客]";
     this.Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
@@ -11,7 +11,7 @@
 }
 
 <div class="content">
-    <h1>Archive</h1>
+    <h1>存档</h1>
     <ul id="archive">
         @foreach (IGrouping<int, IGrouping<MonthYear, PostInfo>> group1 in this.Model)
         {

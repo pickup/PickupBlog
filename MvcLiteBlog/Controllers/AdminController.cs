@@ -69,7 +69,7 @@ namespace MvcLiteBlog.Controllers
                 app.Timezone = model.Timezone;
                 SettingsComp.Save(app);
 
-                this.ViewData["SuccessMessage"] = "Application changes are successful";
+                this.ViewData["SuccessMessage"] = "配置信息已更新";
             }
 
             this.ViewData.Model = model;
@@ -115,20 +115,20 @@ namespace MvcLiteBlog.Controllers
                         }
                         else
                         {
-                            this.ViewData.ModelState.AddModelError("ChangePassword", "Password could not be changed");
+                            this.ViewData.ModelState.AddModelError("ChangePassword", "密码不能修改");
                         }
                     }
                     else
                     {
                         this.ViewData.ModelState.AddModelError(
-                            "RepeatPassword", "New password and repeat password do not match");
+                            "RepeatPassword", "两次输入的新密码不一致");
                     }
 
                     // redirect only if validation is successful as well as change password is successful
                 }
                 else
                 {
-                    this.ViewData.ModelState.AddModelError("InvalidLogin", "Invalid username or password");
+                    this.ViewData.ModelState.AddModelError("InvalidLogin", "用户名或密码不正确");
                 }
             }
 
@@ -179,7 +179,7 @@ namespace MvcLiteBlog.Controllers
                 }
                 else
                 {
-                    this.ViewData.ModelState.AddModelError("Login", "Login credentials is not correct");
+                    this.ViewData.ModelState.AddModelError("Login", "用户名或密码不正确");
                 }
             }
 
