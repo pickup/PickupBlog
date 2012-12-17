@@ -1,16 +1,23 @@
 ﻿@model List<Comment>
          
-<div class="comment">
-    &nbsp;
+<div id="commentCounts">
+    @if(@Model.Count == 0){
+        <span>无评论</span>
+    }
+    else{
+        <span>@Model.Count() 条评论</span>
+    }
 </div>          
 @foreach (Comment comment in this.Model)
 {
     if (comment.IsAuthor)
     {
         <div class="authorBg">
+            <div class="commentImage commentContent">
+                <img src="@Url.Content("~/Content/le-frog/images/commentImage.jpg")" />
+            </div>
             <div class="commentHeader">
                 <a name="@comment.ID"></a>
-                
                 @if (comment.Url == string.Empty)
                 {
                     @comment.Name
@@ -19,7 +26,7 @@
                 {
                     <a href="@comment.Url" target="_blank">@comment.Name</a>
                 }
-                <span> 于 @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture) 评论</span>
+                <span class="muted"> 于 @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture) 评论</span>
             </div>
             <div class="comment">
                 @this.Html.Raw(comment.HighlightedCode)
@@ -28,10 +35,12 @@
     }
     else
     {
-        <div>
+        <div class="commentContent">
+            <div class="commentImage">
+                <img src="@Url.Content("~/Content/le-frog/images/commentImage.jpg")" />
+            </div>
             <div class="commentHeader">
                 <a name="@comment.ID"></a>
-                Commented by 
                 @if (comment.Url == string.Empty)
                 {
                     @comment.Name
@@ -40,7 +49,7 @@
                 {
                     <a href="@comment.Url" target="_blank">@comment.Name</a>
                 }
-                <span> at @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture)</span>
+                <span class="muted"> 于 @comment.Time.ToString(MvcLiteBlog.Helpers.ConfigHelper.DateFormat, System.Globalization.CultureInfo.InvariantCulture) 评论</span>
             </div>
             <div class="comment">
                 @this.Html.Raw(comment.HighlightedCode)

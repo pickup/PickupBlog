@@ -38,7 +38,7 @@ div
 
 fieldset
 {
-    border: 2px solid #009E49;
+    border: none;
     margin: 5px;
 }
 
@@ -47,7 +47,7 @@ legend
     font-family: 'Segoe UI', Segoe, Futura, Helvetica;
     font-size: 1.2em;
     font-weight: normal;
-    color: #2778ec;
+    color: #333;
 }
 
 /* End Generic page styles */
@@ -317,24 +317,48 @@ pre.commentCode
 }
 
 /* Post - comment related styles */
+#commentCounts {
+    padding:10px 0 10px 5px;
+    border-bottom:1px solid #bbb;
+}
+
+.commentContent {
+    clear:both;
+}
+
+.commentImage {
+    float:left;
+    width:50px;
+    height:50px;
+    margin:20px;
+}
+    .commentImage img {
+        width:50px;
+        height:50px;
+    }
 
 .commentHeader
 {
-    padding: 5px 10px;
+    padding: 15px 0 0 80px;
 }
-
 
 .comment
 {
     border-bottom: dashed 1px #bbb;
-    padding: 5px 10px;
+    padding: 0 20px 0 90px;
     font-size: 1em;
 }
+
+    .comment p {
+        margin-top:10px;
+        line-height:1.6em;
+        font-size:0.9em;
+    }
 
 
 .authorBg
 {
-    background-color: #aaffaa;
+    background-color: #fff;
 }
 
 
@@ -342,8 +366,8 @@ pre.commentCode
 {
     font-family: Verdana;
     font-size: 1.1em;
-    border: 2px solid #999;
-    border-radius: 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
     padding: 4px;
 }
 
@@ -357,9 +381,9 @@ pre.commentCode
 {
     font-family: 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
-    border: 2px solid #ccc;
     background: #fff;
     color: black;
+    clear:both;
 }
 
     .ModalWindow fieldset > div
@@ -376,6 +400,17 @@ pre.commentCode
         font-size: 1.2em;
         font-weight: bold;
     }
+
+    .ModalWindow .button {
+        margin-top:20px;
+        text-align:left;
+    }
+
+        .ModalWindow .button a {
+            padding:5px 10px 5px 10px;
+            border:1px solid #999;
+            border-radius:5px;
+        }
 
 div.button
 {
@@ -469,4 +504,6 @@ div.success
 /* End Style for validation helpers */
 
 
-
+.muted {
+    color:#999;
+}
