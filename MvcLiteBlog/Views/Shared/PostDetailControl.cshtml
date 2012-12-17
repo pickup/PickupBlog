@@ -1,0 +1,26 @@
+﻿@model Post
+           
+<div class="post" id="@this.Model.FileID">
+    <div>
+        <h1>@this.Html.ActionLink(this.Model.Title, "Index", "Post", new { id = this.Model.FileID }, null)</h1>
+    </div>
+    <div id="PostContent" class="postContent">
+        @this.Html.Raw(this.Model.HighlightedContents)
+    </div>
+    <div class="postMeta">
+        <span>@this.Model.TimeText</span><br/>
+        <span>@this.Model.CategoriesText</span>
+    </div>
+    <div class="commentView">
+        <a name="comments" />
+        @this.Html.Action("GetComments", new { id = this.Model.FileID })
+    </div>
+    
+    <div>
+        <a name="addcomment" />
+        <div class="successMessage">
+        </div>
+        @this.Html.Action("CommentFormControl", "Comment", new { id = this.Model.FileID })
+    </div>
+</div>
+
