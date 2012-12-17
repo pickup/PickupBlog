@@ -82,10 +82,10 @@ namespace MvcLiteBlog.Controllers
         /// <returns>
         /// The System.Web.Mvc.ActionResult.
         /// </returns>
-        public ActionResult CommentFormControl()
+        public ActionResult CommentFormControl(string id)
         {
             CommenterProfile comProfile = ProfileComp.GetCommenterProfile();
-            InsertCommentModel model = new InsertCommentModel() { Name = comProfile.Name, Url = comProfile.Url };
+            InsertCommentModel model = new InsertCommentModel() { FileID = id, Name = comProfile.Name, Url = comProfile.Url };
             if (this.User.Identity.IsAuthenticated)
             {
                 model.IsAuthor = true;
@@ -156,7 +156,7 @@ namespace MvcLiteBlog.Controllers
                 message = "评论ID不能修改";
             }
 
-            return this.Json(new { Message = message, Result = result });
+            return this.Json(new { Message = message, Result = result, Id = model.FileID });
         }
 
         /// <summary>

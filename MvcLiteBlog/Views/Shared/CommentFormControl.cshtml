@@ -7,7 +7,8 @@
             <legend>添加评论</legend>
             <div class="">
                 <span id="commentResult"></span>
-                <input type="hidden" name="FileID" id="_hdnFileID" />
+                @*<input type="hidden" name="FileID" id="_hdnFileID" />*@
+                @this.Html.HiddenFor(m => m.FileID, new { id = "_hdnFileID" })
                 @this.Html.HiddenFor(m => m.IsAuthor)
             </div>
             <div class="editor_label">
@@ -30,8 +31,7 @@
                 <textarea id="commentEditor" name="CommentText" rows="10" cols="30" placeholder="请填写您的评论"></textarea>
             </div>
             <div class="button">
-                <a href="#" id="addCommentLink">完成</a>
-                <a href="#" id="closeCommentLink">取消</a>
+                <a href="#" id="addCommentLink">发表评论</a>
             </div>
         </fieldset>
     </div>

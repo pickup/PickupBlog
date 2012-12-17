@@ -25,13 +25,13 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the comment text.
         /// </summary>
-        [Required(ErrorMessage = "Please enter your comment")]
+        [Required(ErrorMessage = "评论内容不能为空")]
         public string CommentText { get; set; }
 
         /// <summary>
         /// Gets or sets the file id.
         /// </summary>
-        [Required(ErrorMessage = "There was some error. Please refresh the page!")]
+        [Required(ErrorMessage = "系统出现一些异常。请尝试刷新页面！")]
         public string FileID { get; set; }
 
         /// <summary>
@@ -43,15 +43,15 @@ namespace MvcLiteBlog.Models
         /// <summary>
         /// Gets or sets the name.
         /// </summary>
-        [Required(ErrorMessage = "Please enter your name")]
+        [Required(ErrorMessage = "评论人不能为空")]
         public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the url.
         /// </summary>
-        [RegularExpression(
-            @"(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?", 
-            ErrorMessage = "Please enter a valid web URL")]
+        //[RegularExpression(
+        //    @"(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?", 
+        //    ErrorMessage = "Please enter a valid web URL")]
         public string Url { get; set; }
 
         #endregion

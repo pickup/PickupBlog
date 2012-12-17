@@ -190,6 +190,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\addCodeDialog.js" />
     <Content Include="Scripts\ckeditor.js" />
+    <Content Include="Scripts\comment-new.js" />
     <Content Include="Scripts\comment.js" />
     <Content Include="Scripts\compose.js" />
     <Content Include="Scripts\addCommentCodeDialog.js" />
@@ -409,6 +410,7 @@
     <Content Include="Views\Page\Manage.cshtml" />
     <Content Include="Views\Page\Compose.cshtml" />
     <Content Include="Scripts\Custom\page.compose.js" />
+    <Content Include="Views\Shared\PostDetailControl.cshtml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />

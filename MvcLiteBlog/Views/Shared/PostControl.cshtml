@@ -12,18 +12,9 @@
         <span>@this.Model.CategoriesText</span>
     </div>
     <div>
-        
-        @this.Html.ActionLink("永久链接", "Index", "Post", new { id = this.Model.FileID }, null)  | 
-        <a href="#" class="showCommentLink">@this.Model.GetCommentCount()</a> | 
-        <a href="#" class="viewCommentLink">添加评论</a> 
-
-    </div>
-    <div class="successMessage">
-        
-    </div>
-
-    <div class="commentView">
-        @this.Html.Action("GetComments", new { id = this.Model.FileID })
+        @this.Html.ActionLink("查看原文", "Index", "Post", new { id = this.Model.FileID }, null)  | 
+        @this.Html.ActionLink(this.Model.GetCommentCount(), "Index", "Post", null, null, "comments", new { id = this.Model.FileID }, null)  |
+        @this.Html.ActionLink("添加评论", "Index", "Post", null, null, "addcomment", new { id = this.Model.FileID }, null)
     </div>
 </div>
 

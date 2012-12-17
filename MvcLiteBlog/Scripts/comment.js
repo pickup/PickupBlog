@@ -119,7 +119,7 @@ function () {
                 $('#' + fileId).find('.successMessage').text(data.Message);
                 setTimeout(function () { $('#' + fileId).find('.successMessage').text(''); }, 3000);
 
-                var path = appPath + 'Post/GetComments/' + $('#_hdnFileID').val();
+                var path = appPath + 'Post/GetComments/' + data.Id;
 
                 $.get(path,
                     function (data) {
