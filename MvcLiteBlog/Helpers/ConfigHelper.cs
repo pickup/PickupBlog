@@ -75,14 +75,14 @@ namespace MvcLiteBlog.Helpers
                     // string className = ConfigurationManager.AppSettings["DataContext"];
                     // Type type = Type.GetType(className);
                     string dataPath = ConfigHelper.DataPath;
-                    if (string.IsNullOrEmpty(dataPath) || !System.IO.Directory.Exists(dataPath))
-                    {
-                        if (HttpContext.Current != null)
-                        {
-                            dataPath = HttpContext.Current.Server.MapPath("~/App_Data/");
-                            ConfigHelper.DataPath = dataPath;
-                        }
-                    }
+                    //if (string.IsNullOrEmpty(dataPath) || !System.IO.Directory.Exists(dataPath))
+                    //{
+                    //    if (HttpContext.Current != null)
+                    //    {
+                    //        dataPath = HttpContext.Current.Server.MapPath("~/App_Data/");
+                    //        ConfigHelper.DataPath = dataPath;
+                    //    }
+                    //}
 
                     // context = (IDataContext)Activator.CreateInstance(type, dataPath);
                     using (UnityContainer container = new UnityContainer())
