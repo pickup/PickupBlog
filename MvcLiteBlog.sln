@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcLiteBlog", "MvcLiteBlog\MvcLiteBlog.csproj", "{6F28298D-BDC2-4F54-A362-BD5069EF441A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E6905F18-EEE1-499C-BB00-C58183F1DF28} = {E6905F18-EEE1-499C-BB00-C58183F1DF28}
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteBlog.XmlLayer", "LiteBlog.XmlLayer\LiteBlog.XmlLayer.csproj", "{5B21DD97-01E0-4647-9142-208211A3C9FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteBlog.XmlProviders", "LiteBlog.XmlProviders\LiteBlog.XmlProviders.csproj", "{E6905F18-EEE1-499C-BB00-C58183F1DF28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteBlog.SqlDbProfileProvider", "LiteBlog.SqlDbProfileProvider\LiteBlog.SqlDbProfileProvider.csproj", "{B53C4045-C078-46B6-8EEC-76ED2BB27537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteBlog.SqlDbLayer", "LiteBlog.SqlDbLayer\LiteBlog.SqlDbLayer.csproj", "{424559FB-0DEB-49C5-8229-6A8CB4288BAA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{E6905F18-EEE1-499C-BB00-C58183F1DF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6905F18-EEE1-499C-BB00-C58183F1DF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6905F18-EEE1-499C-BB00-C58183F1DF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B53C4045-C078-46B6-8EEC-76ED2BB27537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B53C4045-C078-46B6-8EEC-76ED2BB27537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B53C4045-C078-46B6-8EEC-76ED2BB27537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B53C4045-C078-46B6-8EEC-76ED2BB27537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{424559FB-0DEB-49C5-8229-6A8CB4288BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{424559FB-0DEB-49C5-8229-6A8CB4288BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{424559FB-0DEB-49C5-8229-6A8CB4288BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{424559FB-0DEB-49C5-8229-6A8CB4288BAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
