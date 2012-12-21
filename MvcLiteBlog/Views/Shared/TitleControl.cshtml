@@ -1,6 +1,8 @@
 ﻿@model List<LiteBlog.Common.Page>
 <div id="headerTitle">
-    @this.Html.Raw((string)this.ViewData["Title"])
+    <a href="/Home/index/">
+        @this.Html.Raw((string)this.ViewData["Title"])
+    </a>
 </div>
 <div id="headerMenu">
     <ul>

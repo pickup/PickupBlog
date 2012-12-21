@@ -1,8 +1,8 @@
 ﻿/* Generic page styles */
 body
 {
-    background-color: #000;
     margin: 0;
+    background-color:#fff;
 }
 
 table
@@ -44,7 +44,7 @@ fieldset
 
 legend
 {
-    font-family: 'Segoe UI', Segoe, Futura, Helvetica;
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Futura, Helvetica;
     font-size: 1.2em;
     font-weight: normal;
     color: #333;
@@ -60,33 +60,36 @@ div.page
     min-width: 960px;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-image:url(/Content/le-frog/images/bg.png);
+    background-repeat:repeat;
     text-align: left;
 }
 
 #header
 {
-    background-color: #fff;
+    background-color: #245a5c;
     color: #666;
-    font-family: 'Segoe UI', Segoe, Futura, Helvetica;
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Futura, Helvetica;
 }
 
 #headerTitle
 {
     float: left;
     margin: 0 0 0 20px;
-    font-size: 2.5em;
-    padding-top: 8px;
-    padding-bottom: 12px;
+    height:120px;
+    width:517px;
+    background-image:url(/Content/le-frog/images/Logo.png);
+    text-indent:-1000em;
+    background-repeat:no-repeat;
 }
 
 #headerMenu
 {
     float: right;
-    margin: 0 20px 0 0;
-    font-size: 1.5em;
-    padding-top: 18px;
-    padding-bottom: 20px;
+    margin: 0 40px 0 0;
+    font-size: 2em;
+    padding-top: 40px;
+    padding-bottom: 39px;
 }
 
     #headerMenu ul
@@ -103,29 +106,27 @@ div.page
 
     #headerMenu a:link, #headerMenu a:visited
     {
-        color: #004a82;
+        color: #e8a27c;
         text-decoration: none;
     }
 
     #headerMenu a:hover
     {
-        color: #fff;
-        background-color: #004a82;
+        color: #fffca8;
+        background-color: #245a5c;
     }
 
 #headerStrip
 {
-    background-color: #fff;
-    border-bottom:1px dashed #666;
+    border-top:1px dashed #fffca8;
     clear: both;
-    height:1px;
+    height:2px;
 }
 
 #middle
 {
     margin: 0;
     padding: 0;
-    background-color: white;
 }
 
 
@@ -153,7 +154,6 @@ div.page
     vertical-align: top;
     width: 75%;
     float: left;
-    background-color: #fff;
     margin: 0;
     padding: 0;
 }
@@ -164,9 +164,8 @@ div.page
     color: #333;
     padding: 6px;
     text-align: right;
-    font-family: Segoe UI, Verdana;
+    font-family: 'Microsoft YaHei', Segoe UI, Verdana;
     font-size: 1em;
-    background-color: #fff;
 }
 
 /* End Master page styles*/
@@ -175,10 +174,9 @@ div.page
 
 div.widget
 {
-    font-family: Segoe UI, Segoe, Arial;
+    font-family: 'Microsoft YaHei', Segoe UI, Segoe, Arial;
     font-size: .9em;
     line-height: 110%;
-    background-color: #fff;
     color: #333;
     margin: 8px;
     border-bottom:1px dashed #bbb;
@@ -186,14 +184,14 @@ div.widget
 
     div.widget a:link, div.widget a:visited
     {
-        color: #004a82;
+        color: #245a5c;
         text-decoration: none;
     }
 
     div.widget a:Hover
     {
         color: #fff;
-        background-color: #004a82;
+        background-color: #245a5c;
         text-decoration: none;
     }
 
@@ -248,26 +246,52 @@ ul.widgetList
 
 div.post
 {
-    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-family: 'Microsoft YaHei', 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
     padding: 10px 0 20px 0;
-    margin: 0;
     width: 90%;
-    margin: auto;
+    margin-top:20px;
     border-bottom: 1px dashed #bbb;
 }
 
+    div.post h1 {
+        display:inline;
+        margin-left:10px;
+    }
     div.post a, div.post a:visited
     {
         text-decoration: none;
-        color: #004a82;
+        color: #245a5c;
     }
 
         div.post a:hover
         {
             color: #fff;
-            background-color: #004a82;
+            background-color: #245a5c;
         }
+
+    div.post div.publishDate {
+        float:left;
+        font-family:Consolas;
+        text-align:center;
+        border:1px solid #7e0000;
+        border-radius:5px;
+    }
+
+    div.post div.publishYear {
+        font-size:0.8em;
+        padding:0;
+        background-color:#7e0000;
+        border-bottom:1px dashed #fffca8;
+        color:#fffca8;
+    }
+
+    div.post div.publishDay {
+        font-size:0.9em;
+        padding:2px;
+        color:#7e0000;
+        font-weight:bold;
+    }
 
 div.postContent
 {
@@ -278,7 +302,7 @@ div.postContent
 
 h1, .title
 {
-    font-family: 'Segoe UI', Segoe, Helvetica;
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Helvetica;
     word-wrap: normal;
     font-size: 2em;
     line-height: 110%;
@@ -314,7 +338,12 @@ pre.commentCode
 {
     color: #999;
     padding-bottom: 5px;
+    margin-top:20px;
 }
+
+    .postMeta span {
+        margin-right:20px;
+    }
 
 /* Post - comment related styles */
 #commentCounts {
@@ -358,14 +387,13 @@ pre.commentCode
 
 .authorBg
 {
-    background-color: #fff;
 }
 
 
 .textBox, input[type=text]
 {
-    font-family: Verdana;
-    font-size: 1.1em;
+    font-family: 'Microsoft YaHei', Verdana;
+    font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 2px;
     padding: 4px;
@@ -379,9 +407,8 @@ pre.commentCode
 
 .ModalWindow
 {
-    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-family: 'Microsoft YaHei', 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
-    background: #fff;
     color: black;
     clear:both;
 }
@@ -434,13 +461,11 @@ div.button
 
 div.content
 {
-    width: 90%;
-    margin: auto;
-    font-family: 'Segoe UI','Lucida Grande',Verdana;
+    font-family: 'Microsoft YaHei', 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
-    word-spacing: 2px;
-    line-height: 130%;
-    padding: 10px 10px;
+    margin-top:20px;
+    width:90%;
+    border-bottom:1px dashed #7e0000;
 }
 
     div.content a, div.content a:visited
@@ -458,11 +483,10 @@ div.content
 
 .caption
 {
-    font-family: 'Segoe UI', Segoe;
-    font-size: 1.5em;
-    color: black;
-    background-color: lightgray;
-    padding: 0 5px;
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe;
+    font-size: 2em;
+    color: #7e0000;
+    padding-bottom:3px;
 }
 
 

@@ -143,7 +143,7 @@ namespace MvcLiteBlog.BlogEngine
             if (catID.IndexOf(",") < 0)
             {
                 string cat = CategoryComp.GetCategoryName(catID);
-                return string.Format("所属分类 : {0}", cat);
+                return string.Format("分类 : {0}", cat);
             }
             else
             {
