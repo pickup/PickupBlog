@@ -568,7 +568,7 @@ namespace MvcLiteBlog.Controllers
 
             // To avoid exception in syntax highlighter
             post.Contents = model.Content ?? string.Empty;
-
+            post.Author = this.User.Identity.Name;
             model.Post = post;
 
             this.Session["Post"] = post;

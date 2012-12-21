@@ -3,15 +3,15 @@
 <div class="post" id="@this.Model.FileID">
     <div>
         <div class="publishDate">
-            <div class="publishYear">2012</div>
-            <div class="publishDay">12.12</div>
+            <div class="publishYear">@this.Model.Time.Year</div>
+            <div class="publishDay">@(this.Model.Time.Month).@(this.Model.Time.Day)</div>
         </div>
         <h1>
             @this.Html.ActionLink(this.Model.Title, "Index", "Post", new { id = this.Model.FileID }, null)
         </h1>
     </div>
     <div class="postMeta">
-        <span>作者：@this.Model.TimeText</span>
+        <span>作者：@this.Model.Author</span>
         <span>@this.Model.CategoriesText</span>
     </div>
     <div id="PostContent" class="postContent">
