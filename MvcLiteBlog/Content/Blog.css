@@ -77,10 +77,17 @@ div.page
     float: left;
     margin: 0 0 0 20px;
     height:120px;
-    width:517px;
-    background-image:url(/Content/le-frog/images/Logo.png);
-    text-indent:-1000em;
+    width:392px;
     background-repeat:no-repeat;
+}
+
+#slogan
+{
+    float: right;
+    margin: 0 60px 0 0;
+    font-size: 2em;
+    padding-top: 42px;
+    padding-bottom: 29px;
 }
 
 #headerMenu
@@ -126,7 +133,7 @@ div.page
 #middle
 {
     margin: 0;
-    padding: 0;
+    padding: 0 40px 0 40px;
 }
 
 
@@ -141,6 +148,15 @@ div.page
     
 }
 
+#right
+{
+    width: 25%;
+    vertical-align: top;
+    float: right;
+    margin: 0;
+    padding-top: 30px;
+}
+
 #main
 {
     vertical-align: top;
@@ -152,10 +168,9 @@ div.page
 #center
 {
     vertical-align: top;
-    width: 75%;
+    width: 70%;
     float: left;
     margin: 0;
-    padding: 0;
 }
 
 #footer
@@ -249,7 +264,7 @@ div.post
     font-family: 'Microsoft YaHei', 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
     padding: 10px 0 20px 0;
-    width: 90%;
+    width: 100%;
     margin-top:20px;
     border-bottom: 1px dashed #bbb;
 }

@@ -1,18 +1,21 @@
 ﻿@model List<LiteBlog.Common.Page>
 <div id="headerTitle">
     <a href="/Home/index/">
-        @this.Html.Raw((string)this.ViewData["Title"])
+        @*@this.Html.Raw((string)this.ViewData["Title"])*@
+        <img src="/Content/le-frog/images/Logo.png" alt="皮卡网志" title="皮卡网志" />
     </a>
 </div>
-<div id="headerMenu">
+@*<div id="headerMenu">
     <ul>
         <li>@this.Html.ActionLink("首页", "Index", "Home") </li>
         <li>@this.Html.ActionLink("管理", "Index", "Admin") </li>
-        @*<li>@this.Html.ActionLink("LiteBlog", "Index", "LiteBlog") </li>*@
         @foreach (var page in Model)
         {
             <li>@this.Html.ActionLink(page.Title, "Index", "Page", new { id = page.FileId }, null)</li>
         }
     </ul>
+</div>*@
+<div id="slogan">
+    <img src="/Content/le-frog/images/slogan.png" title="装满希望，驶向云端。" />
 </div>
 <div id="headerStrip">&nbsp;</div>
