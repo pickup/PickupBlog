@@ -355,6 +355,7 @@ pre.commentCode
     color: #999;
     padding-bottom: 5px;
     margin-top:20px;
+    font-size:13px;
 }
 
     .postMeta span {
@@ -547,3 +548,11 @@ div.success
 .muted {
     color:#999;
 }
+
+.bshare-custom {
+    display:inline;
+}
+
+    .bshare-custom a {
+        margin-top:-4px;
+    }

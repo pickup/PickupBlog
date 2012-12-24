@@ -13,6 +13,22 @@
     <div class="postMeta">
         <span>作者：@this.Model.Author</span>
         <span>@this.Model.CategoriesText</span>
+        <div class="bshare-custom">
+            分享到：
+            <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+            <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+            <a title="分享到QQ空间" class="bshare-qzone" href="javascript:void(0);"></a>
+            <a title="分享到豆瓣" class="bshare-douban"></a>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            bShare.addEntry({
+                title: "@Model.Title",
+                summary: "#皮卡网志#",
+                url:"http://"+"@Request.Url.Host"+":"+"@Request.Url.Port"+"/Post/"+"@System.Web.HttpUtility.UrlEncode(Model.Title)"
+            });
+        </script>
     </div>
     <div id="PostContent" class="postContent">
         @this.Html.Raw(this.Model.HighlightedContents)
