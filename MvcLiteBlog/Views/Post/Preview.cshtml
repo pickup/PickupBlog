@@ -10,19 +10,18 @@
 }
 
 <div id="main">
-    <div class="post">
+    <div class="post" id="@this.Model.FileID">
         <div>
-            <h1>@this.Model.Title</h1>
+            <div class="publishDate">
+                <div class="publishYear">@this.Model.Time.Year</div>
+                <div class="publishDay">@(this.Model.Time.Month).@(this.Model.Time.Day)</div>
+            </div>
+            <h1>@this.Html.ActionLink(this.Model.Title, "Index", "Post", new { id = this.Model.FileID }, null)</h1>
         </div>
         <div id="PostContent" class="postContent">
-            @this.Html.Raw(this.Model.HighlightedContents)
-        </div>
-        <div class="postMeta">
-            <span>@this.Model.TimeText</span><br />
-            <span>@this.Model.CategoriesText</span>
+        @this.Html.Raw(this.Model.HighlightedContents)
         </div>
     </div>
-
     @using (this.Html.BeginForm("BackToCompose", "Post"))
     {
         <div class="button">

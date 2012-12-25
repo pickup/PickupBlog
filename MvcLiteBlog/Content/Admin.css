@@ -1,10 +1,8 @@
 ﻿/* Generic page styles */
 body
 {
-    background-color: #fff;
-    margin: 0px;
-    font-family: 'Microsoft YaHei', 'Segoe UI', 'Lucida Grande',Verdana;
-    font-size: 1em;
+    margin: 0;
+    background-color:#fff;
 }
 
 table
@@ -12,6 +10,11 @@ table
     padding: 0px;
     margin: 0px;
     font-size: 1em;
+}
+
+img {
+    display:block;
+    border:none;
 }
 
 tr
@@ -26,7 +29,7 @@ td
     margin: 0px;
 }
 
-a, a:visited, a:hover
+a:link, a:visited, a:hover
 {
     color: #0000ff;
     text-decoration: underline;
@@ -35,6 +38,21 @@ a, a:visited, a:hover
 div
 {
     font-size: 1em;
+}
+
+
+fieldset
+{
+    border: none;
+    margin: 5px;
+}
+
+legend
+{
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Futura, Helvetica;
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #333;
 }
 
 /* End Generic page styles */
@@ -627,38 +645,79 @@ div.pwdForm
 
 div.post
 {
-    width: 760px;
-    font-family: 'Segoe UI', 'Lucida Grande',Verdana;
+    font-family: 'Microsoft YaHei', 'Segoe UI','Lucida Grande',Verdana;
     font-size: 1em;
-    word-spacing: 2px;
-    line-height: 130%;
-    padding: 5px 10px;
+    padding: 10px 0 20px 0;
+    width: 100%;
+    margin-top:20px;
+    border-bottom: 1px dashed #bbb;
 }
 
+    div.post h1 {
+        display:inline;
+        margin-left:10px;
+    }
     div.post a, div.post a:visited
     {
-        text-decoration: underline;
-        color: #00f;
+        text-decoration: none;
+        color: #245a5c;
     }
 
         div.post a:hover
         {
-            color: #f00;
+            color: #fff;
+            background-color: #245a5c;
         }
+
+    div.post div.publishDate {
+        float:left;
+        font-family:Consolas;
+        text-align:center;
+        border:1px solid #7e0000;
+        border-radius:5px;
+    }
+
+    div.post div.publishYear {
+        font-size:0.8em;
+        padding:0;
+        background-color:#7e0000;
+        border-bottom:1px dashed #fffca8;
+        color:#fffca8;
+    }
+
+    div.post div.publishDay {
+        font-size:0.9em;
+        padding:2px;
+        color:#7e0000;
+        font-weight:bold;
+        width:40px;
+    }
 
 div.postContent
 {
     font-size: 1em;
-    padding: 5px 0px;
+    word-spacing: 2px;
+    line-height: 130%;
 }
 
-
+h1, .title
+{
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Helvetica;
+    word-wrap: normal;
+    font-size: 2em;
+    line-height: 110%;
+    font-weight: normal;
+    word-spacing: 2px;
+    color: #2778ec;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+}
 
 pre.code
 {
     font-family: Consolas, Courier New;
     font-size: .8em;
-    width: 700px;
+    min-width: 700px;
     margin: 0;
     padding: 5px 10px;
     background-color: #eeeeee;
@@ -674,11 +733,18 @@ pre.commentCode
     overflow: hidden;
 }
 
+
 .postMeta
 {
-    color: #f00;
+    color: #999;
     padding-bottom: 5px;
+    margin-top:20px;
+    font-size:13px;
 }
+
+    .postMeta span {
+        margin-right:20px;
+    }
 
 /* End Post Control Styles */
 
