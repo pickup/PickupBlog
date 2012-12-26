@@ -13,7 +13,6 @@ table
 }
 
 img {
-    display:block;
     border:none;
 }
 
@@ -360,12 +359,15 @@ pre.commentCode
     color: #999;
     padding-bottom: 5px;
     margin-top:20px;
+    margin-bottom:40px;
     font-size:13px;
 }
 
-    .postMeta span {
+    .postMeta div {
+        float:left;
         margin-right:20px;
     }
+
 
 /* Post - comment related styles */
 #commentCounts {
@@ -554,10 +556,17 @@ div.success
     color:#999;
 }
 
-.bshare-custom {
+.jiathis_style {
     display:inline;
 }
 
-    .bshare-custom a {
-        margin-top:-4px;
+    .jiathis_style .buttons {
+        padding-top:2px;
     }
+
+    .jiathis_style div {
+        float:left;
+        margin-right:0;
+
+    }
+
