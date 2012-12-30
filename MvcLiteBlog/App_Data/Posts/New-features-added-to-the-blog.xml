@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Post Title="New features added to the blog" FileID="New-features-added-to-the-blog" Author="Admin" Time="24-Nov-2010 09:31 AM" CatID="General" Comments="1">
+  <Documents></Documents>
+  <Content>&lt;p&gt;
+	A lot of new features are added to the blog:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;
+		Scheduled publishing&lt;/li&gt;
+	&lt;li&gt;
+		Ability to add code in the blog from the editor&lt;/li&gt;
+	&lt;li&gt;
+		Syntax Highlighter to highlight the code&lt;/li&gt;
+	&lt;li&gt;
+		Enhanced XML Profile Provider to delete inactive user profiles&lt;/li&gt;
+	&lt;li&gt;
+		A better compose page&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+	A few technical enhancements have been made:&lt;/p&gt;
+&lt;ol&gt;
+	&lt;li&gt;
+		Usage of FckEditor as the compose tool&lt;/li&gt;
+	&lt;li&gt;
+		Extensive use of AjaxControlToolkit&lt;/li&gt;
+	&lt;li&gt;
+		Good reusable code in the business/data layer&lt;/li&gt;
+	&lt;li&gt;
+		DIV based styling of UI&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+	I hope the new release is much more useful than the previous one. Get started with the &lt;a href="../BlogAdmin/Default.aspx"&gt;admin portal&lt;/a&gt;. User: Admin, Password: admin.&lt;/p&gt;
+&lt;p&gt;
+	 &lt;/p&gt;
+&lt;p&gt;
+	 &lt;/p&gt;
+&lt;p&gt;
+	 &lt;/p&gt;
+</Content>
+  <Comments>
+    <Comment ID="5" Name="zdy" Url="" Time="15-Dec-2012 04:41 PM" Ip="::1" IsAuthor="true">&lt;p&gt;
+	评论一下。&lt;/p&gt;
+</Comment>
+  </Comments>
+</Post>

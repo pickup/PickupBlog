@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Post Title="VirtualBox 4.2.6 发布 修复多项问题" FileID="VirtualBox-426-发布-修复多项问题" Author="" Time="21-Dec-2012 10:06 PM" CatID="" Comments="0">
+  <Documents>
+    <Document Path="/Docs/ul3631456-2.jpg" />
+  </Documents>
+  <Content>&lt;p&gt;
+	Oracle 刚发布了 VirtualBox 4.2.6 ，这是一个维护版本，看起来没什么变化，主要是很多小改进和 bug 修复。 值得关注的有：VBoxManage 现在可正确处理从映像中转成磁盘，提升了媒体处理，支持&amp;ldquo;网络使用率&amp;rdquo;和&amp;ldquo;磁盘使用率&amp;rdquo;统计；EI Torito BIOS 的修复了帮助你从 CD 中启动虚拟机；更好的支持 Windows 2000 和 Windows 8；修复多个问题提升了可靠性。&lt;/p&gt;
+</Content>
+  <Comments></Comments>
+</Post>
