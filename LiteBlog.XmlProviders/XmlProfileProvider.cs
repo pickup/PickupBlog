@@ -19,6 +19,7 @@ namespace LiteBlog.XmlProviders
     using System.Xml;
 
     using LiteBlog.Common;
+    using System.Web;
 
     // using MvcLiteBlog.BlogEngine;
 
@@ -579,7 +580,7 @@ namespace LiteBlog.XmlProviders
             }
             else
             {
-                string dataPath = config["DataPath"];
+                string dataPath = HttpRuntime.AppDomainAppPath + config["DataPath"];
                 this.path = string.Format("{0}Profile.xml", dataPath);
                 this.path2 = string.Format("{0}Log.txt", dataPath);
                 this.doc.Load(this.path);

@@ -161,7 +161,9 @@
     <Content Include="App_Data\Comment.xml" />
     <Content Include="App_Data\Draft.xml" />
     <Content Include="App_Data\Log.txt" />
-    <Content Include="App_Data\Profile.xml" />
+    <Content Include="App_Data\Profile.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Rss.xml" />
     <Content Include="App_Data\Service.xml" />
     <Content Include="App_Data\Settings.xml" />

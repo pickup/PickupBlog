@@ -13,6 +13,7 @@ namespace LiteBlog.XmlLayer
 {
     using LiteBlog.Common;
     using LiteBlog.Common.Contracts;
+    using System.Web;
 
     /// <summary>
     /// This class is present in common layer because it is tightly 
@@ -59,7 +60,7 @@ namespace LiteBlog.XmlLayer
         {
             get
             {
-                return _path;
+                return HttpRuntime.AppDomainAppPath + _path;
             }
         }
 

@@ -14,6 +14,7 @@ namespace LiteBlog.XmlLayer
 
     using LiteBlog.Common;
     using LiteBlog.Common.Contracts;
+    using System.Web;
 
     /// <summary>
     /// This class is used by CacheHelper object to create any dependencies

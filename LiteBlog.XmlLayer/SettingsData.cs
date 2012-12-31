@@ -14,6 +14,7 @@ namespace LiteBlog.XmlLayer
 
     using LiteBlog.Common;
     using LiteBlog.Common.Contracts;
+    using System.Web;
 
     /// <summary>
     /// Class that manages the Settings XML
@@ -110,7 +111,8 @@ namespace LiteBlog.XmlLayer
 
             try
             {
-                root = XElement.Load(this._path);
+                var p = this._path;
+                root = XElement.Load(p);
             }
             catch (Exception ex)
             {

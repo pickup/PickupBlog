@@ -94,3 +94,103 @@ mscorlib
    在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
    在 System.Xml.Linq.XElement.Load(String uri)
    在 LiteBlog.XmlLayer.SettingsData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\SettingsData.cs:行号 113
+30-Dec-2012 Application file could not be found
+未能找到路径“C:\App_Data\Settings.xml”的一部分。
+mscorlib
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.SettingsData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\SettingsData.cs:行号 113
+30-Dec-2012 Membership data not loaded
+31-Dec-2012 Service file could not be found
+未能找到路径“C:\App_Data\Service.xml”的一部分。
+mscorlib
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.ServiceData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\ServiceData.cs:行号 90
+31-Dec-2012 Stat file could not be found
+未能找到路径“C:\App_Data\Stat.xml”的一部分。
+mscorlib
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.StatData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\StatData.cs:行号 89
+31-Dec-2012 Blog meta file could not be found
+未能找到路径“C:\App_Data\Blog.xml”的一部分。
+mscorlib
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.BlogData.GetBlogItems() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\BlogData.cs:行号 391
+31-Dec-2012 Stat file is not in the right format
+Blog meta file could not be found
+LiteBlog.XmlLayer
+   在 LiteBlog.XmlLayer.BlogData.GetBlogItems() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\BlogData.cs:行号 396
+   在 LiteBlog.XmlLayer.StatData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\StatData.cs:行号 136
+31-Dec-2012 Blog meta file could not be found
+未能找到路径“C:\App_Data\Blog.xml”的一部分。
+mscorlib
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.BlogData.GetBlogItems() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\BlogData.cs:行号 391
+31-Dec-2012 Stat file is not in the right format
+Blog meta file could not be found
+LiteBlog.XmlLayer
+   在 LiteBlog.XmlLayer.BlogData.GetBlogItems() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\BlogData.cs:行号 396
+   在 LiteBlog.XmlLayer.StatData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\StatData.cs:行号 136
+31-Dec-2012 Application file could not be found
+不支持给定路径的格式。
+mscorlib
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   在 System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   在 System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   在 System.Xml.XmlTextReaderImpl.FinishInitUriString()
+   在 System.Xml.XmlTextReaderImpl..ctor(String uriStr, XmlReaderSettings settings, XmlParserContext context, XmlResolver uriResolver)
+   在 System.Xml.XmlReaderSettings.CreateReader(String inputUri, XmlParserContext inputContext)
+   在 System.Xml.XmlReader.Create(String inputUri, XmlReaderSettings settings, XmlParserContext inputContext)
+   在 System.Xml.Linq.XElement.Load(String uri, LoadOptions options)
+   在 System.Xml.Linq.XElement.Load(String uri)
+   在 LiteBlog.XmlLayer.SettingsData.Load() 位置 c:\Users\zdy\Documents\GitHub\PickupBlog\LiteBlog.XmlLayer\SettingsData.cs:行号 115
