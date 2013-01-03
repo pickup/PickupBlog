@@ -100,6 +100,7 @@
     <Compile Include="BlogEngine\ArchiveComp.cs" />
     <Compile Include="BlogEngine\BlogComp.cs" />
     <Compile Include="BlogEngine\PageComp.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\PageController.cs" />
     <Compile Include="Helpers\CacheHelper.cs" />
     <Compile Include="BlogEngine\CategoryComp.cs" />
@@ -412,6 +413,7 @@
     <Content Include="Views\Page\Compose.cshtml" />
     <Content Include="Scripts\Custom\page.compose.js" />
     <Content Include="Views\Shared\PostDetailControl.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
@@ -453,7 +455,7 @@
     <Content Include="Views\Shared\_SiteLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\TitleControl.cshtml" />

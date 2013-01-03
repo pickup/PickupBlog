@@ -24,11 +24,11 @@
     <body>
         <div class="page">
             <div id="header">
-                @this.Html.Action("AdminTitle", "Home")
+                @this.Html.Action("AdminTitle", "Blog")
             </div>
             <div id="middle">
                 <div id="left">
-                    @{ this.Html.RenderAction("AdminMenu", "Home"); }
+                    @{ this.Html.RenderAction("AdminMenu", "Blog"); }
                 </div>
                 <div id="center">
                     @{ this.Html.EnableClientValidation(); }

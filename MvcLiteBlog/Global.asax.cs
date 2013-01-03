@@ -42,9 +42,14 @@ namespace MvcLiteBlog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                "Blog",
+                "Blog/{action}/{id}",
+                new { controller = "Blog", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
                 "Rss",
                 "Rss",
-                new { controller = "Home", action = "Rss" });
+                new { controller = "Blog", action = "Rss" });
 
             routes.MapRoute(
                 "Category",

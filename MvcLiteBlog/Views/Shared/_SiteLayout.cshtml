@@ -19,18 +19,18 @@
 <body>
     <div class="page">
         <div id="header">
-            @this.Html.Action("Title", "Home")
+            @this.Html.Action("Title", "Blog")
         </div>
         <div id="middle">
             <div id="center">
                 @this.RenderBody()
             </div>
             <div id="right">
-                @this.Html.Action("MostPopularTile", "Home")
+                @this.Html.Action("MostPopularTile", "Blog")
                 @this.Html.Action("RecentCommentsTile", "Comment")
                 @this.Html.Action("Widget", "Category")
                 @this.Html.Action("Widget", "Archive")
-                @this.Html.Action("Stat", "Home")
+                @this.Html.Action("Stat", "Blog")
                 @this.Html.Partial("AdControl")
             </div>
             <div style="clear: both;">&nbsp;</div>

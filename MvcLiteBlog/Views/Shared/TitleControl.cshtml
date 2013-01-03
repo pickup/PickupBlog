@@ -1,13 +1,13 @@
 ﻿@model List<LiteBlog.Common.Page>
 <div id="headerTitle">
-    <a href="/Home/index/">
+    <a href="/Blog/index/">
         @*@this.Html.Raw((string)this.ViewData["Title"])*@
         <img src="/Content/le-frog/images/Logo.png" alt="皮卡网志" title="回首页" />
     </a>
 </div>
 @*<div id="headerMenu">
     <ul>
-        <li>@this.Html.ActionLink("首页", "Index", "Home") </li>
+        <li>@this.Html.ActionLink("首页", "Index", "Blog") </li>
         <li>@this.Html.ActionLink("管理", "Index", "Admin") </li>
         @foreach (var page in Model)
         {

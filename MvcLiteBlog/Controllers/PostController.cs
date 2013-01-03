@@ -284,7 +284,7 @@ namespace MvcLiteBlog.Controllers
             StatComp.IncrementPosts(id);
             if (post == null)
             {
-                return this.RedirectToAction("Error", "Home");
+                return this.RedirectToAction("Error", "Blog");
             }
 
             this.ViewData.Model = post;
