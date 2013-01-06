@@ -85,10 +85,23 @@ div.page
     background-repeat:no-repeat;
 }
 
+#backToStudio {
+    float: right;
+    margin: 10px 20px 0 0;
+    width:130px;
+    height:100px;
+    background-image:url(/Content/le-frog/images/backToStudio.jpg);
+}
+
+    #backToStudio:hover {
+        background-position-y:100px;
+        cursor:pointer;
+    }
+
 #slogan
 {
     float: right;
-    margin: 0 60px 0 0;
+    margin: 0 20px 0 0;
     font-size: 2em;
     padding-top: 42px;
     padding-bottom: 29px;
