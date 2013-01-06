@@ -20,20 +20,16 @@
                 $('#about').ScrollTo(800);
             });
 
-            $('#tb-global').hide();
-            $('#fs-global').hide();
             $(window).scroll(function () {
                 var vtop = $(document).scrollTop();
                 
-                if (vtop > 250) {
+                if (vtop > 260) {
                     $('#tb-global').show();
-                    $('#fs-global').show();
                     $('#navbar-bottomline').hide();
                     $('#navbar-shadow').hide();
                 }
                 else {
                     $('#tb-global').hide();
-                    $('#fs-global').hide();
                     $('#navbar-bottomline').show();
                     $('#navbar-shadow').show();
                 }
@@ -60,9 +56,9 @@
                 <div id="navbar-shadow"></div>
             </div>
             <!--滚动超过logo和slogan之后的导航栏底栏-->
-            <div id="tb-global" class="title-bottomline"></div>
+            <div id="tb-global" class="title-bottomline" style="display:none;"></div>
             <!--滚动超过logo和slogan之后的导航栏阴影-->
-            <div id="fs-global" class="full-shadow"></div>
+            @*<div id="fs-global" class="full-shadow" style="display:none;"></div>*@
         </div>
         <div id="middle">
             <div id="logo">
@@ -316,9 +312,10 @@
             </div>
         </div>
     </div>
-    
-    
-    
 
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write('<div style="display:none">' + unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff1c27a1f5e4ddd21285a8a21e0ba3f8e' type='text/javascript'%3E%3C/script%3E") + '</div>');
+    </script>
 </body>
 </html>
