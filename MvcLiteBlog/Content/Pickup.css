@@ -171,14 +171,11 @@ h1 {
 }
 
 .area {
-}
-
-#products>.align-center {
-    border-bottom:1px dashed #333;
-}
-
-#products,#about {
     padding-top:60px;
+}
+
+#products>.align-center,#about>.align-center {
+    border-bottom:1px dashed #333;
 }
 
 .product {
@@ -218,6 +215,10 @@ h1 {
 
 #rememberit .product-logo {
     background-color:dodgerblue;
+}
+
+#spirits {
+    margin-bottom:60px;
 }
 
 #spirits ul li{

@@ -14,16 +14,19 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#goto-products').bind('click', function () {
-                $('#products').ScrollTo(800);
+                $('#products').ScrollTo(500);
             });
             $('#goto-about').bind('click', function () {
-                $('#about').ScrollTo(800);
+                $('#about').ScrollTo(500);
+            });
+            $('#goto-studio-members').bind('click', function () {
+                $('#studio-members').ScrollTo(500);
             });
 
             $(window).scroll(function () {
                 var vtop = $(document).scrollTop();
                 
-                if (vtop > 260) {
+                if (vtop > 261) {
                     $('#tb-global').show();
                     $('#navbar-bottomline').hide();
                     $('#navbar-shadow').hide();
@@ -42,8 +45,9 @@
         <div id="header" class="nav-fixed-top">
             <div class="align-center">
                 <ul>
-                    <li><a id="goto-products" href="#products">产品</a></li>
                     <li><a id="goto-about" href="#about">关于皮卡</a></li>
+                    <li><a id="goto-products" href="#products">产品</a></li>
+                    <li><a id="goto-studio-members" href="#studio-members">成员</a></li>
                     <li><a href="./blog/">网志</a></li>
                 </ul>
             </div>
@@ -57,8 +61,10 @@
             </div>
             <!--滚动超过logo和slogan之后的导航栏底栏-->
             <div id="tb-global" class="title-bottomline" style="display:none;"></div>
+            @*
             <!--滚动超过logo和slogan之后的导航栏阴影-->
-            @*<div id="fs-global" class="full-shadow" style="display:none;"></div>*@
+            <div id="fs-global" class="full-shadow" style="display:none;"></div>
+            *@
         </div>
         <div id="middle">
             <div id="logo">
@@ -69,6 +75,36 @@
                 <div class="title-bottomline"></div>
             </div>
 
+            <div id="about" class="area">
+                <div class="align-center">
+                    <h2>『关于皮卡』</h2>
+                    <div id="spirits">
+                        <h3>皮卡精神</h3>
+                        <ul>
+                            <li><span id="free" class="spirit">自由</span><span class="muted">转化新鲜的想法</span></li>
+                            <li><span id="efficiency" class="spirit">高效</span><span class="muted">轻巧且实用</span></li>
+                            <li><span id="comfortable" class="spirit">舒适</span><span class="muted">关注用户体验</span></li>
+                        </ul>
+                        <div class="description">
+                            <p>
+                                皮卡工作室成立于2012年的末日之后。
+                            </p>
+                            <p>
+                                我们崇尚皮卡车的自由、高效和舒适，遂凭其名，愿践其意。
+                            </p>
+                            <p>
+                                我们会持续关注和收集泛互联网行业的前沿动态，并将新鲜的想法转化为产品。
+                            </p>
+                            <p>
+                                我们致力于生产轻巧且实用的软件产品， 同时提供良好的用户体验。
+                            </p>
+                            <p>
+                                我们希望可以在积累和实践中分享一丝快乐，收获一份成长。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="products" class="area">
                 <div class="align-center">
                     <h2>『皮卡产品』</h2>
@@ -121,39 +157,11 @@
                     </div>
                 </div>
             </div>
-    
-            <div id="about" class="area">
+            <div id="studio-members" class="area">
                 <div class="align-center">
-                    <h2>『关于皮卡』</h2>
-                    <div id="spirits">
-                        <h3>皮卡精神</h3>
-                        <ul>
-                            <li><span id="free" class="spirit">自由</span><span class="muted">转化新鲜的想法</span></li>
-                            <li><span id="efficiency" class="spirit">高效</span><span class="muted">轻巧且实用</span></li>
-                            <li><span id="comfortable" class="spirit">舒适</span><span class="muted">关注用户体验</span></li>
-                        </ul>
-                        <div class="description">
-                            <p>
-                                皮卡工作室成立于2012年的末日之后。
-                            </p>
-                            <p>
-                                我们崇尚皮卡车的自由、高效和舒适，遂凭其名，愿践其意。
-                            </p>
-                            <p>
-                                我们会持续关注和收集泛互联网行业的前沿动态，并将新鲜的想法转化为产品。
-                            </p>
-                            <p>
-                                我们致力于生产轻巧且实用的软件产品， 同时提供良好的用户体验。
-                            </p>
-                            <p>
-                                我们希望可以在积累和实践中分享一丝快乐，收获一份成长。
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div id="zdybit" class="members">
-                        <h3>成员</h3>
-                        <div class="member">
+                    <h2>『皮卡成员』</h2>
+                    <div class="members">
+                        <div id="zdybit" class="member">
                             <div class="photo">
                                 <img class="img-circle" src="~/Content/le-frog/images/Photozdybit.jpg"/>
                                 <div class="name"><div>宽厚</div></div>
@@ -253,7 +261,6 @@
                                 </table>
                             </div>
                         </div>
-
                         <div id="ZhangYC" class="member">
                             <div class="photo">
                                 <img class="img-circle" src="~/Content/le-frog/images/PhotoZhangYC.jpg"/>
@@ -301,10 +308,10 @@
                                 </table>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+
         </div>
         <div id="footer">
             <div>
