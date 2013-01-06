@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Service>
-  <ServiceItem ID="PublishScheduled" Type="MvcLiteBlog.BlogEngine.PublisherComp" Method="PublishScheduled" Frequency="60" LastUpdated="31-Dec-2012 07:20 PM"></ServiceItem>
-  <ServiceItem ID="DeleteProfiles" Type="MvcLiteBlog.BlogEngine.ProfileComp" Method="DeleteProfiles" Frequency="1440" LastUpdated="31-Dec-2012 07:20 PM"></ServiceItem>
+  <ServiceItem ID="PublishScheduled" Type="MvcLiteBlog.BlogEngine.PublisherComp" Method="PublishScheduled" Frequency="60" LastUpdated="03-Jan-2013 01:50 PM"></ServiceItem>
+  <ServiceItem ID="DeleteProfiles" Type="MvcLiteBlog.BlogEngine.ProfileComp" Method="DeleteProfiles" Frequency="1440" LastUpdated="03-Jan-2013 10:14 AM"></ServiceItem>
 </Service>

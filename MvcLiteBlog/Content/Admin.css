@@ -97,24 +97,26 @@ div.page
     min-width: 960px;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-image:url("/Content/le-frog/images/bg.png");
     text-align: left;
 }
 
 #header
 {
-    background-color: #009E49;
-    color: #fff;
-    font-family: 'Segoe UI', Segoe, Futura, Helvetica;
+    background-color: #245a5c;
+    color: #666;
+    font-family: 'Microsoft YaHei', 'Segoe UI', Segoe, Futura, Helvetica;
 }
 
 #headerTitle
 {
     float: left;
-    margin: 0 0 0 50px;
-    font-size: 2.5em;
-    padding-top: 8px;
-    padding-bottom: 12px;
+    margin: 0 0 0 20px;
+    height:60px;
+    width:392px;
+    background-repeat:no-repeat;
+    font-size:2.5em;
+    color:#fffca8;
 }
 
 #headerMenu
@@ -155,10 +157,12 @@ div.page
     clear: both;
     text-align: right;
     padding: 0 20px;
-    font-size: 1.4em;
-    line-height: 2em;
+    font-size: 1em;
+    line-height: 1.2em;
+    
+    border-top:1px dashed #fffca8;
+    border-bottom:1px dashed #fffca8;
 }
-
 
     #headerStrip a:link, #headerStrip a:visited
     {
@@ -179,7 +183,6 @@ div.page
 #middle
 {
     padding: 0;
-    background-color: lightgray;
 }
 
 #left
@@ -191,7 +194,6 @@ div.page
 
 #center
 {
-    background-color: #fff;
     width: 78%;
     float: left;
     min-height: 609px;
@@ -217,7 +219,8 @@ div.page
     text-align: right;
     font-family: Segoe UI, Verdana;
     font-size: 1em;
-    background-color: #009E49;
+    border-top: 1px dashed #bbb;
+    /*background-color: #009E49;*/
 }
 
 h1, .title
@@ -244,7 +247,7 @@ h1, .title
 
 fieldset
 {
-    border: 2px solid #009E49;
+    border: 0px solid #009E49;
     margin: 5px;
 }
 
@@ -264,10 +267,10 @@ fieldset > div
 .textBox, input[type=text], input[type=file], input[type=password]
 {
     font-family: Verdana;
-    font-size: 1.1em;
-    border: 2px solid #999;
-    border-radius: 6px;
-    padding: 4px;
+    font-size: 1em;
+    border: 1px solid #999;
+    border-radius: 0px;
+    padding: 2px;
 }
 
     input[type=text]:focus, input[type=file]:focus, input[type=password]:focus
@@ -322,35 +325,38 @@ div.info
 
 table.GridContent
 {
+    border-collapse: collapse;
+    border-spacing: 0;
     font-family: 'Segoe UI', 'Lucida Grande',Verdana;
     font-size: 1em;
     word-spacing: 2px;
-    border: 2px solid #009E49;
+    border: 1px solid rgb(36, 90, 92);
     margin: 20px 0px;
 }
 
 
 .GridHeader
 {
-    background-color: #009E49;
-    border-bottom: 2px solid #44bb44;
+    background-color: rgb(36, 90, 92);
+    border: 1px solid rgb(36, 90, 92);
     font-weight: bold;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 2em;
     color: white;
 }
 
 table.GridContent tbody tr td
 {
-    padding: 1px 5px;
+    padding: 1px 3px;
     overflow: hidden;
+    border: 1px solid rgb(36, 90, 92);
 }
 
 table.GridContent tfoot
 {
     text-align: center;
-    border-top: 2px solid #44bb44;
+    border-top: 1px solid rgb(36, 90, 92);
 }
 
 .gridRowStyle
@@ -361,7 +367,7 @@ table.GridContent tfoot
 
 .gridAltRowStyle
 {
-    background-color: lightgreen;
+    background-color: #eee;
     height: 2em;
 }
 
@@ -373,7 +379,7 @@ table.GridContent tfoot a:link, table.GridContent tfoot a:visited, table.GridCon
 
 .GridMargin
 {
-    margin: 5px 0px;
+    margin: 0px 0px;
 }
 
 
@@ -420,15 +426,15 @@ div.menuContainer
     margin: 8px 0px 8px 0px;
     padding: 0px;
     height: auto;
-    background-color: #009E49;
+    border-bottom: 1px dashed #bbb;
 }
 
 div.menuHeader
 {
     font-family: Segoe UI, Segoe, Arial;
     font-size: 1.3em;
-    color: white;
-    text-align: right;
+    color: black;
+    text-align: left;
     padding: 5px 10px;
 }
 
@@ -436,7 +442,7 @@ ul.menu
 {
     font-family: Segoe UI, Segoe, Arial;
     font-size: 1em;
-    color: white;
+    color: black;
     padding: 4px 0 8px 0;
     margin: 0px;
     text-align: left;
@@ -456,13 +462,13 @@ ul.menu
         {
             padding: 0;
             text-decoration: none;
-            color: #fff;
+            color: black;
         }
 
             ul.menu li a:hover
             {
                 text-decoration: none;
-                color: lawngreen;
+                color: black;
             }
 
 
