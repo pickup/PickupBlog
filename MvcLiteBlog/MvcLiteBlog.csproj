@@ -197,6 +197,7 @@
     <Content Include="Scripts\compose.js" />
     <Content Include="Scripts\addCommentCodeDialog.js" />
     <Content Include="Scripts\Custom\plugins\simpletree.js" />
+    <Content Include="Scripts\jquery.scrollto.js" />
     <Content Include="Scripts\post-compose.js" />
     <Content Include="Scripts\images\spacer.gif" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
