@@ -9,6 +9,29 @@
     <meta name="viewport" content="width=device-width" />
     <title>PickupStudio</title>
     <link href="~/Content/Pickup.css" rel="stylesheet" />
+    <script src='@this.Url.Content("~/Scripts/jquery-1.6.2.min.js")' type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tb-global').hide();
+            $('#fs-global').hide();
+            $(window).scroll(function () {
+                var vtop = $(document).scrollTop();
+                
+                if (vtop > 250) {
+                    $('#tb-global').show();
+                    $('#fs-global').show();
+                    $('#navbar-bottomline').hide();
+                    $('#navbar-shadow').hide();
+                }
+                else {
+                    $('#tb-global').hide();
+                    $('#fs-global').hide();
+                    $('#navbar-bottomline').show();
+                    $('#navbar-shadow').show();
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div id="page">
