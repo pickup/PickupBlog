@@ -169,7 +169,9 @@
     <Content Include="App_Data\Service.xml" />
     <Content Include="App_Data\Settings.xml" />
     <Content Include="App_Data\Stat.xml" />
-    <Content Include="App_Data\User.xml" />
+    <Content Include="App_Data\User.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\Admin.css" />
     <Content Include="Content\Blog.css" />
     <Content Include="Content\le-frog\images\atom_icon.png" />
@@ -178,6 +180,7 @@
     <Content Include="Content\le-frog\images\blogLogo.png" />
     <Content Include="Content\le-frog\images\commentImage.jpg" />
     <Content Include="Content\le-frog\images\contact.png" />
+    <Content Include="Content\le-frog\images\favicon.ico" />
     <Content Include="Content\le-frog\images\fullShadow.png" />
     <Content Include="Content\le-frog\images\hobby.png" />
     <Content Include="Content\le-frog\images\kinver1.png" />
@@ -215,6 +218,7 @@
     <Content Include="Content\simpletree\down.png" />
     <Content Include="Content\simpletree\right.png" />
     <Content Include="Content\simpletree.css" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\addCodeDialog.js" />
     <Content Include="Scripts\ckeditor.js" />
@@ -448,6 +452,9 @@
     <Content Include="Content\le-frog\images\Photo.psd" />
     <Content Include="Content\le-frog\images\slogan.psd" />
     <Content Include="Content\le-frog\images\studioLogo.psd" />
+    <Content Include="Content\le-frog\images\favicon.psd" />
+    <None Include="Properties\PublishProfiles\pickupstudio - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\pickupstudio - Web Deploy.pubxml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.WebHost.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.Http.SelfHost.dll" />
@@ -633,6 +640,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

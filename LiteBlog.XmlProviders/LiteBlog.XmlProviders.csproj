@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="XmlMembershipProvider.cs" />
+    <Compile Include="XmlMembershipProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="XmlProfileProvider.cs" />
   </ItemGroup>
   <ItemGroup>
