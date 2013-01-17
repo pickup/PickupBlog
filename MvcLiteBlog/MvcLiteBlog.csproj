@@ -192,6 +192,8 @@
     <Content Include="Content\le-frog\images\PhotoLPraYer.jpg" />
     <Content Include="Content\le-frog\images\Photozdybit.jpg" />
     <Content Include="Content\le-frog\images\PhotoZhangYC.jpg" />
+    <Content Include="Content\le-frog\images\QuoteEnd.png" />
+    <Content Include="Content\le-frog\images\QuoteStart.png" />
     <Content Include="Content\le-frog\images\rememberit1.png" />
     <Content Include="Content\le-frog\images\rememberit2.png" />
     <Content Include="Content\le-frog\images\rememberit3.png" />
@@ -453,6 +455,7 @@
     <Content Include="Content\le-frog\images\slogan.psd" />
     <Content Include="Content\le-frog\images\studioLogo.psd" />
     <Content Include="Content\le-frog\images\favicon.psd" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
     <None Include="Properties\PublishProfiles\pickupstudio - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\pickupstudio - Web Deploy.pubxml" />
     <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
@@ -642,7 +645,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>Content\le-frog\images\favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

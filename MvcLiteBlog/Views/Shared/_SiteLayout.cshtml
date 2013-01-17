@@ -12,6 +12,11 @@
     <link href="@this.Url.Content("~/Content/Blog.css")" rel="stylesheet" type="text/css" />
     <link href="@this.Url.Content("~/Content/le-frog/jquery-ui-1.8.16.custom.css")" rel="stylesheet" type="text/css" />
     <link href="@this.Url.Content("~/Content/SimpleTree.css")" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        /*ie6提示*/
+        #ie6-warning{width:100%;position:absolute;top:0;left:0;z-index:1031;background:#f5ff00;padding:10px 0;font-size:12px;}
+        #ie6-warning p{width:100%;margin:0 auto;text-align:center;}
+    </style>
     <script src='@this.Url.Content("~/Scripts/MicrosoftAjax.debug.js")' type="text/javascript"></script>
     <script src='@this.Url.Content("~/Scripts/MicrosoftMvcAjax.debug.js")' type="text/javascript"></script>
     <script src='@this.Url.Content("~/Scripts/jquery-1.6.2.min.js")' type="text/javascript"></script>
@@ -24,6 +29,17 @@
 </head>
 <body>
     <div class="page">
+        <!--[if lte IE 6]>
+        <div id="ie6-warning">
+            <p>
+                我们已不再支持 Internet Explorer 6 。建议您升级到
+                <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">
+                更高版本</a>
+                或选用以下现代浏览器：
+                <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> / <a href="http://www.mozillaonline.com/">Firefox</a> / <a href="http://www.apple.com.cn/safari/">Safari</a> / <a href="http://www.operachina.com/">Opera</a>
+            </p>
+        </div>
+        <![endif]-->
         <div id="header">
             @this.Html.Action("Title", "Blog")
         </div>
@@ -57,6 +73,12 @@
     <script type="text/javascript">
         var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write('<div style="display:none">' + unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff1c27a1f5e4ddd21285a8a21e0ba3f8e' type='text/javascript'%3E%3C/script%3E") + '</div>');
+        //ie6 warning
+        jQuery(function ($) {
+            if (jQuery.browser.msie && (jQuery.browser.version == "6.0") && !jQuery.support.style) {
+                jQuery('#ie6-warning').css({ 'top': jQuery(this).scrollTop() + 'px' });
+            }
+        });
     </script>
 </body>
 </html>

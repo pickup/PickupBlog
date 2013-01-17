@@ -54,6 +54,10 @@ legend
     color: #333;
 }
 
+::selection{background: #245a5c; color: white; /* Safari */} 
+::-moz-selection{background: #245a5c; color: white; /* Firefox */ } 
+::-webkit-selection{background: #245a5c; color: white; /* Chrome */ } 
+
 /* End Generic page styles */
 
 /* Master page styles */
@@ -328,10 +332,56 @@ div.post
 
 div.postContent
 {
-    font-size: 1em;
+    font-family:SimSun;
+    font-size: 14px;
     word-spacing: 2px;
-    line-height: 130%;
+    line-height: 180%;
+    color:#444;
 }
+
+    div.postContent p {
+        text-indent:2em;
+    }
+
+    div.postContent pre {
+        border-left:8px solid #ccc;
+    }
+
+    div.postContent blockquote {
+        padding:10px 40px;
+        margin:0 00px;
+    }
+
+    div.postContent blockquote:before {
+        content: "“";
+        font-size: 500%;
+        float:left;
+        margin-left:-50px;
+        margin-bottom:-40px;
+        color: #aaa;
+        padding-top:20px;
+    }
+
+    div.postContent blockquote:after {
+        content: "”";
+        font-size: 500%;
+        float:right;
+        margin-right:-50px;
+        margin-top:-20px;
+        color: #aaa;
+        }
+
+    div.postContent a, div.postContent a:visited {
+        text-decoration:underline;
+        text-decoration-style:dashed;
+    }
+
+        div.postContent a:hover {
+            text-decoration:underline;
+            color:#2b999d;
+            background-color:transparent;
+        }
+
 
 h1, .title
 {

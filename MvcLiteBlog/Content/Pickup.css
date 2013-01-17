@@ -53,6 +53,9 @@ ul>li {
     vertical-align:middle;
 }
 
+::selection{background: #245a5c; color: white; /* Safari */} 
+::-moz-selection{background: #245a5c; color: white; /* Firefox */ } 
+::-webkit-selection{background: #245a5c; color: white; /* Chrome */ } 
 
 /* End Generic page styles */
 
