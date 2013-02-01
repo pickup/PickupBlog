@@ -158,6 +158,10 @@
     <Content Include="App_Data\Blog.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\BlogDb.mdf" />
+    <Content Include="App_Data\BlogDb_log.ldf">
+      <DependentUpon>BlogDb.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\Category.xml" />
     <Content Include="App_Data\Comment.xml" />
     <Content Include="App_Data\Draft.xml" />
