@@ -9,6 +9,18 @@ namespace LiteBlog.SqlDbLayer
 {
     public class BlogData : IBlogData
     {
+        private BlogDbContext dbContext;
+
+        public BlogData()
+        {
+            dbContext = new BlogDbContext();
+        }
+
+        /// <summary>
+        /// 改变作者
+        /// </summary>
+        /// <param name="fileID">内容ID</param>
+        /// <param name="author">作者</param>
         public void ChangeAuthor(string fileID, string author)
         {
             throw new NotImplementedException();

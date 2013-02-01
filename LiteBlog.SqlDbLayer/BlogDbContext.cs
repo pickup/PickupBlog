@@ -17,6 +17,7 @@ namespace LiteBlog.SqlDbLayer
 
         public DbSet<ArchiveMonth> ArchiveSet { get; set; }
         public DbSet<Category> CategorySet { get; set; }
+        public DbSet<PostInfo> PostInfoSet { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,7 +29,11 @@ namespace LiteBlog.SqlDbLayer
             modelBuilder.Entity<Category>().Property(i => i.CatID).HasColumnName("Id");
             modelBuilder.Entity<Category>().Property(i => i.Order).HasColumnName("OrderNumber");
 
-            //
+            //博文概要表
+            modelBuilder.Entity<PostInfo>().ToTable("Blog");
+            modelBuilder.Entity<PostInfo>().Property(i => i.FileID).HasColumnName("Id");
+            modelBuilder.Entity<PostInfo>().Property(i => i.CatID).HasColumnName("CategoryId");
+            modelBuilder.Entity<PostInfo>().Property(i => i.Time).HasColumnName("UpdateTime");
 
             base.OnModelCreating(modelBuilder);
         }
